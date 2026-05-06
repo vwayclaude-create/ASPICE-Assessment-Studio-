@@ -1,0 +1,96 @@
+{
+  "id": "SUP.10",
+  "name": "Change Request Management",
+  "category": "SUP",
+  "pamSection": "4.8.4",
+  "purpose": "The purpose of the Change Request Management Process is to ensure that change requests are recorded, analyzed, tracked, approved, and implemented.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Requests for changes are recorded and identified."
+    },
+    {
+      "id": 2,
+      "text": "Change requests are analyzed, dependencies and relationships to other change requests are identified, and the impact is estimated."
+    },
+    {
+      "id": 3,
+      "text": "Change requests are approved before implementation and prioritized accordingly."
+    },
+    {
+      "id": 4,
+      "text": "Bidirectional traceability is established between change requests and affected work products."
+    },
+    {
+      "id": 5,
+      "text": "Implementation of change requests is confirmed."
+    },
+    {
+      "id": 6,
+      "text": "Change requests are tracked to closure and status of change requests is communicated to affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Identify and record the change requests",
+      "description": "The scope for application of change requests is identified. Each change request is uniquely identified, described, and recorded, including the initiator and reason of the change request. A status is assigned to each change request to facilitate tracking. NOTE 1: Change requests may be used for changes related to e.g., product, process, methods. NOTE 2: Example values for the change request status are “open”, “under investigation”, “implemented”, etc. NOTE 3: The change request handling may differ across the product life cycle e.g., during prototype are recorded, analyzed, tracked, approved, and implemented. | | | 2) Change requests are analyzed, dependencies and relationships to other change requests are identified, and the impact is estimated. 3) Change requests are approved before implementation and prioritized accordingly. 4) Bidirectional traceability is established between change requests and affected work products. 5) Implementation of change requests is confirmed. 6) Change requests are tracked to closure and status of change requests is communicated to affected parties. | | | requests is identified. Each change request is uniquely identified, described, and recorded, including the initiator and reason of the change request. A status is assigned to each change request to facilitate tracking. NOTE 1: Change requests may be used for changes related to e.g., product, process, methods. NOTE 2: Example values for the change request status are “open”, “under investigation”, “implemented”, etc. NOTE 3: The change request handling may differ across the product life cycle e.g., during prototype | | | construction and series development",
+      "pamCitation": "PAM §SUP.10 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Analyze and assess change requests",
+      "description": "Change requests are analyzed by relevant parties according to analysis criteria. Work products affected by the change request and dependencies to other change requests are determined. The impact of the change requests is assessed. NOTE 4: Examples for analysis criteria are: resource requirements, scheduling issues, risks, benefits, etc.",
+      "pamCitation": "PAM §SUP.10 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Approve change requests before implementation",
+      "description": "Change requests are prioritized and approved for implementation based on analysis results and availability of resources. NOTE 5: A Change Control Board (CCB) is an example mechanism used to approve change requests. NOTE 6: Prioritization of change requests may be done by allocation to releases.",
+      "pamCitation": "PAM §SUP.10 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Establish bidirectional traceability",
+      "description": "Establish bidirectional traceability between change requests and work products affected by the change requests. In case that the change request is initiated by a problem, establish bidirectional traceability between change requests and the corresponding problem reports.",
+      "pamCitation": "PAM §SUP.10 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Confirm the implementation of change requests",
+      "description": "The implementation of change requests is confirmed before closure by relevant stakeholders.",
+      "pamCitation": "PAM §SUP.10 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Track change requests to closure",
+      "description": "Change requests are tracked to closure. The status of change requests is communicated to all affected parties. NOTE 7: Examples for informing affected parties can be daily standup meetings or tool-supported workflows. SUP.10 Change Request Management 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §SUP.10 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "18-57",
+      "name": "Change analysis criteria"
+    },
+    {
+      "id": "13-16",
+      "name": "Change request"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency evidence"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "13-07",
+      "name": "Problem",
+      "fromProcess": "SUP.9"
+    }
+  ],
+  "traceBPs": [
+    "BP1",
+    "BP4"
+  ]
+}

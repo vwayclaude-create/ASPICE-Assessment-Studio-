@@ -1,0 +1,104 @@
+{
+  "id": "VAL.1",
+  "name": "Validation",
+  "category": "VAL",
+  "pamSection": "4.5.1",
+  "purpose": "The purpose is to provide evidence that the end product, allowing direct end user interaction, satisfies the intended use expectations in its operational target environment.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Validation measures are selected considering criteria for regression verification."
+    },
+    {
+      "id": 2,
+      "text": "The product is validated using the selected validation measures and the results of validation are recorded."
+    },
+    {
+      "id": 3,
+      "text": "Consistency and unidirectional traceability are established between validation measures and stakeholder requirements; and consistency and bidirectional traceability is established between validation results and validation measures."
+    },
+    {
+      "id": 4,
+      "text": "Results of the validation are summarized and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify validation measures for product validation",
+      "description": "Specify the validation measures for the end product based on the stakeholder requirements to provide evidence that it fulfills its intended use expectations in its operational target environment, and • techniques for the validation measures, • pass/fail criteria for validation measures, • a definition of entry and exit criteria for the validation measures, • necessary sequence of validation measures, and • the required validation infrastructure and environment setup. approval requirements. Further examples of sources of intended use expectations are technical risks (see MAN.5, SYS.3.BP4, SWE.2.BP3, HWE.2.BP6). repeated validation of (often rapidly developed) increments in product evolution may be employed to refine stakeholder requirements, and to mitigate risks in the correct identification of needs. formally expressed, but sometimes overriding, attitudes, experience, and subjective tests that comprise stakeholder or end user satisfaction.",
+      "pamCitation": "PAM §VAL.1 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Select validation measures",
+      "description": "Document the selection of validation measures considering selection criteria including criteria for regression validation. The documented selection of validation measures shall have sufficient coverage according to the release scope. as test bench, test track, validation on public roads, field use by end users), homologation/ type approval, confirmation of requirements, or the need for regression due to e.g., changes to stakeholder requirements and needs.",
+      "pamCitation": "PAM §VAL.1 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Perform validation and evaluate results",
+      "description": "Perform the validation of the integrated end product using the selected validation measures. Record the validation results including pass/fail status. Evaluate the validation results. requirements e.g, in the case of mock-ups or concept studies. measures for the end product based on the stakeholder requirements to provide evidence that it fulfills its intended use expectations in its operational target environment, and • techniques for the validation measures, • pass/fail criteria for validation measures, • a definition of entry and exit criteria for the validation measures, • necessary sequence of validation measures, and • the required validation infrastructure and environment setup. approval requirements. Further examples of sources of intended use expectations are technical risks (see MAN.5, SYS.3.BP4, SWE.2.BP3, HWE.2.BP6). repeated validation of (often rapidly developed) increments in product evolution may be employed to refine stakeholder requirements, and to mitigate risks in the correct identification of needs. formally expressed, but sometimes overriding, attitudes, experience, and subjective tests that comprise stakeholder or end user satisfaction. | | | considering selection criteria including criteria for regression validation. The documented selection of validation measures shall have sufficient coverage according to the release scope. as test bench, test track, validation on public roads, field use by end users), homologation/ type approval, confirmation of requirements, or the need for regression due to e.g., changes to stakeholder requirements and needs. | | | end product using the selected validation measures. Record the validation results including pass/fail status. Evaluate the validation results. requirements e.g, in the case of mock-ups or concept studies.",
+      "pamCitation": "PAM §VAL.1 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability from validation measures to the stakeholder requirements from which they are derived. Establish bidirectional traceability between validation results and validation measures. requirements, homologation requirements, results of technical risk analyses, or stakeholder and system requirements (see SYS.1 and SYS.2). bidirectional traceability from those sources to the validation measures are not possible. In such a case, unidirectional traceability is sufficient. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "pamCitation": "PAM §VAL.1 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Summarize and communicate results",
+      "description": "Summarize the validation results and communicate them to all affected parties. other parties to judge the consequences. VAL.1 Validation 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO",
+      "pamCitation": "PAM §VAL.1 BP5"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-59",
+      "name": "Validation Measure"
+    },
+    {
+      "id": "08-57",
+      "name": "Validation Measure Selection Set"
+    },
+    {
+      "id": "13-24",
+      "name": "Validation Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "11-06",
+      "name": "Integrated System",
+      "fromProcess": "SYS.5"
+    },
+    {
+      "id": "13-19",
+      "name": "Review evidence",
+      "fromProcess": "SUP.1"
+    },
+    {
+      "id": "15-52",
+      "name": "Verification Results",
+      "fromProcess": "SYS.5"
+    },
+    {
+      "id": "17-00",
+      "name": "Requirement",
+      "fromProcess": "SYS.2"
+    }
+  ],
+  "traceBPs": [
+    "BP4"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "HWE.2",
+  "name": "Hardware Design",
+  "category": "HWE",
+  "pamSection": "4.7.2",
+  "purpose": "The purpose is to provide an analyzed design, including dynamic aspects, that is consistent with the hardware requirements and suitable for manufacturing, and to derive production-relevant data.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "A hardware architecture and hardware detailed design is developed that identifies the elements of the hardware and describes their behavior as well as their interfaces, and the dynamic interactions of the hardware elements."
+    },
+    {
+      "id": 2,
+      "text": "The hardware architecture and the hardware detailed design is analyzed, and special characteristics are identified."
+    },
+    {
+      "id": 3,
+      "text": "Consistency and bidirectional traceability are established between hardware requirements and hardware design."
+    },
+    {
+      "id": 4,
+      "text": "Hardware production data is derived from the hardware detailed design and communicated to all affected parties."
+    },
+    {
+      "id": 5,
+      "text": "Information for production test is derived from the hardware detailed design and communicated to all affected parties."
+    },
+    {
+      "id": 6,
+      "text": "The hardware architecture and hardware detailed design and the special characteristics are agreed and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify the hardware architecture",
+      "description": "Develop the hardware architecture that identifies the hardware components. Document the rationale for the defined hardware architecture. concept, EMC concept. platform, or product line, respectively, or by a make-or-buy decision, or found in an evolutionary way.",
+      "pamCitation": "PAM §HWE.2 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Specify the hardware detailed design",
+      "description": "Based on components identified in the hardware architecture, specify the detailed design description and the schematics for the intended hardware variants, including the interfaces between the hardware elements. Derive the hardware layout, the hardware bill of materials, and the production data. be subject to a pre-defined repository (see also IATF 16949:2016, clause 8.4.1.2.). parts on the market, hardware design rules, layout rules, creepage and clearance distances, compliance of HW parts with industry standards such as AEC-Q, REACH.",
+      "pamCitation": "PAM §HWE.2 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Specify dynamic aspects",
+      "description": "Evaluate and document the dynamic behavior of the relevant hardware elements and the interaction between them.",
+      "pamCitation": "PAM §HWE.2 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Analyze the hardware architecture and the hardware detailed design",
+      "description": "Analyze the hardware architecture and hardware detailed design regarding relevant technical aspects, and support project management regarding project estimates. Identify special characteristics. hardware components to be reused, or availability of hardware elements. quantitative or qualitative analyses such as FMEA.",
+      "pamCitation": "PAM §HWE.2 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish traceability between hardware elements and hardware requirements. Ensure consistency and establish traceability between the hardware detailed design and components of the hardware architecture. trace to. Examples are development process requirements. Such requirements are still subject to verification. change requests, and demonstration of verification coverage. Traceability alone, e.g, the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "pamCitation": "PAM §HWE.2 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Communicate agreed hardware architecture and hardware detailed design",
+      "description": "Communicate the agreed hardware architecture and the hardware detailed design, including the special characteristics and relevant production data, to all affected parties. identifies the hardware components. Document the rationale for the defined hardware architecture. concept, EMC concept. platform, or product line, respectively, or by a make-or-buy decision, or found in an evolutionary way. | | | hardware architecture, specify the detailed design description and the schematics for the intended hardware variants, including the interfaces between the hardware elements. Derive the hardware layout, the hardware bill of materials, and the production data. be subject to a pre-defined repository (see also IATF 16949:2016, clause 8.4.1.2.). parts on the market, hardware design rules, layout rules, creepage and clearance distances, compliance of HW parts with industry standards such as AEC-Q, REACH. | | | relevant hardware elements and the interaction between them. the hardware architecture and hardware detailed design regarding relevant technical aspects, and support project management regarding project estimates. Identify special characteristics. hardware components to be reused, or availability of hardware elements. quantitative or qualitative analyses such as FMEA. | | | consistency and establish traceability between hardware elements and hardware requirements. Ensure consistency and establish traceability between the hardware detailed design and components of the hardware architecture. trace to. Examples are development process requirements. Such requirements are still subject to verification. change requests, and demonstration of verification coverage. Traceability alone, e.g, the existence of links, does not necessarily mean that the information is consistent with each other. | | | Communicate the agreed hardware architecture and the hardware detailed design, including the special characteristics and relevant production data, to all affected parties. | | | HWE.2 Hardware Design 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §HWE.2 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "04-52",
+      "name": "Hardware Architecture"
+    },
+    {
+      "id": "04-53",
+      "name": "Hardware Detailed Design"
+    },
+    {
+      "id": "15-51",
+      "name": "Analysis Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "17-57",
+      "name": "Special Characteristics"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    },
+    {
+      "id": "04-54",
+      "name": "Hardware Schematics"
+    },
+    {
+      "id": "14-54",
+      "name": "Hardware Bill of Materials"
+    },
+    {
+      "id": "04-55",
+      "name": "Hardware Layout"
+    },
+    {
+      "id": "03-54",
+      "name": "Hardware Production Data"
+    },
+    {
+      "id": "04-56",
+      "name": "Hardware Element Interface"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "08-56",
+      "name": "Schedule",
+      "fromProcess": "MAN.3"
+    },
+    {
+      "id": "13-16",
+      "name": "Change request",
+      "fromProcess": "SUP.10"
+    },
+    {
+      "id": "13-19",
+      "name": "Review evidence",
+      "fromProcess": "SUP.1"
+    },
+    {
+      "id": "17-00",
+      "name": "Requirement",
+      "fromProcess": "HWE.1"
+    }
+  ],
+  "traceBPs": [
+    "BP5",
+    "BP6"
+  ]
+}

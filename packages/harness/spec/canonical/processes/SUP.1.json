@@ -1,0 +1,109 @@
+{
+  "id": "SUP.1",
+  "name": "Quality Assurance",
+  "category": "SUP",
+  "pamSection": "4.8.1",
+  "purpose": "The purpose of the Quality Assurance Process is to provide independent and objective assurance that work products and processes comply with defined criteria and that non- conformances are resolved and further prevented.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Quality assurance is performed independently and objectively without conflicts of interest."
+    },
+    {
+      "id": 2,
+      "text": "Criteria for the quality of work products and process performance are defined."
+    },
+    {
+      "id": 3,
+      "text": "Conformance of work products and process performance with the defined criteria and targets is verified, documented and communicated to the relevant parties."
+    },
+    {
+      "id": 4,
+      "text": "Non-conformances are tracked, resolved, and further prevented."
+    },
+    {
+      "id": 5,
+      "text": "Non-conformances are escalated to appropriate levels of management."
+    },
+    {
+      "id": 6,
+      "text": "Management ensures that escalated non-conformances are resolved."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Ensure independence of quality assurance",
+      "description": "Ensure that quality assurance is performed independently and objectively without conflicts of interest. organizational structure as well as responsibility for processes that are subject to quality assurance (no self-monitoring).",
+      "pamCitation": "PAM §SUP.1 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Define criteria for quality assurance",
+      "description": "Define quality criteria for work products as well as for process tasks and their performance. standards, milestones, etc.",
+      "pamCitation": "PAM §SUP.1 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Assure quality of work products",
+      "description": "Identify work products subject to quality assurance according to the quality criteria. Perform appropriate activities to evaluate the work products against the defined quality criteria and document the results. improve the work products for further use. assurance that work products and processes comply with defined criteria and that non- conformances are resolved and further prevented. | | | 2) Criteria for the quality of work products and process performance are defined. 3) Conformance of work products and process performance with the defined criteria and targets is verified, documented and communicated to the relevant parties. 4) Non-conformances are tracked, resolved, and further prevented. 5) Non-conformances are escalated to appropriate levels of management. 6) Management ensures that escalated non-conformances are resolved. | | | performed independently and objectively without conflicts of interest. organizational structure as well as responsibility for processes that are subject to quality assurance (no self-monitoring). | | | well as for process tasks and their performance. standards, milestones, etc. | | | assurance according to the quality criteria. Perform appropriate activities to evaluate the work products against the defined quality criteria and document the results. improve the work products for further use. | | |",
+      "pamCitation": "PAM §SUP.1 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Assure quality of process activities",
+      "description": "Identify processes subject to quality assurance according to the quality criteria. Perform appropriate activities to evaluate the processes against their defined quality criteria and associated target values and document the results. NOTE 4: Quality assurance activities may include process assessments, problem analysis, regular check of methods, tools, and the adherence to defined processes, and consideration of lessons learned.",
+      "pamCitation": "PAM §SUP.1 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Summarize and communicate quality assurance activities and results",
+      "description": "Regularly report performance, non-conformances, and trends of quality assurance activities to all affected parties.",
+      "pamCitation": "PAM §SUP.1 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Ensure resolution of non-conformances",
+      "description": "Analyze, track, correct, resolve, and further prevent non-conformances found in quality assurance activities. NOTE 5: Non-conformances detected in work products may be entered into the problem resolution management process (SUP.9). NOTE 6: Non-conformances detected in the process definition or implementation may be entered into a process improvement process (PIM.3).",
+      "pamCitation": "PAM §SUP.1 BP6"
+    },
+    {
+      "id": "BP7",
+      "title": "Escalate non-conformances",
+      "description": "Escalate relevant non-conformances to appropriate levels of management and other relevant stakeholders to facilitate their resolution. NOTE 7: The decision whether to escalate non-conformances may be based on criteria such as delay of resolution, urgency, and risk. SUP.1 Quality Assurance 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §SUP.1 BP7"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "16-50",
+      "name": "Organizational structure"
+    },
+    {
+      "id": "18-52",
+      "name": "Escalation path"
+    },
+    {
+      "id": "18-07",
+      "name": "Quality criteria"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    },
+    {
+      "id": "13-18",
+      "name": "Quality conformance evidence"
+    },
+    {
+      "id": "13-19",
+      "name": "Review evidence"
+    },
+    {
+      "id": "14-02",
+      "name": "Corrective action"
+    }
+  ],
+  "inputWorkProducts": [],
+  "traceBPs": []
+}

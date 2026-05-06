@@ -1,0 +1,87 @@
+{
+  "id": "SYS.1",
+  "name": "Requirements Elicitation",
+  "category": "SYS",
+  "pamSection": "4.3.1",
+  "purpose": "The purpose is to gather, analyze, and track evolving stakeholder needs and requirements throughout the lifecycle of the product and/or service to establish a set of agreed requirements.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Continuing communication with the stakeholder is established."
+    },
+    {
+      "id": 2,
+      "text": "Stakeholder expectations are understood, and requirements are defined and agreed."
+    },
+    {
+      "id": 3,
+      "text": "Stakeholder requirements changes arising from stakeholder needs are analyzed to enable associated risk assessment and impact management."
+    },
+    {
+      "id": 4,
+      "text": "Determination of stakeholder requirements status is ensured for all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Obtain stakeholder expectations and requests",
+      "description": "Obtain and define stakeholder expectations and requests through direct solicitation of stakeholder input, and through review of stakeholder business proposals (where relevant) and other documents containing inputs to stakeholder requirements, and consideration of the target operating and hardware environment. stakeholder requirements agreement and change analysis (see BP2 and BP3).",
+      "pamCitation": "PAM §SYS.1 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Agree on requirements",
+      "description": "Formalize the stakeholder’s expectations and requests into requirements. Reach a common understanding of the set of stakeholder requirements among affected parties by obtaining an explicit agreement from all affected parties. partners, or outsourcing parties. schedule impact analysis.",
+      "pamCitation": "PAM §SYS.1 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Analyze stakeholder requirements changes",
+      "description": "Analyze all changes made to the stakeholder requirements against the agreed stakeholder requirements. Assess the impact and risks, and initiate appropriate change control and mitigation actions. technology, stakeholder needs, or legal constraints. throughout the lifecycle of the product and/or service to establish a set of agreed requirements. | | | 2) Stakeholder expectations are understood, and requirements are defined and agreed. 3) Stakeholder requirements changes arising from stakeholder needs are analyzed to enable associated risk assessment and impact management. 4) Determination of stakeholder requirements status is ensured for all affected parties. | | | expectations and requests through direct solicitation of stakeholder input, and through review of stakeholder business proposals (where relevant) and other documents containing inputs to stakeholder requirements, and consideration of the target operating and hardware environment. stakeholder requirements agreement and change analysis (see BP2 and BP3). | | | into requirements. Reach a common understanding of the set of stakeholder requirements among affected parties by obtaining an explicit agreement from all affected parties. partners, or outsourcing parties. schedule impact analysis. | | | stakeholder requirements against the agreed stakeholder requirements. Assess the impact and risks, and initiate appropriate change control and mitigation actions. technology, stakeholder needs, or legal constraints.",
+      "pamCitation": "PAM §SYS.1 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Communicate requirements status",
+      "description": "Ensure all affected parties can be aware of the status and disposition of their requirements including changes and can communicate necessary information and data. SYS.1 Requirements Elicitation 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO",
+      "pamCitation": "PAM §SYS.1 BP4"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "15-51",
+      "name": "Analysis Results"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    },
+    {
+      "id": "17-00",
+      "name": "Requirement"
+    },
+    {
+      "id": "17-54",
+      "name": "Requirement Attribute"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "08-56",
+      "name": "Schedule",
+      "fromProcess": "MAN.3"
+    },
+    {
+      "id": "13-19",
+      "name": "Review evidence",
+      "fromProcess": "SUP.1"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence",
+      "fromProcess": "ACQ.4"
+    }
+  ],
+  "traceBPs": []
+}

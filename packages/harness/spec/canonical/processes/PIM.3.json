@@ -1,0 +1,127 @@
+{
+  "id": "PIM.3",
+  "name": "Process Improvement",
+  "category": "PIM",
+  "pamSection": "4.10.1",
+  "purpose": "The purpose is to continually improve the organization’s effectiveness and efficiency through the processes used and ensure alignment of the processes with the business needs.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Commitment is established to provide resources to sustain improvement measures."
+    },
+    {
+      "id": 2,
+      "text": "Issues arising from the organization's internal or external environment are identified as improvement opportunities and justified as reasons for change."
+    },
+    {
+      "id": 3,
+      "text": "Analysis of the current status of the existing process is performed."
+    },
+    {
+      "id": 4,
+      "text": "Improvement goals are identified and prioritized, and consequent changes to the process are defined, documented and implemented."
+    },
+    {
+      "id": 5,
+      "text": "The effects of process implementation are monitored, measured and confirmed against the identified improvement goals."
+    },
+    {
+      "id": 6,
+      "text": "Knowledge gained from the improvement is communicated within the organization."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Establish commitment",
+      "description": "Establish commitment to support the process improvement staff, to provide resources and further enablers to sustain improvement actions. organizational level, process level, project level, etc.) and which can be used to improve all processes.",
+      "pamCitation": "PAM §PIM.3 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Identify improvement measures",
+      "description": "Identify issues from the analysis of process performance and derive improvement opportunities with justified reasons for change. Assurance and Verification results and records (see SUP.1), validation results and records, and product quality metrics like defect rate. customer's satisfaction reports, measurements of organizational effectiveness/efficiency, costs of quality.",
+      "pamCitation": "PAM §PIM.3 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Establish process improvement goals",
+      "description": "Analyze the current status of the existing processes and establish improvement goals. processes used and ensure alignment of the processes with the business needs. | | | 2) Issues arising from the organization's internal or external environment are identified as improvement opportunities and justified as reasons for change. 3) Analysis of the current status of the existing process is performed. 4) Improvement goals are identified and prioritized, and consequent changes to the process are defined, documented and implemented. 5) The effects of process implementation are monitored, measured and confirmed against the identified improvement goals. 6) Knowledge gained from the improvement is communicated within the organization. | | | improvement staff, to provide resources and further enablers to sustain improvement actions. organizational level, process level, project level, etc.) and which can be used to improve all processes. performance and derive improvement opportunities with justified reasons for change. Assurance and Verification results and records (see SUP.1), validation results and records, and product quality metrics like defect rate. customer's satisfaction reports, measurements of organizational effectiveness/efficiency, costs of quality. | | | processes and establish improvement goals. | | |",
+      "pamCitation": "PAM §PIM.3 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Prioritize improvements",
+      "description": "Prioritize the improvement goals and improvement measures.",
+      "pamCitation": "PAM §PIM.3 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Define process improvement measures",
+      "description": "Process improvement measures are defined.",
+      "pamCitation": "PAM §PIM.3 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Implement process improvement measures",
+      "description": "Implement and apply the improvements to the processes. Update the Process documentation and train people as needed. infrastructure, process training, process coaching and tailoring processes to local needs.",
+      "pamCitation": "PAM §PIM.3 BP6"
+    },
+    {
+      "id": "BP7",
+      "title": "Confirm process improvement",
+      "description": "The effects of process implementation are monitored and measured, and the achievement of defined improvement goals is confirmed.",
+      "pamCitation": "PAM §PIM.3 BP7"
+    },
+    {
+      "id": "BP8",
+      "title": "Communicate results of improvement",
+      "description": "Knowledge gained from the improvements and progress of the improvement implementation is communicated to affected parties. PIM.3 Process Improvement 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §PIM.3 BP8"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "02-01",
+      "name": "Commitment/agreement"
+    },
+    {
+      "id": "06-04",
+      "name": "Training material"
+    },
+    {
+      "id": "07-04",
+      "name": "Process metric"
+    },
+    {
+      "id": "10-00",
+      "name": "Process description"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    },
+    {
+      "id": "13-16",
+      "name": "Change request"
+    },
+    {
+      "id": "15-51",
+      "name": "Analysis result"
+    },
+    {
+      "id": "15-13",
+      "name": "Assessment/audit report"
+    },
+    {
+      "id": "15-16",
+      "name": "Improvement opportunity"
+    },
+    {
+      "id": "16-06",
+      "name": "Process repository"
+    }
+  ],
+  "inputWorkProducts": [],
+  "traceBPs": []
+}

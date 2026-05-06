@@ -1,0 +1,148 @@
+{
+  "id": "SYS.4",
+  "name": "System Integration and Integration Verification",
+  "category": "SYS",
+  "pamSection": "4.3.4",
+  "purpose": "The purpose is to integrate systems elements and verify that the integrated system elements are consistent with the system architecture.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Verification measures are specified for system integration verification of the integrated system elements based on the system architecture, including the interfaces of, and interactions between, system elements."
+    },
+    {
+      "id": 2,
+      "text": "System elements are integrated up to a complete integrated system consistent with the release scope."
+    },
+    {
+      "id": 3,
+      "text": "Verification measures are selected according to the release scope considering criteria, including criteria for regression verification."
+    },
+    {
+      "id": 4,
+      "text": "Integrated system elements are verified using the selected verification measures, and the results of the system integration verification are recorded."
+    },
+    {
+      "id": 5,
+      "text": "Consistency and bidirectional traceability are established between verification measures and the elements of the system architecture."
+    },
+    {
+      "id": 6,
+      "text": "Bidirectional traceability between verification results and verification measures is established."
+    },
+    {
+      "id": 7,
+      "text": "Results of the system integration and integration verification are summarized and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify verification measures for system integration",
+      "description": "Specify the verification measures, based on a defined sequence and preconditions for the integration of system elements against the system static and dynamic aspects of the system architecture, including • techniques for the verification measures, • pass/fail criteria for verification measures, • a definition of entry and exit criteria for the verification measures, and • the required verification infrastructure and environment setup. correct signal flow between interfacing system elements, or interactions between hardware and software, as specified in the system architecture. The system integration test cases may focus on • the correct signal flow between system items, • the timeliness and timing dependencies of signal flow between system items, • the correct interpretation of signals by all system items using an interface, and/or • the dynamic interaction between system items.",
+      "pamCitation": "PAM §SYS.4 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Select verification measures",
+      "description": "Document the selection of verification measures for each integration step considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope. verification (due to e.g., changes to the system architectural design or to system components), or the intended use of the delivered product release (e.g., test bench, test track, public road etc.)",
+      "pamCitation": "PAM §SYS.4 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Integrate system elements and perform integration verification",
+      "description": "Integrate the system elements until the system is fully integrated according to the specified interfaces and interactions between the system elements, and according to the defined sequence and defined preconditions. Perform the selected system integration verification measures. Record the verification measure data including pass/fail status and corresponding verification measure data. verification or qualification of pre-existing system elements.",
+      "pamCitation": "PAM §SYS.4 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between verification measures and the system architecture. Establish bidirectional traceability between verification results and verification measures. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. measures, based on a defined sequence and preconditions for the integration of system elements against the system static and dynamic aspects of the system architecture, including • techniques for the verification measures, • pass/fail criteria for verification measures, • a definition of entry and exit criteria for the verification measures, and • the required verification infrastructure and environment setup. correct signal flow between interfacing system elements, or interactions between hardware and software, as specified in the system architecture. The system integration test cases may focus on • the correct signal flow between system items, • the timeliness and timing dependencies of signal flow between system items, • the correct interpretation of signals by all system items using an interface, and/or • the dynamic interaction between system items. | | | each integration step considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope. verification (due to e.g., changes to the system architectural design or to system components), or the intended use of the delivered product release (e.g., test bench, test track, public road etc.) | | | system elements until the system is fully integrated according to the specified interfaces and interactions between the system elements, and according to the defined sequence and defined preconditions. Perform the selected system integration verification measures. Record the verification measure data including pass/fail status and corresponding verification measure data. verification or qualification of pre-existing system elements. consistency and establish bidirectional traceability between verification measures and the system architecture. Establish bidirectional traceability between verification results and verification measures. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. | | |",
+      "pamCitation": "PAM §SYS.4 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Summarize and communicate results",
+      "description": "Summarize the system integration and integration verification results and communicate them to all affected parties. parties to judge the consequences. SYS.4 System Integration and Integration Verification 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO 7 emoctuO",
+      "pamCitation": "PAM §SYS.4 BP5"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-60",
+      "name": "Verification Measure"
+    },
+    {
+      "id": "06-50",
+      "name": "Integration Sequence Instruction"
+    },
+    {
+      "id": "03-50",
+      "name": "Verification Measure Data"
+    },
+    {
+      "id": "08-58",
+      "name": "Verification Measure Selection Set"
+    },
+    {
+      "id": "15-52",
+      "name": "Verification Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    },
+    {
+      "id": "11-06",
+      "name": "Integrated System"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "01-03",
+      "name": "Software Component",
+      "fromProcess": "SWE.6"
+    },
+    {
+      "id": "01-52",
+      "name": "Configuration item list",
+      "fromProcess": "SUP.8"
+    },
+    {
+      "id": "04-06",
+      "name": "System Architecture",
+      "fromProcess": "SYS.3"
+    },
+    {
+      "id": "04-52",
+      "name": "Hardware Architecture",
+      "fromProcess": "HWE.2"
+    },
+    {
+      "id": "08-56",
+      "name": "Schedule",
+      "fromProcess": "MAN.3"
+    },
+    {
+      "id": "08-58",
+      "name": "Verification Measure Selection Set",
+      "fromProcess": "SYS.3"
+    },
+    {
+      "id": "13-06",
+      "name": "Delivery evidence",
+      "fromProcess": "ACQ.4"
+    },
+    {
+      "id": "13-08",
+      "name": "Baseline",
+      "fromProcess": "SUP.8"
+    }
+  ],
+  "traceBPs": [
+    "BP4"
+  ]
+}

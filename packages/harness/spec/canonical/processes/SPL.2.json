@@ -1,0 +1,118 @@
+{
+  "id": "SPL.2",
+  "name": "Product Release",
+  "category": "SPL",
+  "pamSection": "4.2.1",
+  "purpose": "The purpose is to control the release of a product to the intended customer.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "The contents of the product releases are determined."
+    },
+    {
+      "id": 2,
+      "text": "The release package is assembled from configured items."
+    },
+    {
+      "id": 3,
+      "text": "The release documentation is defined and produced."
+    },
+    {
+      "id": 4,
+      "text": "Release approval is performed against defined criteria."
+    },
+    {
+      "id": 5,
+      "text": "The release package is made available to the intended customer."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Define the functional content of releases",
+      "description": "Define the functionality to be included and the release criteria for each release. parameter files (influencing the identified system functionality) that are needed for the release.",
+      "pamCitation": "PAM §SPL.2 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Define release package",
+      "description": "Define the release as well as supporting tools and information.",
+      "pamCitation": "PAM §SPL.2 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Ensure unique identification of releases",
+      "description": "Ensure a unique identification of the release based upon the intended purpose and expectations of the release. releases.",
+      "pamCitation": "PAM §SPL.2 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Build the release from items under configuration control",
+      "description": "Build the release from items under configuration control to ensure integrity.",
+      "pamCitation": "PAM §SPL.2 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Ensure release approval before delivery",
+      "description": "Criteria for the release are satisfied before delivery takes place.",
+      "pamCitation": "PAM §SPL.2 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Provide a release note",
+      "description": "A release is accompanied by information detailing key characteristics of the release. legislation that is considered etc. See also VAL.1 Validation. SPL2.BP7: Communicate the type, service level and duration of support for a release. Identify and communicate the type, service level and duration of support for a release.",
+      "pamCitation": "PAM §SPL.2 BP6"
+    },
+    {
+      "id": "BP8",
+      "title": "Deliver the release package to the intended customer",
+      "description": "Deliver the release package to the intended customer. SPL.2 Product Release 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO",
+      "pamCitation": "PAM §SPL.2 BP8"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "11-03",
+      "name": "Release note"
+    },
+    {
+      "id": "11-04",
+      "name": "Product release package"
+    },
+    {
+      "id": "13-06",
+      "name": "Delivery evidence"
+    },
+    {
+      "id": "13-13",
+      "name": "Product release approval"
+    },
+    {
+      "id": "18-06",
+      "name": "Product release criteria"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "01-52",
+      "name": "Configuration item list",
+      "fromProcess": "SUP.8"
+    },
+    {
+      "id": "11-06",
+      "name": "Integrated System",
+      "fromProcess": "SYS.4"
+    },
+    {
+      "id": "13-08",
+      "name": "Baseline",
+      "fromProcess": "SUP.8"
+    },
+    {
+      "id": "15-52",
+      "name": "Verification Results",
+      "fromProcess": "SYS.5"
+    }
+  ],
+  "traceBPs": []
+}

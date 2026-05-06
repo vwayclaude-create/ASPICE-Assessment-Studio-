@@ -1,0 +1,118 @@
+{
+  "id": "MLE.4",
+  "name": "Machine Learning Model Testing",
+  "category": "MLE",
+  "pamSection": "4.6.4",
+  "purpose": "The purpose is to ensure compliance of the trained ML model and the deployed ML model with the ML requirements.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "A ML test approach is defined."
+    },
+    {
+      "id": 2,
+      "text": "A ML test data set is created."
+    },
+    {
+      "id": 3,
+      "text": "The trained ML model is tested."
+    },
+    {
+      "id": 4,
+      "text": "The deployed ML model is derived from the trained ML model and tested."
+    },
+    {
+      "id": 5,
+      "text": "Consistency and bidirectional traceability are established between the ML test approach and the ML requirements, and the ML test data set and the ML data requirements; and bidirectional traceability is established between the ML test approach and ML test results."
+    },
+    {
+      "id": 6,
+      "text": "Results of the ML model testing are summarized and communicated with the deployed ML model to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify an ML test approach",
+      "description": "Specify an ML test approach suitable to provide evidence for compliance of the trained ML model and the deployed ML model with the ML requirements. The ML test approach includes • ML test scenarios with distribution of data characteristics (e.g., gender, weather conditions, street conditions within the ODD) defined by ML requirements, • distribution and frequency of each ML test scenario inside the ML test data set, • expected test result per test datum, • entry and exit criteria of the testing, • approach for data set creation and modification, and • the required testing infrastructure and environment setup. of output of the ML model with the expected output. output. E.g., one image in photo processing or an audio sequence in voice recognition. ODD. E.g., weather condition may contain expressions like sunny, foggy or rainy. weather conditions = sunny, street conditions = gravel road. the ML requirements. | | | 2) A ML test data set is created. 3) The trained ML model is tested. 4) The deployed ML model is derived from the trained ML model and tested. 5) Consistency and bidirectional traceability are established between the ML test approach and the ML requirements, and the ML test data set and the ML data requirements; and bidirectional traceability is established between the ML test approach and ML test results. 6) Results of the ML model testing are summarized and communicated with the deployed ML model to all affected parties. | | | evidence for compliance of the trained ML model and the deployed ML model with the ML requirements. The ML test approach includes • ML test scenarios with distribution of data characteristics (e.g., gender, weather conditions, street conditions within the ODD) defined by ML requirements, • distribution and frequency of each ML test scenario inside the ML test data set, • expected test result per test datum, • entry and exit criteria of the testing, • approach for data set creation and modification, and • the required testing infrastructure and environment setup. of output of the ML model with the expected output. output. E.g., one image in photo processing or an audio sequence in voice recognition. ODD. E.g., weather condition may contain expressions like sunny, foggy or rainy. weather conditions = sunny, street conditions = gravel road. | | |",
+      "pamCitation": "PAM §MLE.4 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Create ML test data set",
+      "description": "Create the ML test data set needed for testing of the trained ML model and testing of the deployed ML model from the ML data collection provided by SUP.11 considering the ML test approach. The ML test data set shall not be used for training. deployed ML model. robustness.",
+      "pamCitation": "PAM §MLE.4 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Test trained ML model",
+      "description": "Test the trained ML model according to the ML test approach using the created ML test data set. Record and evaluate the ML test results. trustworthiness.",
+      "pamCitation": "PAM §MLE.4 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Derive deployed ML model",
+      "description": "Derive the deployed ML model from the trained ML model according to the ML architecture. The deployed ML model shall be used for testing and delivery to software integration. trained ML model which often requires powerful hardware and uses interpretative languages. MLE4.BP5: Test deployed ML model. Test the deployed ML model according to the ML test approach using the created ML test data set. Record and evaluate the ML test results.",
+      "pamCitation": "PAM §MLE.4 BP4"
+    },
+    {
+      "id": "BP6",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between the ML test approach and the ML requirements, and the ML test data set and the ML data requirements; and bidirectional traceability is established between the ML test approach and ML test results. requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "pamCitation": "PAM §MLE.4 BP6"
+    },
+    {
+      "id": "BP7",
+      "title": "Summarize and communicate results",
+      "description": "Summarize the ML test results of the ML model. Inform all affected parties about the agreed results and the deployed ML model. MLE.4 Machine Learning Model Testing 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §MLE.4 BP7"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-64",
+      "name": "ML test approach"
+    },
+    {
+      "id": "03-51",
+      "name": "ML data set"
+    },
+    {
+      "id": "13-50",
+      "name": "ML test results"
+    },
+    {
+      "id": "11-50",
+      "name": "Deployed ML model"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "01-53",
+      "name": "Trained ML model",
+      "fromProcess": "MLE.3"
+    },
+    {
+      "id": "03-53",
+      "name": "ML data",
+      "fromProcess": "SUP.11"
+    },
+    {
+      "id": "17-00",
+      "name": "Requirement",
+      "fromProcess": "MLE.1"
+    }
+  ],
+  "traceBPs": [
+    "BP1",
+    "BP6"
+  ]
+}

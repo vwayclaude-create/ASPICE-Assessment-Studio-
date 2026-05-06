@@ -1,0 +1,48 @@
+{
+  "name": "aspice-harness",
+  "version": "0.2.0",
+  "description": "Spec-driven ASPICE v4.0 harness (CL1-CL3) with cross-process consistency and traceability verification.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "aspice": "src/cli.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./spec": "./spec/canonical/index.js",
+    "./spec/all": "./spec/canonical/all.json",
+    "./spec/canonical/*.json": "./spec/canonical/*.json",
+    "./evaluators": "./src/evaluators/index.js",
+    "./crossProcess": "./src/crossProcess/index.js",
+    "./io": "./src/io/index.js",
+    "./llm": "./src/llm/index.js",
+    "./model": "./src/model/index.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "extract": "node spec/extractor.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "commander": "^12.1.0",
+    "mammoth": "^1.8.0",
+    "openai": "^4.68.0",
+    "pdf-parse": "^1.1.1",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "aspice",
+    "automotive",
+    "spice",
+    "pam-v4",
+    "capability-level",
+    "assessment",
+    "traceability",
+    "vda"
+  ],
+  "license": "MIT"
+}

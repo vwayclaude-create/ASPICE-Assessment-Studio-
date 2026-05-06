@@ -1,0 +1,113 @@
+{
+  "id": "HWE.4",
+  "name": "Verification against Hardware Requirements",
+  "category": "HWE",
+  "pamSection": "4.7.4",
+  "purpose": "consistency and establish bidirectional traceability between hardware elements and the verification measures. Establish bidirectional traceability between the verification measures and verification results. Note 6: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. | communicate them to all affected parties. Note 7: Providing all necessary information from the test case execution in a summary enables other parties to judge the consequences. | emoctuO | | | 2 emoctuO | | | 3 emoctuO | | | 4 emoctuO | | | 5 emoctuO | | | 6 emoctuO | | hardware design | | X | | | | | | | | | | | | | | | | | | The purpose is to ensure that the complete hardware is verified to be consistent with the hardware requirements.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Verification measures are specified for verification of the hardware against the hardware requirements."
+    },
+    {
+      "id": 2,
+      "text": "Verification measures are selected considering criteria, including criteria for regression verification."
+    },
+    {
+      "id": 3,
+      "text": "Verification is performed, if applicable on production data compliant samples, using the selected verification measures, and verification results are recorded."
+    },
+    {
+      "id": 4,
+      "text": "Consistency and bidirectional traceability are established between verification measures and hardware requirements."
+    },
+    {
+      "id": 5,
+      "text": "Bidirectional traceability is established between verification measures and verification results."
+    },
+    {
+      "id": 6,
+      "text": "Verification results are summarized and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify verification measures for the verification against hardware",
+      "description": "requirements. Specify the verification measure to provide evidence for compliance with the hardware requirements. This includes • techniques for the verification measures, • pass/fail criteria for the verification measures, • a definition of entry and exit criteria for the verification measures, • necessary sequence of verification the measures, and • the required verification infrastructure and environment setup robustness/lifetime, and EMC.",
+      "pamCitation": "PAM §HWE.4 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Ensure use of compliant samples",
+      "description": "Ensure that the samples used for the verification against hardware requirements are compliant with the corresponding production data, including special characteristics, provided by hardware design.",
+      "pamCitation": "PAM §HWE.4 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Select verification measures",
+      "description": "Document the selection of verification measures considering selection criteria including regression criteria. The documented selection of verification measures shall have sufficient coverage according to the release scope. due to changes to the hardware requirements, or the intended use of the delivered hardware release (e.g, test bench, test track, public road etc.).",
+      "pamCitation": "PAM §HWE.4 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Verify the compliant hardware samples",
+      "description": "Verify the compliant hardware samples using the selected verification measures. Record the verification results including pass/fail status and corresponding verification measure output data. hardware requirements. | | | requirements. 2) Verification measures are selected considering criteria, including criteria for regression verification. 3) Verification is performed, if applicable on production data compliant samples, using the selected verification measures, and verification results are recorded. 4) Consistency and bidirectional traceability are established between verification measures and hardware requirements. 5) Bidirectional traceability is established between verification measures and verification results. 6) Verification results are summarized and communicated to all affected parties. | | | requirements. Specify the verification measure to provide evidence for compliance with the hardware requirements. This includes • techniques for the verification measures, • pass/fail criteria for the verification measures, • a definition of entry and exit criteria for the verification measures, • necessary sequence of verification the measures, and • the required verification infrastructure and environment setup robustness/lifetime, and EMC. | | | verification against hardware requirements are compliant with the corresponding production data, including special characteristics, provided by hardware design. considering selection criteria including regression criteria. The documented selection of verification measures shall have sufficient coverage according to the release scope. due to changes to the hardware requirements, or the intended use of the delivered hardware release (e.g, test bench, test track, public road etc.). | | | using the selected verification measures. Record the verification results including pass/fail status and corresponding verification measure output data.",
+      "pamCitation": "PAM §HWE.4 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency between hardware requirements and verification measures. Establish bidirectional traceability between hardware requirements and verification measures. Establish bidirectional traceability between verification measures and verification results. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "pamCitation": "PAM §HWE.4 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Summarize and communicate results",
+      "description": "Summarize the verification results and communicate them to all affected parties. parties to judge the consequences. HWE.4 Verification against Hardware Requirements 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §HWE.4 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-60",
+      "name": "Verification Measure"
+    },
+    {
+      "id": "03-50",
+      "name": "Verification Measure Data"
+    },
+    {
+      "id": "08-58",
+      "name": "Verification Measure Selection Set"
+    },
+    {
+      "id": "15-52",
+      "name": "Verification Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "04-52",
+      "name": "Hardware Architecture",
+      "fromProcess": "HWE.3"
+    },
+    {
+      "id": "17-00",
+      "name": "Requirement",
+      "fromProcess": "HWE.1"
+    }
+  ],
+  "traceBPs": [
+    "BP4",
+    "BP5"
+  ]
+}

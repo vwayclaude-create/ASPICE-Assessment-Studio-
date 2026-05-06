@@ -1,0 +1,267 @@
+{
+  "PA 1.1": {
+    "id": "PA 1.1",
+    "level": 1,
+    "name": "Process performance process attribute",
+    "scope": "The process performance process attribute is a measure of the extent to which the process purpose is achieved.",
+    "achievements": [
+      {
+        "id": 1,
+        "text": "The process achieves its defined outcomes."
+      }
+    ],
+    "genericPractices": [
+      {
+        "id": "GP 1.1.1",
+        "title": "Achieve the process outcomes",
+        "description": "Achieve the intent of the base practices. Produce work products that evidence the process outcomes. PA 1.1 Process performance process attribute a tnemeveihcA",
+        "pamCitation": "PAM §5 GP 1.1.1"
+      }
+    ],
+    "pamSection": "5.2.1"
+  },
+  "PA 2.1": {
+    "id": "PA 2.1",
+    "level": 2,
+    "name": "Process performance management process attribute",
+    "scope": "The performance management process attribute is a measure of the extent to which the performance of the process is managed.",
+    "achievements": [
+      {
+        "id": 1,
+        "text": "Strategy for the performance of the process is defined based on identified objectives."
+      },
+      {
+        "id": 2,
+        "text": "Performance of the process is planned."
+      },
+      {
+        "id": 3,
+        "text": "Performance of the process is monitored and adjusted to meet the planning."
+      },
+      {
+        "id": 4,
+        "text": "Needs for human resources including responsibilities and authorities for performing the process are determined."
+      },
+      {
+        "id": 5,
+        "text": "Needs for physical and material resources are determined."
+      },
+      {
+        "id": 6,
+        "text": "Persons performing the process are prepared for executing their responsibilities."
+      },
+      {
+        "id": 7,
+        "text": "Physical and material resources for performing the process are identified, made available, allocated and used."
+      },
+      {
+        "id": 8,
+        "text": "Interfaces between the involved parties are managed to ensure both effective communication and the assignment of responsibilities."
+      }
+    ],
+    "genericPractices": [
+      {
+        "id": "GP 2.1.1",
+        "title": "Identify the objectives and define a strategy for the performance of the process",
+        "description": "The scope of the process activities including the management of process performance and the management of work products are determined. Corresponding results to be achieved are determined. Process performance objectives and associated criteria are identified. lead time are examples for process performance objectives. Assumptions and constraints are considered when identifying the performance objectives. Approach and methodology for the process performance is determined. process. Elements applicable for multiple processes may be documented jointly, e.g, as part of a common project handbook or in a joint test strategy. performance of the process is managed. | | | 2) Performance of the process is planned. 3) Performance of the process is monitored and adjusted to meet the planning. 4) Needs for human resources including responsibilities and authorities for performing the process are determined. 5) Needs for physical and material resources are determined. 6) Persons performing the process are prepared for executing their responsibilities. 7) Physical and material resources for performing the process are identified, made available, allocated and used. 8) Interfaces between the involved parties are managed to ensure both effective communication and the assignment of responsibilities. | | | The scope of the process activities including the management of process performance and the management of work products are determined. Corresponding results to be achieved are determined. Process performance objectives and associated criteria are identified. lead time are examples for process performance objectives. Assumptions and constraints are considered when identifying the performance objectives. Approach and methodology for the process performance is determined. process. Elements applicable for multiple processes may be documented jointly, e.g, as part of a common project handbook or in a joint test strategy. | | |",
+        "pamCitation": "PAM §5 GP 2.1.1"
+      },
+      {
+        "id": "GP 2.1.2",
+        "title": "Plan the performance of the process",
+        "description": "The planning for the performance of the process is established according to the defined objectives, criteria, and strategy. Process activities and work packages are defined. Estimates for work packages are identified using appropriate methods.",
+        "pamCitation": "PAM §5 GP 2.1.2"
+      },
+      {
+        "id": "GP 2.1.3",
+        "title": "Determine resource needs",
+        "description": "The required amount of human resources, and experience, knowledge and skill needs for the for process performance are determined based on the planning. The needs for physical and material resources are determined based on the planning. licenses etc. Required responsibilities and authorities to perform the process, and to manage the corresponding work products are determined. descriptions.",
+        "pamCitation": "PAM §5 GP 2.1.3"
+      },
+      {
+        "id": "GP 2.1.4",
+        "title": "Identify and make available resources",
+        "description": "The individuals performing and managing the process are identified and allocated according to the determined needs. The individuals performing and managing the process are being qualified to execute their responsibilities. The other resources, necessary for performing the process are identified, made available, allocated and used according to the determined needs.",
+        "pamCitation": "PAM §5 GP 2.1.4"
+      },
+      {
+        "id": "GP 2.1.5",
+        "title": "Monitor and adjust the performance of the process",
+        "description": "Process performance is monitored to identify deviations from the planning. Appropriate actions in case of deviations from the planning are taken. The planning is adjusted as necessary.",
+        "pamCitation": "PAM §5 GP 2.1.5"
+      },
+      {
+        "id": "GP 2.1.6",
+        "title": "Manage the interfaces between involved parties",
+        "description": "The individuals and groups including required external parties involved in the process performance are determined. Responsibilities are assigned to the relevant individuals or parties. Communication mechanisms between the involved parties are determined. Effective communication between the involved parties is established and maintained. The planning for the performance of the process is established according to the defined objectives, criteria, and strategy. Process activities and work packages are defined. Estimates for work packages are identified using appropriate methods. The required amount of human resources, and experience, knowledge and skill needs for the for process performance are determined based on the planning. The needs for physical and material resources are determined based on the planning. licenses etc. Required responsibilities and authorities to perform the process, and to manage the corresponding work products are determined. descriptions. | The individuals performing and managing the process are identified and allocated according to the determined needs. The individuals performing and managing the process are being qualified to execute their responsibilities. The other resources, necessary for performing the process are identified, made available, allocated and used according to the determined needs. | Process performance is monitored to identify deviations from the planning. Appropriate actions in case of deviations from the planning are taken. The planning is adjusted as necessary. | The individuals and groups including required external parties involved in the process performance are determined. Responsibilities are assigned to the relevant individuals or parties. Communication mechanisms between the involved parties are determined. Effective communication between the involved parties is established and maintained. | PA 2.1 Process Performance Management 1 tnemeveihcA 2 tnemeveihcA 3 tnemeveihcA 4 tnemeveihcA 5 tnemeveihcA 6 tnemeveihcA 7 tnemeveihcA 8 tnemeveihcA",
+        "pamCitation": "PAM §5 GP 2.1.6"
+      }
+    ],
+    "pamSection": "5.3.1"
+  },
+  "PA 2.2": {
+    "id": "PA 2.2",
+    "level": 2,
+    "name": "Work product management process attribute",
+    "scope": "The work product management process attribute is a measure of the extent to which the work products produced by the process are appropriately managed.",
+    "achievements": [
+      {
+        "id": 1,
+        "text": "Requirements for the work products of the process are defined."
+      },
+      {
+        "id": 2,
+        "text": "Requirements for storage and control of the work products are defined."
+      },
+      {
+        "id": 3,
+        "text": "The work products are appropriately identified, stored, and controlled."
+      },
+      {
+        "id": 4,
+        "text": "The work products are reviewed and adjusted as necessary to meet requirements."
+      }
+    ],
+    "genericPractices": [
+      {
+        "id": "GP 2.2.1",
+        "title": "Define the requirements for the work products",
+        "description": "The requirements for the content and structure of the work products to be produced are defined. Quality criteria for the work products are identified. Appropriate review and approval criteria for the work products are defined. learned from other projects, standards, organization requirements, customer requirements, etc. there would be no need to define the corresponding criteria.",
+        "pamCitation": "PAM §5 GP 2.2.1"
+      },
+      {
+        "id": "GP 2.2.2",
+        "title": "Define the requirements for storage and control of the work products",
+        "description": "Requirements for the storage and control of the work products are defined, including their identification and distribution. legal requirements, data policies, best practices from other projects, tool related requirements, etc. documents etc. defined status model. products produced by the process are appropriately managed. | | | 2) Requirements for storage and control of the work products are defined. 3) The work products are appropriately identified, stored, and controlled. 4) The work products are reviewed and adjusted as necessary to meet requirements. | | | The requirements for the content and structure of the work products to be produced are defined. Quality criteria for the work products are identified. Appropriate review and approval criteria for the work products are defined. learned from other projects, standards, organization requirements, customer requirements, etc. there would be no need to define the corresponding criteria. | | | Requirements for the storage and control of the work products are defined, including their identification and distribution. legal requirements, data policies, best practices from other projects, tool related requirements, etc. documents etc. defined status model. | | |",
+        "pamCitation": "PAM §5 GP 2.2.2"
+      },
+      {
+        "id": "GP 2.2.3",
+        "title": "Identify, store and control the work products",
+        "description": "The work products to be controlled are identified. The work products are stored and controlled in accordance with the requirements. Change control is established for work products. Versioning and baselining of the work products is performed in accordance with the requirements for storage and control of the work products. The work products including the revision status are made available through appropriate mechanisms.",
+        "pamCitation": "PAM §5 GP 2.2.3"
+      },
+      {
+        "id": "GP 2.2.4",
+        "title": "Review and adjust work products",
+        "description": "The work products are reviewed against the defined requirements and criteria. Resolution of issues arising from work products reviews is ensured. PA 2.2 Work product management process attribute 1 tnemeveihcA 2 tnemeveihcA 3 tnemeveihcA 4 tnemeveihcA",
+        "pamCitation": "PAM §5 GP 2.2.4"
+      }
+    ],
+    "pamSection": "5.3.2"
+  },
+  "PA 3.1": {
+    "id": "PA 3.1",
+    "level": 3,
+    "name": "Process definition process attribute",
+    "scope": "The process definition process attribute is a measure of the extent to which a standard process is maintained to support the deployment of the defined process.",
+    "achievements": [
+      {
+        "id": 1,
+        "text": "A standard process is developed, established, and maintained that describes the fundamental elements that must be incorporated into a defined process."
+      },
+      {
+        "id": 2,
+        "text": "The required inputs and the expected outputs for the standard process are defined."
+      },
+      {
+        "id": 3,
+        "text": "Roles, responsibilities, authorities, and required competencies for performing the standard process are defined."
+      },
+      {
+        "id": 4,
+        "text": "Tailoring guidelines for deriving the defined process from the standard process are defined."
+      },
+      {
+        "id": 5,
+        "text": "Required physical and material resources and process infrastructure needs are determined as part of the standard process."
+      },
+      {
+        "id": 6,
+        "text": "Suitable methods and required activities for monitoring the effectiveness, suitability and adequacy of the process are determined."
+      }
+    ],
+    "genericPractices": [
+      {
+        "id": "GP 3.1.1",
+        "title": "Establish and maintain the standard process",
+        "description": "A suitable standard process is developed including required activities and their interactions. Inputs and outputs of the standard process are defined including the corresponding entry and exit criteria to determine the interactions and sequence with other processes. Process performance roles are identified and assigned to the standard process activities including their type of involvement, responsibilities, and authorities. RASI/RASIC representation. Suitable guidance, procedures, and templates are provided to support the execution of the process as needed. Appropriate tailoring guidelines including predefined unambiguous criteria as well as predefined and unambiguous proceedings are defined based on identified deployment needs and context of the standard process. The standard process is maintained according to corresponding feedback from the monitoring of the deployed processes. process (PIM.3). is maintained to support the deployment of the defined process. | | | fundamental elements that must be incorporated into a defined process. 2) The required inputs and the expected outputs for the standard process are defined. 3) Roles, responsibilities, authorities, and required competencies for performing the standard process are defined. 4) Tailoring guidelines for deriving the defined process from the standard process are defined. 5) Required physical and material resources and process infrastructure needs are determined as part of the standard process. 6) Suitable methods and required activities for monitoring the effectiveness, suitability and adequacy of the process are determined. | | | A suitable standard process is developed including required activities and their interactions. Inputs and outputs of the standard process are defined including the corresponding entry and exit criteria to determine the interactions and sequence with other processes. Process performance roles are identified and assigned to the standard process activities including their type of involvement, responsibilities, and authorities. RASI/RASIC representation. Suitable guidance, procedures, and templates are provided to support the execution of the process as needed. Appropriate tailoring guidelines including predefined unambiguous criteria as well as predefined and unambiguous proceedings are defined based on identified deployment needs and context of the standard process. The standard process is maintained according to corresponding feedback from the monitoring of the deployed processes. process (PIM.3). | | |",
+        "pamCitation": "PAM §5 GP 3.1.1"
+      },
+      {
+        "id": "GP 3.1.2",
+        "title": "Determine the required competencies",
+        "description": "Required competencies, skills, and experience for performing the standard process are determined for the identified roles. Appropriate qualification methods to acquire the necessary competencies and skills are determined, maintained, and made available for the identified roles. learning material.",
+        "pamCitation": "PAM §5 GP 3.1.2"
+      },
+      {
+        "id": "GP 3.1.3",
+        "title": "Determine the required resources",
+        "description": "Required physical and material resources and process infrastructure needs for performing the standard process are determined. the establishment of the required work environment.",
+        "pamCitation": "PAM §5 GP 3.1.3"
+      },
+      {
+        "id": "GP 3.1.4",
+        "title": "Determine suitable methods to monitor the standard process",
+        "description": "Methods and required activities for monitoring the effectiveness and adequacy of the standard process are determined. learned, process compliance checks, internal audits, management reviews, change requests, reflection of state-of-the-art such as applicable international standards, etc. Appropriate criteria and information needed to monitor the standard process are defined. PA 3.1 Process definition process attribute 1 tnemeveihcA 2 tnemeveihcA 3 tnemeveihcA 4 tnemeveihcA 5 tnemeveihcA 6 tnemeveihcA",
+        "pamCitation": "PAM §5 GP 3.1.4"
+      }
+    ],
+    "pamSection": "5.4.1"
+  },
+  "PA 3.2": {
+    "id": "PA 3.2",
+    "level": 3,
+    "name": "Process deployment process attribute",
+    "scope": "The process deployment process attribute is a measure of the extent to which the standard process is deployed as a defined process to achieve its process outcomes.",
+    "achievements": [
+      {
+        "id": 1,
+        "text": "A defined process is deployed based upon an appropriately selected and/or tailored standard process."
+      },
+      {
+        "id": 2,
+        "text": "Assignment of persons necessary for performing the defined process to roles is performed and communicated."
+      },
+      {
+        "id": 3,
+        "text": "Required education, training and experience is ensured and monitored for the person(s) assigned to the roles."
+      },
+      {
+        "id": 4,
+        "text": "Required resources for performing the defined process are made available, allocated, and maintained."
+      },
+      {
+        "id": 5,
+        "text": "Appropriate information is collected and analyzed as a basis for understanding the behavior of the process."
+      }
+    ],
+    "genericPractices": [
+      {
+        "id": "GP 3.2.1",
+        "title": "Deploy a defined process that satisfies the context specific requirements of the",
+        "description": "use of the standard process. The defined process is appropriately selected and/or tailored from the standard process. Conformance of defined process with standard process requirements and tailoring criteria is verified. The defined process is used as managed process to achieve the process outcomes.",
+        "pamCitation": "PAM §5 GP 3.2.1"
+      },
+      {
+        "id": "GP 3.2.2",
+        "title": "Ensure required competencies for the defined roles",
+        "description": "Human resources are allocated to the defined roles according to the required competencies and skills. Assignment of persons to roles and corresponding responsibilities and authorities for performing the defined process are communicated. Gaps in competencies and skills are identified, and corresponding qualification measures are initiated and monitored. process | | | | | | X | process is deployed as a defined process to achieve its process outcomes. | | | standard process. 2) Assignment of persons necessary for performing the defined process to roles is performed and communicated. 3) Required education, training and experience is ensured and monitored for the person(s) assigned to the roles. 4) Required resources for performing the defined process are made available, allocated, and maintained. 5) Appropriate information is collected and analyzed as a basis for understanding the behavior of the process. | | | use of the standard process. The defined process is appropriately selected and/or tailored from the standard process. Conformance of defined process with standard process requirements and tailoring criteria is verified. The defined process is used as managed process to achieve the process outcomes. Human resources are allocated to the defined roles according to the required competencies and skills. Assignment of persons to roles and corresponding responsibilities and authorities for performing the defined process are communicated. Gaps in competencies and skills are identified, and corresponding qualification measures are initiated and monitored. | | | Availability and usage of the project staff are measured and monitored.",
+        "pamCitation": "PAM §5 GP 3.2.2"
+      },
+      {
+        "id": "GP 3.2.3",
+        "title": "Ensure required resources to support the performance of the defined process",
+        "description": "Required information to perform the defined process is made available, allocated and used. Required physical and material resources, process infrastructure and work environment are made available, allocated and used. Availability and usage of resources are measured and monitored.",
+        "pamCitation": "PAM §5 GP 3.2.3"
+      },
+      {
+        "id": "GP 3.2.4",
+        "title": "Monitor the performance of the defined process",
+        "description": "Information is collected and analyzed according to the determined process monitoring methods to understand the effectiveness and adequacy of the defined process. Results of the analysis are made available to all effected parties and used to identify where continual improvement of the standard and/or defined process can be made. process (PIM.3). PA 3.2 Process deployment process attribute 1 tnemeveihcA 2 tnemeveihcA 3 tnemeveihcA 4 tnemeveihcA 5 tnemeveihcA",
+        "pamCitation": "PAM §5 GP 3.2.4"
+      }
+    ],
+    "pamSection": "5.4.2"
+  }
+}

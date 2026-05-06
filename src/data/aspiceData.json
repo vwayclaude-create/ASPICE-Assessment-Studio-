@@ -1,0 +1,690 @@
+{
+  "SYS.2": {
+    "id": "SYS.2",
+    "name": "System Requirements Analysis",
+    "purpose": "The purpose is to establish a structured and analyzed set of system requirements consistent with the stakeholder requirements.",
+    "outcomes": [
+      "System requirements are specified.",
+      "System requirements are structured and prioritized.",
+      "System requirements are analyzed for correctness and technical feasibility.",
+      "The impact of system requirements on the operating environment is analyzed.",
+      "Consistency and bidirectional traceability are established between system requirements and stakeholder requirements.",
+      "The system requirements are agreed and communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify system requirements",
+        "description": "Use the stakeholder requirements to identify and document the functional and non-functional requirements for the system according to defined characteristics for requirements."
+      },
+      {
+        "id": "BP2",
+        "title": "Structure system requirements",
+        "description": "Structure and prioritize the system requirements."
+      },
+      {
+        "id": "BP3",
+        "title": "Analyze system requirements",
+        "description": "Analyze the specified system requirements including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates."
+      },
+      {
+        "id": "BP4",
+        "title": "Analyze the impact on the system context",
+        "description": "Analyze the impact that the system requirements will have on elements in the relevant system context."
+      },
+      {
+        "id": "BP5",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between system requirements and stakeholder requirements."
+      },
+      {
+        "id": "BP6",
+        "title": "Communicate agreed system requirements and impact on the system context",
+        "description": "Communicate the agreed system requirements, and results of the impact analysis on the system context, to all affected parties."
+      }
+    ],
+    "guideline": "SYS.2 establishes structured system requirements consistent with stakeholder requirements. Requires specification, structuring/prioritization, analysis for correctness and technical feasibility, impact analysis on system context, bidirectional traceability, and communication to affected parties."
+  },
+  "SYS.3": {
+    "id": "SYS.3",
+    "name": "System Architectural Design",
+    "purpose": "The purpose is to establish an analyzed system architecture, comprising static and dynamic aspects, consistent with the system requirements.",
+    "outcomes": [
+      "A system architecture is designed including a definition of the system elements with their behavior, their interfaces, their relationships, and their interactions.",
+      "The system architecture is analyzed against defined criteria, and special characteristics are identified.",
+      "Consistency and bidirectional traceability are established between system architecture and system requirements.",
+      "The agreed system architecture and the special characteristics are communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify static aspects of the system architecture",
+        "description": "Specify and document the static aspects of the system architecture with respect to functional and non-functional system requirements, including external interfaces and a defined set of system elements."
+      },
+      {
+        "id": "BP2",
+        "title": "Specify dynamic aspects of the system architecture",
+        "description": "Specify and document the dynamic aspects of the system architecture, including the behavior of the system elements and their interaction in different system modes."
+      },
+      {
+        "id": "BP3",
+        "title": "Analyze system architecture",
+        "description": "Analyze the system architecture regarding relevant technical design aspects, support project estimates, derive special characteristics. Document a rationale for design decisions."
+      },
+      {
+        "id": "BP4",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between the elements of the system architecture and the system requirements."
+      },
+      {
+        "id": "BP5",
+        "title": "Communicate agreed system architecture",
+        "description": "Communicate the agreed system architecture, including special characteristics, to all affected parties."
+      }
+    ],
+    "guideline": "SYS.3 establishes analyzed system architecture with static and dynamic views. Architecture is mainly non-functional requirements driven. Recursive decomposition with high cohesion and low coupling. Analysis covers cybersecurity, functional safety per ISO 26262, and robustness."
+  },
+  "SYS.4": {
+    "id": "SYS.4",
+    "name": "System Integration and Integration Verification",
+    "purpose": "The purpose is to integrate systems elements and verify that the integrated system elements are consistent with the system architecture.",
+    "outcomes": [
+      "Verification measures are specified for system integration verification.",
+      "System elements are integrated up to a complete integrated system consistent with the release scope.",
+      "Verification measures are selected according to the release scope.",
+      "Integrated system elements are verified using the selected verification measures.",
+      "Consistency and bidirectional traceability are established between verification measures and the system architecture.",
+      "Bidirectional traceability between verification results and verification measures is established.",
+      "Results are summarized and communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify verification measures for system integration",
+        "description": "Specify the verification measures with techniques, pass/fail criteria, entry/exit criteria, and required verification infrastructure."
+      },
+      {
+        "id": "BP2",
+        "title": "Select verification measures",
+        "description": "Document the selection of verification measures for each integration step considering selection criteria including criteria for regression verification."
+      },
+      {
+        "id": "BP3",
+        "title": "Integrate system elements and perform integration verification",
+        "description": "Integrate the system elements until fully integrated, perform the selected integration verification measures, and record results."
+      },
+      {
+        "id": "BP4",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between verification measures and the system architecture, and between verification results and verification measures."
+      },
+      {
+        "id": "BP5",
+        "title": "Summarize and communicate results",
+        "description": "Summarize the system integration and integration verification results and communicate them to all affected parties."
+      }
+    ],
+    "guideline": "SYS.4 verifies that integrated system elements are consistent with the system architecture. Supports HIL simulation, vehicle network simulation, digital mock-up. Explorative testing cannot be traced to system architectural design."
+  },
+  "SYS.5": {
+    "id": "SYS.5",
+    "name": "System Verification",
+    "purpose": "The purpose is to ensure that the system is verified to be consistent with the system requirements.",
+    "outcomes": [
+      "Verification measures are specified for system verification based on the system requirements.",
+      "Verification measures are selected according to the release scope.",
+      "The integrated system is verified using the selected verification measures.",
+      "Consistency and bidirectional traceability are established between verification measures and system requirements.",
+      "Bidirectional traceability is established between verification results and verification measures.",
+      "Verification results are summarized and communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify verification measures for system verification",
+        "description": "Specify the verification measures suitable to provide evidence for compliance with the system requirements."
+      },
+      {
+        "id": "BP2",
+        "title": "Select verification measures",
+        "description": "Document the selection of verification measures considering selection criteria including criteria for regression verification."
+      },
+      {
+        "id": "BP3",
+        "title": "Perform verification of the integrated system",
+        "description": "Perform the verification of the integrated system using the selected verification measures and record results."
+      },
+      {
+        "id": "BP4",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between verification measures and system requirements."
+      },
+      {
+        "id": "BP5",
+        "title": "Summarize and communicate results",
+        "description": "Summarize the system verification results and communicate them to all affected parties."
+      }
+    ],
+    "guideline": "SYS.5 ensures the integrated system is verified against the system requirements. Black-box view. Supports HIL and similar verification environments."
+  },
+  "SWE.1": {
+    "id": "SWE.1",
+    "name": "Software Requirements Analysis",
+    "purpose": "The purpose is to establish a structured and analyzed set of software requirements consistent with the system requirements and the system architecture.",
+    "outcomes": [
+      "Software requirements are specified.",
+      "Software requirements are structured and prioritized.",
+      "Software requirements are analyzed for correctness and technical feasibility.",
+      "The impact of software requirements on the operating environment is analyzed.",
+      "Consistency and bidirectional traceability are established between software requirements and system requirements.",
+      "Consistency and bidirectional traceability are established between software requirements and system architecture.",
+      "The software requirements are agreed and communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify software requirements",
+        "description": "Use the system requirements and architecture to identify and document the functional and non-functional requirements for the software."
+      },
+      {
+        "id": "BP2",
+        "title": "Structure software requirements",
+        "description": "Structure and prioritize the software requirements."
+      },
+      {
+        "id": "BP3",
+        "title": "Analyze software requirements",
+        "description": "Analyze the software requirements including dependencies to ensure correctness, technical feasibility, and to support project estimates."
+      },
+      {
+        "id": "BP4",
+        "title": "Analyze the impact on the operating environment",
+        "description": "Analyze the impact that the software requirements will have on elements in the operating environment."
+      },
+      {
+        "id": "BP5",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between software requirements, system architecture, and system requirements."
+      },
+      {
+        "id": "BP6",
+        "title": "Communicate agreed software requirements",
+        "description": "Communicate the agreed software requirements and the impact analysis results to all affected parties."
+      }
+    ],
+    "guideline": "SWE.1 establishes software requirements consistent with system requirements and architecture. In software-only development, traceability may go directly to stakeholder requirements."
+  },
+  "SWE.2": {
+    "id": "SWE.2",
+    "name": "Software Architectural Design",
+    "purpose": "The purpose is to establish an analyzed software architecture, comprising static and dynamic aspects, consistent with the software requirements.",
+    "outcomes": [
+      "A software architecture is designed including static and dynamic aspects.",
+      "The software architecture is analyzed against defined criteria.",
+      "Consistency and bidirectional traceability are established between software architecture and software requirements.",
+      "The software architecture is agreed and communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify static aspects of the software architecture",
+        "description": "Specify and document the static aspects of the software architecture with respect to functional and non-functional requirements, including external interfaces and software components."
+      },
+      {
+        "id": "BP2",
+        "title": "Specify dynamic aspects of the software architecture",
+        "description": "Specify and document the dynamic aspects, including behavior of software components and their interaction in different software modes, and concurrency aspects."
+      },
+      {
+        "id": "BP3",
+        "title": "Analyze software architecture",
+        "description": "Analyze the software architecture regarding relevant technical design aspects and to support project estimates. Document a rationale for design decisions."
+      },
+      {
+        "id": "BP4",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between the software architecture and the software requirements."
+      },
+      {
+        "id": "BP5",
+        "title": "Communicate agreed software architecture",
+        "description": "Communicate the agreed software architecture to all affected parties."
+      }
+    ],
+    "guideline": "SWE.2 establishes analyzed software architecture with static and dynamic aspects. Decomposition into manageable elements with high cohesion and low coupling. Analysis covers cybersecurity, functional safety per ISO 26262, robustness."
+  },
+  "SWE.3": {
+    "id": "SWE.3",
+    "name": "Software Detailed Design and Unit Construction",
+    "purpose": "The purpose is to establish a software detailed design consistent with the software architecture, and to construct software units consistent with the software detailed design.",
+    "outcomes": [
+      "A detailed design is specified including static and dynamic aspects.",
+      "Software units as specified in the software detailed design are produced.",
+      "Consistency and bidirectional traceability are established between software detailed design, software architecture, source code, and software requirements.",
+      "The source code and the agreed software detailed design are communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify the static aspects of the detailed design",
+        "description": "For each software component specify the behavior of its software units, their static structure and relationships, their interfaces including valid data value ranges and physical units."
+      },
+      {
+        "id": "BP2",
+        "title": "Specify dynamic aspects of the detailed design",
+        "description": "Specify and document the dynamic aspects of the detailed design, including the interactions between relevant software units."
+      },
+      {
+        "id": "BP3",
+        "title": "Develop software units",
+        "description": "Develop and document the software units consistent with the detailed design and according to coding principles."
+      },
+      {
+        "id": "BP4",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between the software detailed design, the software architecture, the software units, and the software requirements."
+      },
+      {
+        "id": "BP5",
+        "title": "Communicate agreed software detailed design",
+        "description": "Communicate the agreed software detailed design and developed software units to all affected parties."
+      }
+    ],
+    "guideline": "SWE.3 - software unit is a logical modeling-level term, not implementation-level. Coding principles expected at CL1 include no implicit type conversions, single entry/exit point, encapsulation, defensive programming, range checks."
+  },
+  "SWE.4": {
+    "id": "SWE.4",
+    "name": "Software Unit Verification",
+    "purpose": "The purpose is to verify that software units are consistent with the software detailed design.",
+    "outcomes": [
+      "Verification measures for software unit verification are specified.",
+      "Software unit verification measures are selected according to the release scope.",
+      "Software units are verified using the selected verification measures.",
+      "Consistency and bidirectional traceability are established between verification measures and software units.",
+      "Results of the software unit verification are summarized and communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify software unit verification measures",
+        "description": "Specify verification measures for each software unit including pass/fail criteria, entry and exit criteria, and the required verification infrastructure."
+      },
+      {
+        "id": "BP2",
+        "title": "Select software unit verification measures",
+        "description": "Document the selection of verification measures considering selection criteria including criteria for regression verification."
+      },
+      {
+        "id": "BP3",
+        "title": "Verify software units",
+        "description": "Perform software unit verification using the selected verification measures and record results."
+      }
+    ],
+    "guideline": "SWE.4 covers unit testing and static verification. Code coverage is accompanying information that helps judging completeness, not a verification objective on its own."
+  },
+  "SWE.5": {
+    "id": "SWE.5",
+    "name": "Software Component Verification and Integration Verification",
+    "purpose": "The purpose is to verify software components against the software architectural design, and to integrate software elements and verify the integrated software elements.",
+    "outcomes": [
+      "Verification measures are specified for software integration verification.",
+      "Verification measures for software components are specified.",
+      "Software elements are integrated up to a complete integrated software.",
+      "Verification measures are selected according to the release scope.",
+      "Software components are verified using the selected verification measures.",
+      "Integrated software elements are verified using the selected verification measures.",
+      "Consistency and bidirectional traceability are established.",
+      "Results are summarized and communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify software integration verification measures",
+        "description": "Specify verification measures based on a defined sequence and preconditions for the integration of software elements."
+      },
+      {
+        "id": "BP2",
+        "title": "Specify verification measures for verifying software component behavior",
+        "description": "Specify verification measures for software component verification against the defined components behavior and interfaces."
+      },
+      {
+        "id": "BP3",
+        "title": "Select verification measures",
+        "description": "Document the selection of integration verification measures for each integration step considering selection criteria."
+      },
+      {
+        "id": "BP4",
+        "title": "Integrate software elements and perform integration verification",
+        "description": "Integrate the software elements until fully integrated and perform the selected integration verification measures."
+      },
+      {
+        "id": "BP5",
+        "title": "Perform software component verification",
+        "description": "Perform the selected verification measures for verifying software component behavior and record results."
+      },
+      {
+        "id": "BP6",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between verification measures and the software architecture and detailed design."
+      },
+      {
+        "id": "BP7",
+        "title": "Summarize and communicate results",
+        "description": "Summarize the verification results and communicate them to all affected parties."
+      }
+    ],
+    "guideline": "SWE.5 verifies software components against the architectural design and integrates software elements."
+  },
+  "SWE.6": {
+    "id": "SWE.6",
+    "name": "Software Verification",
+    "purpose": "The purpose is to ensure that the integrated software is verified to be consistent with the software requirements.",
+    "outcomes": [
+      "Verification measures are specified for software verification based on the software requirements.",
+      "Verification measures are selected according to the release scope.",
+      "The integrated software is verified using the selected verification measures.",
+      "Consistency and bidirectional traceability are established between verification measures and software requirements.",
+      "Results of the software verification are summarized and communicated to all affected parties."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Specify verification measures for software verification",
+        "description": "Specify the verification measures suitable to provide evidence for compliance of the integrated software with the software requirements."
+      },
+      {
+        "id": "BP2",
+        "title": "Select verification measures",
+        "description": "Document the selection of verification measures considering selection criteria including criteria for regression verification."
+      },
+      {
+        "id": "BP3",
+        "title": "Verify the integrated software",
+        "description": "Perform the verification of the integrated software using the selected verification measures and record results."
+      },
+      {
+        "id": "BP4",
+        "title": "Ensure consistency and establish bidirectional traceability",
+        "description": "Ensure consistency and establish bidirectional traceability between verification measures and software requirements."
+      },
+      {
+        "id": "BP5",
+        "title": "Summarize and communicate results",
+        "description": "Summarize the software verification results and communicate them to all affected parties."
+      }
+    ],
+    "guideline": "SWE.6 verifies the integrated software against software requirements. Black-box view of the software."
+  },
+  "SUP.1": {
+    "id": "SUP.1",
+    "name": "Quality Assurance",
+    "purpose": "The purpose is to provide independent and objective assurance that work products and processes comply with defined criteria and that non-conformances are resolved.",
+    "outcomes": [
+      "Quality assurance is performed independently and objectively.",
+      "Criteria for the quality of work products and process performance are defined.",
+      "Conformance with the defined criteria is verified.",
+      "Non-conformances are tracked, resolved, and further prevented.",
+      "Non-conformances are escalated to appropriate levels of management.",
+      "Management ensures that escalated non-conformances are resolved."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Ensure independence of quality assurance",
+        "description": "Ensure that quality assurance is performed independently and objectively without conflicts of interest."
+      },
+      {
+        "id": "BP2",
+        "title": "Define criteria for quality assurance",
+        "description": "Define quality criteria for work products as well as for process tasks and their performance."
+      },
+      {
+        "id": "BP3",
+        "title": "Assure quality of work products",
+        "description": "Identify work products subject to quality assurance, perform appropriate evaluation, and document results."
+      },
+      {
+        "id": "BP4",
+        "title": "Assure quality of process activities",
+        "description": "Identify processes subject to quality assurance, perform appropriate evaluation against quality criteria, and document results."
+      },
+      {
+        "id": "BP5",
+        "title": "Summarize and communicate quality assurance activities",
+        "description": "Regularly report performance, non-conformances, and trends of quality assurance activities."
+      },
+      {
+        "id": "BP6",
+        "title": "Ensure resolution of non-conformances",
+        "description": "Analyze, track, correct, resolve, and further prevent non-conformances found in quality assurance activities."
+      },
+      {
+        "id": "BP7",
+        "title": "Escalate non-conformances",
+        "description": "Escalate relevant non-conformances to appropriate levels of management and other relevant stakeholders."
+      }
+    ],
+    "guideline": "SUP.1 - independence means unbiased and free of conflict of interest. Quality assurance based on review-oriented methods. Just checking existence of work products is insufficient."
+  },
+  "SUP.8": {
+    "id": "SUP.8",
+    "name": "Configuration Management",
+    "purpose": "The purpose is to establish and maintain the integrity of relevant configuration items and baselines.",
+    "outcomes": [
+      "Selection criteria for configuration items are defined and applied.",
+      "Configuration item properties are defined.",
+      "Configuration management is established.",
+      "Modifications are controlled.",
+      "Baselining is applied.",
+      "The status of the configuration items is recorded and reported.",
+      "The completeness and consistency of the baselines is ensured.",
+      "The availability of backup and recovery mechanisms is verified."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Identify configuration items",
+        "description": "Define selection criteria for identifying relevant work products to be subject to configuration management."
+      },
+      {
+        "id": "BP2",
+        "title": "Define configuration item properties",
+        "description": "Define the necessary properties needed for the modification and control of configuration items."
+      },
+      {
+        "id": "BP3",
+        "title": "Establish configuration management",
+        "description": "Establish configuration management mechanisms for control of identified configuration items including parallel modification control."
+      },
+      {
+        "id": "BP4",
+        "title": "Control modifications",
+        "description": "Control modifications using the configuration management mechanisms."
+      },
+      {
+        "id": "BP5",
+        "title": "Establish baselines",
+        "description": "Define and establish baselines for internal purposes and for external product delivery."
+      },
+      {
+        "id": "BP6",
+        "title": "Summarize and communicate configuration status",
+        "description": "Record, summarize, and communicate the status of configuration items and established baselines."
+      },
+      {
+        "id": "BP7",
+        "title": "Ensure completeness and consistency",
+        "description": "Ensure that configuration items information is correct and complete, and baselines are complete and consistent."
+      },
+      {
+        "id": "BP8",
+        "title": "Verify backup and recovery mechanisms availability",
+        "description": "Verify the availability of appropriate backup and recovery mechanisms for the configuration management."
+      }
+    ],
+    "guideline": "SUP.8 - configuration items may include externally procured software. Branching and merging supports parallel work. Backup and recovery is foundational, not the same as archiving."
+  },
+  "SUP.9": {
+    "id": "SUP.9",
+    "name": "Problem Resolution Management",
+    "purpose": "The purpose is to ensure that problems are identified, recorded, analyzed, and their resolution is managed and controlled.",
+    "outcomes": [
+      "Problems are uniquely identified, recorded and classified.",
+      "Problems are analyzed and assessed to determine an appropriate solution.",
+      "Problem resolution is initiated.",
+      "Problems are tracked to closure.",
+      "The status of problems including trends identified are reported to stakeholders."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Identify and record the problem",
+        "description": "Each problem is uniquely identified, described and recorded with supporting information."
+      },
+      {
+        "id": "BP2",
+        "title": "Determine the cause and the impact of the problem",
+        "description": "Analyze the problem, determine its cause and impact, involve relevant parties, and categorize the problem."
+      },
+      {
+        "id": "BP3",
+        "title": "Authorize urgent resolution action",
+        "description": "Obtain authorization for immediate action if a problem requires an urgent resolution."
+      },
+      {
+        "id": "BP4",
+        "title": "Raise alert notifications",
+        "description": "Raise alert notifications if the problem has a high impact on other systems or affected parties."
+      },
+      {
+        "id": "BP5",
+        "title": "Initiate problem resolution",
+        "description": "Initiate appropriate actions to resolve the problem long-term, including review of those actions or initiate a change request."
+      },
+      {
+        "id": "BP6",
+        "title": "Track problems to closure",
+        "description": "Track the status of problems to closure including all related change requests."
+      },
+      {
+        "id": "BP7",
+        "title": "Report the status of problem resolution activities",
+        "description": "Collect and analyze problem resolution data, identify trends, and regularly report results."
+      }
+    ],
+    "guideline": "SUP.9 - problems may be hierarchically organized. Status of a problem must be consistent with the status of all consequent change requests and tasks."
+  },
+  "SUP.10": {
+    "id": "SUP.10",
+    "name": "Change Request Management",
+    "purpose": "The purpose is to ensure that change requests are recorded, analyzed, tracked, approved, and implemented.",
+    "outcomes": [
+      "Requests for changes are recorded and identified.",
+      "Change requests are analyzed and impact is estimated.",
+      "Change requests are approved before implementation and prioritized.",
+      "Bidirectional traceability is established between change requests and affected work products.",
+      "Implementation of change requests is confirmed.",
+      "Change requests are tracked to closure."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Identify and record the change requests",
+        "description": "Each change request is uniquely identified, described, and recorded, including the initiator and reason."
+      },
+      {
+        "id": "BP2",
+        "title": "Analyze and assess change requests",
+        "description": "Change requests are analyzed by relevant parties. Affected work products and dependencies are determined. Impact is assessed."
+      },
+      {
+        "id": "BP3",
+        "title": "Approve change requests before implementation",
+        "description": "Change requests are prioritized and approved for implementation based on analysis results and resource availability."
+      },
+      {
+        "id": "BP4",
+        "title": "Establish bidirectional traceability",
+        "description": "Establish bidirectional traceability between change requests and affected work products, and between change requests and corresponding problem reports."
+      },
+      {
+        "id": "BP5",
+        "title": "Confirm the implementation of change requests",
+        "description": "The implementation of change requests is confirmed before closure by relevant stakeholders."
+      },
+      {
+        "id": "BP6",
+        "title": "Track change requests to closure",
+        "description": "Change requests are tracked to closure and status is communicated to all affected parties."
+      }
+    ],
+    "guideline": "SUP.10 - Change Control Board (CCB) is example mechanism. All affected disciplines and stakeholders must be represented. Decisions taken in time."
+  },
+  "MAN.3": {
+    "id": "MAN.3",
+    "name": "Project Management",
+    "purpose": "The purpose is to identify and control the activities, and establish resources necessary for a project to develop a product, in the context of the project's requirements and constraints.",
+    "outcomes": [
+      "The scope of the work for the project is defined.",
+      "The feasibility of achieving the goals of the project is evaluated.",
+      "The activities and resources necessary to complete the work are sized and estimated.",
+      "Interfaces within the project, and with other projects and organizational units, are identified and monitored.",
+      "Plans for the execution of the project are developed, implemented and maintained.",
+      "Progress of the project is monitored and reported.",
+      "Adjustment is performed when project goals are not achieved."
+    ],
+    "bps": [
+      {
+        "id": "BP1",
+        "title": "Define the scope of work",
+        "description": "Identify the project's goals, motivation and boundaries."
+      },
+      {
+        "id": "BP2",
+        "title": "Define project life cycle",
+        "description": "Define the life cycle for the project, appropriate to the scope, context, and complexity."
+      },
+      {
+        "id": "BP3",
+        "title": "Evaluate feasibility of the project",
+        "description": "Evaluate the feasibility of achieving the goals with respect to time, project estimates, and available resources."
+      },
+      {
+        "id": "BP4",
+        "title": "Define and monitor work packages",
+        "description": "Define and monitor work packages and their dependencies according to the project life cycle and estimations."
+      },
+      {
+        "id": "BP5",
+        "title": "Define and monitor project estimates and resources",
+        "description": "Define and monitor project estimates of effort and resources based on goals, risks, motivation and boundaries."
+      },
+      {
+        "id": "BP6",
+        "title": "Define and monitor required skills, knowledge, and experience",
+        "description": "Identify and monitor the required skills, knowledge, and experience for the project."
+      },
+      {
+        "id": "BP7",
+        "title": "Define and monitor project interfaces and agreed commitments",
+        "description": "Identify and agree interfaces of the project with affected stakeholders and monitor agreed commitments."
+      },
+      {
+        "id": "BP8",
+        "title": "Define and monitor project schedule",
+        "description": "Allocate resources to work packages and schedule each activity. Monitor the performance against schedule."
+      },
+      {
+        "id": "BP9",
+        "title": "Ensure consistency",
+        "description": "Regularly adjust estimates, resources, skills, work packages, schedules, plans, interfaces, and commitments for consistency."
+      },
+      {
+        "id": "BP10",
+        "title": "Review and report progress of the project",
+        "description": "Regularly review and report the status of the project and the fulfillment of work packages."
+      }
+    ],
+    "guideline": "MAN.3 - scope of work covers motivation, boundaries, and constraints. Work packages should not exceed two monitoring cycles. Weekly monitoring is appropriate as a rule of thumb."
+  }
+}

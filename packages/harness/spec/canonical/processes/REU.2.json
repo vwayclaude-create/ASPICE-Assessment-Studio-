@@ -1,0 +1,95 @@
+{
+  "id": "REU.2",
+  "name": "Management of Products for Reuse",
+  "category": "REU",
+  "pamSection": "4.11.1",
+  "purpose": "The purpose is to ensure that reused work products are analyzed, verified, and approved for their target context.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Products for reuse are selected using defined criteria."
+    },
+    {
+      "id": 2,
+      "text": "Products for reuse are analyzed for portability and interoperability."
+    },
+    {
+      "id": 3,
+      "text": "Limitations for reuse are defined and communicated."
+    },
+    {
+      "id": 4,
+      "text": "Products for reuse are verified."
+    },
+    {
+      "id": 5,
+      "text": "Products for reuse are provided to affected parties."
+    },
+    {
+      "id": 6,
+      "text": "Communication mechanism is established with the reuse product provider."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Select products for reuse",
+      "description": "Select the products to be reused using defined criteria. Note 1: Products for reuse may be systems, hardware or software components, third party components or legacy components.",
+      "pamCitation": "PAM §REU.2 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Analyze the reuse capability of the product",
+      "description": "Analyze the designated target architecture and the product to be reused to determine its applicability in the target architecture according to relevant criteria. reused in the target architecture, or portability/interoperability.",
+      "pamCitation": "PAM §REU.2 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Define limitations for reuse",
+      "description": "Define and communicate limitations for the products to be reused. their target context. | | | 2) Products for reuse are analyzed for portability and interoperability. 3) Limitations for reuse are defined and communicated. 4) Products for reuse are verified. 5) Products for reuse are provided to affected parties. 6) Communication mechanism is established with the reuse product provider. | | | components or legacy components. | | | architecture and the product to be reused to determine its applicability in the target architecture according to relevant criteria. reused in the target architecture, or portability/interoperability. | | | to be reused.",
+      "pamCitation": "PAM §REU.2 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Ensure qualification of products for reuse",
+      "description": "Provide evidence that the product for reuse is qualified for the intended use of the deliverable.",
+      "pamCitation": "PAM §REU.2 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Provide products for reuse",
+      "description": "Make available the product to be reused to affected parties. or system components.",
+      "pamCitation": "PAM §REU.2 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Communicate information about effectiveness of reuse activities",
+      "description": "Establish communication and notification mechanism about experiences and technical outcomes to the provider of reused products. product is under development or not. REU.2 Management of Products for Reuse 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §REU.2 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "04-02",
+      "name": "Domain architecture"
+    },
+    {
+      "id": "12-03",
+      "name": "Reuse candidate"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    },
+    {
+      "id": "15-07",
+      "name": "Reuse analysis evidence"
+    },
+    {
+      "id": "13-53",
+      "name": "Qualification evidence"
+    }
+  ],
+  "inputWorkProducts": [],
+  "traceBPs": []
+}

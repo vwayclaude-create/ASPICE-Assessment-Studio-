@@ -1,0 +1,92 @@
+{
+  "id": "SUP.9",
+  "name": "Problem Resolution Management",
+  "category": "SUP",
+  "pamSection": "4.8.3",
+  "purpose": "The purpose of the Problem Resolution Management Process is to ensure that problems are identified, recorded, analyzed, and their resolution is managed and controlled.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Problems are uniquely identified, recorded and classified."
+    },
+    {
+      "id": 2,
+      "text": "Problems are analyzed and assessed to determine an appropriate solution."
+    },
+    {
+      "id": 3,
+      "text": "Problem resolution is initiated."
+    },
+    {
+      "id": 4,
+      "text": "Problems are tracked to closure."
+    },
+    {
+      "id": 5,
+      "text": "The status of problems including trends identified are reported to stakeholders."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Identify and record the problem",
+      "description": "Each problem is uniquely identified, described and recorded. A status is assigned to each problem to facilitate tracking. Supporting information is provided to reproduce and diagnose the problem. NOTE 1: Problems may relate to e.g., product, resources, or methods. NOTE 2: Example values for the problem status are “new”, “solved”, “closed”, etc. NOTE 3: Supporting information may include e.g, the origin of the problem, how it can be reproduced, environmental information, by whom it has been detected. NOTE 4: Unique identification supports traceability to changes made as needed by the change request management process (SUP.10).",
+      "pamCitation": "PAM §SUP.9 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Determine the cause and the impact of the problem",
+      "description": "Analyze the problem, determine its cause, including common causes if existing, and impact. Involve relevant parties. Categorize the problem. NOTE 5: Problem categorization (e.g., light, medium, severe) may be based on severity, criticality, urgency, etc.",
+      "pamCitation": "PAM §SUP.9 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Authorize urgent resolution action",
+      "description": "Obtain authorization for immediate action if a problem requires an urgent resolution according to the categorization.",
+      "pamCitation": "PAM §SUP.9 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Raise alert notifications",
+      "description": "If according to the categorization the problem has a high impact on other systems or other affected parties, an alert notification needs to be raised accordingly.",
+      "pamCitation": "PAM §SUP.9 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Initiate problem resolution",
+      "description": "Initiate appropriate actions according to the categorization to resolve the problem long-term, including review of those actions or initiate a change request. This includes synchronization and consistency with short-term urgent resolution actions, if applicable.",
+      "pamCitation": "PAM §SUP.9 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Track problems to closure",
+      "description": "Track the status of problems to closure including all related change requests. The closure of problems is accepted by relevant stakeholders.",
+      "pamCitation": "PAM §SUP.9 BP6"
+    },
+    {
+      "id": "BP7",
+      "title": "Report the status of problem resolution activities",
+      "description": "Collect and analyze problem resolution management data, identify trends, and initiate related actions. Regularly report the results of data analysis, the identified trends and the status of problem resolution activities to relevant stakeholders. NOTE 6: Collected data may contain information about where the problems occurred, how and when they were found, what their impacts were, etc. SUP.9 Problem Resolution Management 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO",
+      "pamCitation": "PAM §SUP.9 BP7"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "13-07",
+      "name": "Problem"
+    },
+    {
+      "id": "15-55",
+      "name": "Problem analysis evidence"
+    },
+    {
+      "id": "15-12",
+      "name": "Problem status"
+    }
+  ],
+  "inputWorkProducts": [],
+  "traceBPs": [
+    "BP1",
+    "BP5"
+  ]
+}

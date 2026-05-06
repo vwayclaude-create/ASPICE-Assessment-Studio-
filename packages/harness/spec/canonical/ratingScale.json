@@ -1,0 +1,51 @@
+{
+  "scale": "extended-6-point",
+  "basedOn": "ISO/IEC 33020:2019 (PAM v4.0 §3.2.2) 4-point ordinal scale",
+  "levels": [
+    { "code": "N",  "name": "Not achieved",       "min": 0,  "max": 15,  "collapseTo": "N", "ordinal": 0 },
+    { "code": "P-", "name": "Partially lower",    "min": 16, "max": 32,  "collapseTo": "P", "ordinal": 1 },
+    { "code": "P+", "name": "Partially upper",    "min": 33, "max": 50,  "collapseTo": "P", "ordinal": 2 },
+    { "code": "L-", "name": "Largely lower",      "min": 51, "max": 67,  "collapseTo": "L", "ordinal": 3 },
+    { "code": "L+", "name": "Largely upper",      "min": 68, "max": 85,  "collapseTo": "L", "ordinal": 4 },
+    { "code": "F",  "name": "Fully",              "min": 86, "max": 100, "collapseTo": "F", "ordinal": 5 }
+  ],
+  "collapsedScale": {
+    "N": { "ordinal": 0 },
+    "P": { "ordinal": 1 },
+    "L": { "ordinal": 2 },
+    "F": { "ordinal": 3 }
+  },
+  "appliesTo": {
+    "bp": "extended-6-point",
+    "gp": "extended-6-point",
+    "pa": "extended-6-point",
+    "cl": "collapsed-4-point"
+  },
+  "capabilityLevels": {
+    "CL0": { "description": "Incomplete", "required": [] },
+    "CL1": {
+      "description": "Performed",
+      "required": [
+        { "pa": "PA 1.1", "minCollapsed": "F" }
+      ]
+    },
+    "CL2": {
+      "description": "Managed",
+      "required": [
+        { "pa": "PA 1.1", "minCollapsed": "F" },
+        { "pa": "PA 2.1", "minCollapsed": "L" },
+        { "pa": "PA 2.2", "minCollapsed": "L" }
+      ]
+    },
+    "CL3": {
+      "description": "Established",
+      "required": [
+        { "pa": "PA 1.1", "minCollapsed": "F" },
+        { "pa": "PA 2.1", "minCollapsed": "F" },
+        { "pa": "PA 2.2", "minCollapsed": "F" },
+        { "pa": "PA 3.1", "minCollapsed": "L" },
+        { "pa": "PA 3.2", "minCollapsed": "L" }
+      ]
+    }
+  }
+}

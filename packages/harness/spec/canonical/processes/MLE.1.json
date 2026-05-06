@@ -1,0 +1,124 @@
+{
+  "id": "MLE.1",
+  "name": "Machine Learning Requirements Analysis",
+  "category": "MLE",
+  "pamSection": "4.6.1",
+  "purpose": "The purpose is to refine the machine learning-related software requirements into a set of ML requirements.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "The ML requirements including ML data requirements are identified and specified based on the software requirements and the components of the software architecture."
+    },
+    {
+      "id": 2,
+      "text": "ML requirements are structured and prioritized."
+    },
+    {
+      "id": 3,
+      "text": "ML requirements are analyzed for correctness and verifiability."
+    },
+    {
+      "id": 4,
+      "text": "The impact of ML requirements on the ML operating environment is analyzed."
+    },
+    {
+      "id": 5,
+      "text": "Consistency and bidirectional traceability are established between ML requirements and software requirements, and between ML requirements and software architecture."
+    },
+    {
+      "id": 6,
+      "text": "The ML requirements are agreed and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify ML requirements",
+      "description": "Use the software requirements and the software architecture to identify and specify functional and non-functional ML requirements, as well as ML data requirements specifying data characteristics (e.g., gender, weather conditions, street conditions within the ODD) and their expected distributions. robustness, performance, and level of trustworthiness. also for other MLE processes. requirements.",
+      "pamCitation": "PAM §MLE.1 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Structure ML requirements",
+      "description": "Structure and prioritize the ML requirements. Note 4: Examples for structuring criteria can be grouping (e.g., by functionality) or variants identification. release scopes. Refer to SPL.2.BP1.",
+      "pamCitation": "PAM §MLE.1 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Analyze ML requirements",
+      "description": "Analyze the specified ML requirements including their interdependencies to ensure correctness, technical feasibility, and ability for machine learning model testing, and to support project management regarding project estimates. requirements. | | | the software requirements and the components of the software architecture. 2) ML requirements are structured and prioritized. 3) ML requirements are analyzed for correctness and verifiability. 4) The impact of ML requirements on the ML operating environment is analyzed. 5) Consistency and bidirectional traceability are established between ML requirements and software requirements, and between ML requirements and software architecture. 6) The ML requirements are agreed and communicated to all affected parties. | | | architecture to identify and specify functional and non-functional ML requirements, as well as ML data requirements specifying data characteristics (e.g., gender, weather conditions, street conditions within the ODD) and their expected distributions. robustness, performance, and level of trustworthiness. also for other MLE processes. requirements. | | | identification. release scopes. Refer to SPL.2.BP1. | | | interdependencies to ensure correctness, technical feasibility, and ability for machine learning model testing, and to support project management regarding project estimates.",
+      "pamCitation": "PAM §MLE.1 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Analyze the impact on the ML operating environment",
+      "description": "Analyze the impact that the ML requirements will have on interfaces of software components and the ML operating environment. the trained ML model and the deployed ML model need for execution.",
+      "pamCitation": "PAM §MLE.1 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between ML requirements and software requirements and between ML requirements and the software architecture. requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "pamCitation": "PAM §MLE.1 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Communicate agreed ML requirements and impact on the operating",
+      "description": "environment. Communicate the agreed ML requirements, and the results of the impact analysis on the ML operating environment to all affected parties. MLE.1 Machine Learning Requirements Analysis 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §MLE.1 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "17-00",
+      "name": "Requirement"
+    },
+    {
+      "id": "17-54",
+      "name": "Requirement attribute"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency evidence"
+    },
+    {
+      "id": "15-51",
+      "name": "Analysis results"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "04-06",
+      "name": "System Architecture",
+      "fromProcess": "SYS.3"
+    },
+    {
+      "id": "13-16",
+      "name": "Change request",
+      "fromProcess": "SUP.10"
+    },
+    {
+      "id": "17-00",
+      "name": "Requirement",
+      "fromProcess": "SYS.2"
+    },
+    {
+      "id": "17-54",
+      "name": "Requirement Attribute",
+      "fromProcess": "SYS.2"
+    },
+    {
+      "id": "17-57",
+      "name": "Special Characteristics",
+      "fromProcess": "SYS.3"
+    }
+  ],
+  "traceBPs": [
+    "BP3",
+    "BP5"
+  ]
+}

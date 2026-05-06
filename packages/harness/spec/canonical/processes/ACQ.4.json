@@ -1,0 +1,93 @@
+{
+  "id": "ACQ.4",
+  "name": "Supplier Monitoring",
+  "category": "ACQ",
+  "pamSection": "4.1.1",
+  "purpose": "The purpose is to track and assess the performance of an external contract-based supplier company against agreed commitments.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Joint activities, as agreed between the customer and the supplier, are performed."
+    },
+    {
+      "id": 2,
+      "text": "All information, agreed upon for exchange, is communicated regularly between the customer and the supplier."
+    },
+    {
+      "id": 3,
+      "text": "Performance of the supplier is monitored against the agreements."
+    },
+    {
+      "id": 4,
+      "text": "Changes to the agreement, if needed, are negotiated between the customer and the supplier and documented in the agreement."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Agree on and maintain joint activities, joint interfaces, and information to be",
+      "description": "exchanged. Establish and maintain an agreement on information to be exchanged, on joint activities, joint interfaces, responsibilities, type and frequency of joint activities, communications, meetings, status reports, and reviews.",
+      "pamCitation": "PAM §ACQ.4 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Exchange all agreed information",
+      "description": "Use the defined joint interfaces between customer and supplier for the exchange of all agreed information.",
+      "pamCitation": "PAM §ACQ.4 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Review development work products with the supplier",
+      "description": "Review development work products with the supplier on the agreed regular basis, covering technical aspects, problems and risks. Track open measures.",
+      "pamCitation": "PAM §ACQ.4 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Review progress of the supplier",
+      "description": "Review progress of the supplier regarding schedule, quality, and cost on the agreed regular basis. Track open measures to closure and perform risk mitigation activities.",
+      "pamCitation": "PAM §ACQ.4 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Act to correct deviations",
+      "description": "Take action when agreed objectives are not achieved. Negotiate changes to objectives and document them in the agreements. company against agreed commitments. | | 2) All information, agreed upon for exchange, is communicated regularly between the customer and the supplier. 3) Performance of the supplier is monitored against the agreements. 4) Changes to the agreement, if needed, are negotiated between the customer and the supplier and documented in the agreement. | | exchanged. Establish and maintain an agreement on information to be exchanged, on joint activities, joint interfaces, responsibilities, type and frequency of joint activities, communications, meetings, status reports, and reviews. | | customer and supplier for the exchange of all agreed information. | | work products with the supplier on the agreed regular basis, covering technical aspects, problems and risks. Track open measures. schedule, quality, and cost on the agreed regular basis. Track open measures to closure and perform risk mitigation activities. Negotiate changes to objectives and document them in the agreements. | | ACQ.4 Supplier Monitoring 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO",
+      "pamCitation": "PAM §ACQ.4 BP5"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "02-01",
+      "name": "Commitment/Agreement"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    },
+    {
+      "id": "13-09",
+      "name": "Meeting support evidence"
+    },
+    {
+      "id": "13-14",
+      "name": "Progress status"
+    },
+    {
+      "id": "13-16",
+      "name": "Change request"
+    },
+    {
+      "id": "13-19",
+      "name": "Review evidence"
+    },
+    {
+      "id": "14-02",
+      "name": "Corrective action"
+    },
+    {
+      "id": "15-51",
+      "name": "Analysis results"
+    }
+  ],
+  "inputWorkProducts": [],
+  "traceBPs": []
+}

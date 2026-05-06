@@ -1,0 +1,89 @@
+{
+  "description": "Hand-curated ASPICE v4.0 V-model + supporting-process edges. PAM v4.0 does not publish a per-process Input Work Product table, so canonical input relationships are encoded here. The extractor merges these into each process's inputWorkProducts. Each edge lists the specific WP IDs that flow across the boundary. All WP IDs are v4.0 catalog entries.",
+  "edges": [
+    { "from": "SYS.1", "to": "SYS.2", "wps": ["17-00", "17-54"] },
+    { "from": "SYS.2", "to": "SYS.3", "wps": ["17-00", "17-54"] },
+    { "from": "SYS.2", "to": "SWE.1", "wps": ["17-00", "17-54"] },
+    { "from": "SYS.2", "to": "HWE.1", "wps": ["17-00", "17-54"] },
+    { "from": "SYS.2", "to": "MLE.1", "wps": ["17-00", "17-54"] },
+    { "from": "SYS.3", "to": "SWE.1", "wps": ["04-06", "17-57"] },
+    { "from": "SYS.3", "to": "HWE.1", "wps": ["04-06", "17-57"] },
+    { "from": "SYS.3", "to": "MLE.1", "wps": ["04-06", "17-57"] },
+    { "from": "SYS.3", "to": "SYS.4", "wps": ["04-06", "08-58"] },
+    { "from": "SYS.3", "to": "SYS.5", "wps": ["04-06"] },
+
+    { "from": "SWE.1", "to": "SWE.2", "wps": ["17-00"] },
+    { "from": "SWE.2", "to": "SWE.3", "wps": ["04-04"] },
+    { "from": "SWE.2", "to": "SWE.5", "wps": ["04-04"] },
+    { "from": "SWE.3", "to": "SWE.4", "wps": ["04-05", "11-05"] },
+    { "from": "SWE.4", "to": "SWE.5", "wps": ["11-05"] },
+    { "from": "SWE.5", "to": "SWE.6", "wps": ["01-03"] },
+    { "from": "SWE.6", "to": "SYS.4", "wps": ["01-03"] },
+    { "from": "SWE.1", "to": "SWE.6", "wps": ["17-00"] },
+
+    { "from": "HWE.1", "to": "HWE.2", "wps": ["17-00"] },
+    { "from": "HWE.2", "to": "HWE.3", "wps": ["04-52", "04-53"] },
+    { "from": "HWE.2", "to": "SYS.4", "wps": ["04-52"] },
+    { "from": "HWE.1", "to": "HWE.4", "wps": ["17-00"] },
+    { "from": "HWE.3", "to": "HWE.4", "wps": ["04-52"] },
+
+    { "from": "MLE.1", "to": "MLE.2", "wps": ["17-00"] },
+    { "from": "MLE.2", "to": "MLE.3", "wps": ["04-51"] },
+    { "from": "MLE.3", "to": "MLE.4", "wps": ["01-53"] },
+    { "from": "MLE.1", "to": "MLE.4", "wps": ["17-00"] },
+    { "from": "SUP.11", "to": "MLE.3", "wps": ["03-53", "19-50"] },
+    { "from": "SUP.11", "to": "MLE.4", "wps": ["03-53"] },
+
+    { "from": "SYS.4", "to": "SYS.5", "wps": ["11-06"] },
+    { "from": "SYS.5", "to": "VAL.1", "wps": ["15-52", "11-06"] },
+    { "from": "SYS.2", "to": "VAL.1", "wps": ["17-00"] },
+
+    { "from": "SYS.4", "to": "SPL.2", "wps": ["11-06"] },
+    { "from": "SYS.5", "to": "SPL.2", "wps": ["15-52"] },
+
+    { "from": "MAN.3", "to": "SYS.1", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "SYS.2", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "SYS.3", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "SYS.4", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "SYS.5", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "SWE.1", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "SWE.2", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "SWE.3", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "HWE.1", "wps": ["08-56"] },
+    { "from": "MAN.3", "to": "HWE.2", "wps": ["08-56"] },
+
+    { "from": "MAN.5", "to": "MAN.3", "wps": ["15-09"] },
+    { "from": "MAN.6", "to": "MAN.3", "wps": ["03-06"] },
+
+    { "from": "SUP.10", "to": "SYS.2", "wps": ["13-16"] },
+    { "from": "SUP.10", "to": "SYS.3", "wps": ["13-16"] },
+    { "from": "SUP.10", "to": "SWE.1", "wps": ["13-16"] },
+    { "from": "SUP.10", "to": "SWE.2", "wps": ["13-16"] },
+    { "from": "SUP.10", "to": "SWE.3", "wps": ["13-16"] },
+    { "from": "SUP.10", "to": "HWE.1", "wps": ["13-16"] },
+    { "from": "SUP.10", "to": "HWE.2", "wps": ["13-16"] },
+    { "from": "SUP.10", "to": "MLE.1", "wps": ["13-16"] },
+
+    { "from": "SUP.9", "to": "SUP.10", "wps": ["13-07"] },
+
+    { "from": "SUP.8", "to": "SYS.4", "wps": ["13-08", "01-52"] },
+    { "from": "SUP.8", "to": "SWE.5", "wps": ["13-08", "01-52"] },
+    { "from": "SUP.8", "to": "SPL.2", "wps": ["13-08", "01-52"] },
+
+    { "from": "SUP.1", "to": "SYS.1", "wps": ["13-19"] },
+    { "from": "SUP.1", "to": "SYS.2", "wps": ["13-19"] },
+    { "from": "SUP.1", "to": "SYS.3", "wps": ["13-19"] },
+    { "from": "SUP.1", "to": "SWE.1", "wps": ["13-19"] },
+    { "from": "SUP.1", "to": "SWE.2", "wps": ["13-19"] },
+    { "from": "SUP.1", "to": "SWE.3", "wps": ["13-19"] },
+    { "from": "SUP.1", "to": "SWE.6", "wps": ["13-19"] },
+    { "from": "SUP.1", "to": "HWE.2", "wps": ["13-19"] },
+    { "from": "SUP.1", "to": "VAL.1", "wps": ["13-19"] },
+
+    { "from": "ACQ.4", "to": "SYS.1", "wps": ["13-52"] },
+    { "from": "ACQ.4", "to": "SYS.4", "wps": ["13-06"] },
+
+    { "from": "REU.2", "to": "SYS.3", "wps": ["15-07"] },
+    { "from": "REU.2", "to": "SWE.2", "wps": ["15-07"] }
+  ]
+}

@@ -1,0 +1,116 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { readFile, readdir } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { dirname, resolve, extname } from "node:path";
+import { Harness } from "../src/harness.js";
+import { ruleScorer } from "../src/evaluators/ruleScorer.js";
+import { indexArtifacts } from "../src/io/artifactIndex.js";
+import { loadWorkProducts } from "../spec/canonical/index.js";
+import { renderReport } from "../src/io/reporter.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const FIXTURE_DIR = resolve(__dirname, "fixtures", "project");
+
+async function loadProjectFixture() {
+  const files = await readdir(FIXTURE_DIR);
+  const artifacts = await Promise.all(
+    files
+      .filter((f) => [".md", ".csv", ".txt"].includes(extname(f)))
+      .map(async (f) => {
+        const path = resolve(FIXTURE_DIR, f);
+        const text = await readFile(path, "utf8");
+        return { name: f, path, mimeType: "text/plain", text, sizeBytes: text.length };
+      })
+  );
+  return indexArtifacts(artifacts, { wpCatalog: loadWorkProducts() });
+}
+
+test("project: artifactIndex tags WP candidates + extracts IDs", async () => {
+  const artifacts = await loadProjectFixture();
+  const srs = artifacts.find((a) => a.name === "system_srs.md");
+  assert.ok(srs, "SRS fixture loaded");
+  assert.ok(srs.wpidCandidates.length > 0, "SRS should have WPID candidates");
+  assert.ok(srs.extractedIds.some((id) => /^REQ-SYS-/.test(id)),
+    `expected REQ-SYS-* ids, got ${srs.extractedIds.join(",")}`);
+
+  const cr = artifacts.find((a) => a.name === "change_request_042.md");
+  assert.ok(cr.extractedIds.includes("CR-042"));
+});
+
+test("project: evaluateProject returns per-process verdicts + cross-process block", async () => {
+  const artifacts = await loadProjectFixture();
+  const harness = new Harness({ scorer: ruleScorer, targetLevel: 1 });
+  const verdict = await harness.evaluateProject({
+    artifacts,
+    processIds: ["SYS.1", "SYS.2", "SYS.3", "SWE.1", "SYS.5", "SUP.10"],
+  });
+
+  assert.equal(verdict.processes.length, 6);
+  assert.ok(verdict.crossProcess);
+  assert.ok(verdict.crossProcess.graph.edges.length > 0, "graph should have edges (seed)");
+  assert.equal(verdict.crossProcess.graph.source, "seed");
+});
+
+test("project: trace matrices report coverage for engineering edges", async () => {
+  const artifacts = await loadProjectFixture();
+  const harness = new Harness({ scorer: ruleScorer, targetLevel: 1 });
+  const verdict = await harness.evaluateProject({
+    artifacts,
+    processIds: ["SYS.1", "SYS.2", "SYS.3", "SWE.1"],
+  });
+  const matrices = verdict.crossProcess.traceMatrices;
+  assert.ok(matrices.length > 0, "some trace matrices should be computed");
+
+  const sys2ToSwe1 = matrices.find((m) => m.sourceProcess === "SYS.2" && m.targetProcess === "SWE.1");
+  assert.ok(sys2ToSwe1, "SYS.2 → SWE.1 trace matrix expected");
+  assert.ok(sys2ToSwe1.sourceIds.length > 0, "SYS.2 source IDs populated");
+  assert.ok(sys2ToSwe1.coveragePercent > 0, `expected positive coverage, got ${sys2ToSwe1.coveragePercent}%`);
+});
+
+test("project: changePropagation detects CR-042 references downstream", async () => {
+  const artifacts = await loadProjectFixture();
+  const harness = new Harness({ scorer: ruleScorer });
+  const verdict = await harness.evaluateProject({
+    artifacts,
+    processIds: ["SUP.10", "SYS.3", "SYS.5", "SWE.1"],
+  });
+  const ch = verdict.crossProcess.changes;
+  assert.equal(ch.summary.total, 1, "one CR in fixture");
+  const r = ch.report.find((r) => r.crId === "CR-042");
+  assert.ok(r, "CR-042 should be reported");
+  assert.ok(r.impactedArtifactCount >= 2, `CR-042 referenced by multiple artifacts, got ${r.impactedArtifactCount}`);
+  assert.ok(["propagated", "verification-only"].includes(r.status));
+});
+
+test("project: coverage finds REQ → TC links", async () => {
+  const artifacts = await loadProjectFixture();
+  const harness = new Harness({ scorer: ruleScorer });
+  const verdict = await harness.evaluateProject({
+    artifacts,
+    processIds: ["SYS.2", "SYS.5"],
+  });
+  const cov = verdict.crossProcess.coverage;
+  assert.ok(cov.totalRequirements > 0);
+  assert.ok(cov.coveragePercent > 0, `coverage should be positive, got ${cov.coveragePercent}%`);
+  // REQ-SYS-003 is deliberately uncovered in the fixture
+  assert.ok(
+    cov.uncovered.includes("REQ-SYS-003"),
+    `REQ-SYS-003 should be flagged uncovered, got uncovered=${cov.uncovered.join(",")}`
+  );
+});
+
+test("project: markdown rendering produces sections we expect", async () => {
+  const artifacts = await loadProjectFixture();
+  const harness = new Harness({ scorer: ruleScorer });
+  const verdict = await harness.evaluateProject({
+    artifacts,
+    processIds: ["SYS.1", "SYS.2", "SYS.3", "SWE.1", "SYS.5", "SUP.10"],
+  });
+  const md = renderReport(verdict, "markdown");
+  assert.match(md, /# ASPICE Project Assessment Report/);
+  assert.match(md, /## Capability Summary/);
+  assert.match(md, /## Cross-Process Verification/);
+  assert.match(md, /### Traceability Matrix/);
+  assert.match(md, /### Change Propagation/);
+});

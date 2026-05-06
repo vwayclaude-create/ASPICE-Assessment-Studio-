@@ -1,0 +1,124 @@
+{
+  "id": "SYS.2",
+  "name": "System Requirements Analysis",
+  "category": "SYS",
+  "pamSection": "4.3.2",
+  "purpose": "The purpose is to establish a structured and analyzed set of system requirements consistent with the stakeholder requirements.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "System requirements are specified."
+    },
+    {
+      "id": 2,
+      "text": "System requirements are structured and prioritized."
+    },
+    {
+      "id": 3,
+      "text": "System requirements are analyzed for correctness and technical feasibility."
+    },
+    {
+      "id": 4,
+      "text": "The impact of system requirements on the operating environment is analyzed."
+    },
+    {
+      "id": 5,
+      "text": "Consistency and bidirectional traceability are established between system requirements and stakeholder requirements."
+    },
+    {
+      "id": 6,
+      "text": "The system requirements are agreed and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify system requirements",
+      "description": "Use the stakeholder requirements to identify and document the functional and non-functional requirements for the system according to defined characteristics for requirements. 26262-8:2018, or the INCOSE Guide For Writing Requirements. verifiability (i.e., verification criteria being inherent in the requirements text), unambiguity/comprehensibility, freedom from design and implementation, and not contradicting any other requirement).",
+      "pamCitation": "PAM §SYS.2 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Structure system requirements",
+      "description": "Structure and prioritize the system requirements. Note 3: Examples for structuring criteria can be grouping (e.g., by functionality) or product variants identification. release scopes. Please refer to SPL.2.BP1.",
+      "pamCitation": "PAM §SYS.2 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Analyze system requirements",
+      "description": "Analyze the specified system requirements including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates. prototype development or product demonstrators. with the stakeholder requirements. | | | 2) System requirements are structured and prioritized. 3) System requirements are analyzed for correctness and technical feasibility. 4) The impact of system requirements on the operating environment is analyzed. 5) Consistency and bidirectional traceability are established between system requirements and stakeholder requirements. 6) The system requirements are agreed and communicated to all affected parties. | | | document the functional and non-functional requirements for the system according to defined characteristics for requirements. 26262-8:2018, or the INCOSE Guide For Writing Requirements. verifiability (i.e., verification criteria being inherent in the requirements text), unambiguity/comprehensibility, freedom from design and implementation, and not contradicting any other requirement). | | | identification. release scopes. Please refer to SPL.2.BP1. | | | including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates. prototype development or product demonstrators. | | |",
+      "pamCitation": "PAM §SYS.2 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Analyze the impact on the system context",
+      "description": "Analyze the impact that the system requirements will have on elements in the relevant system context.",
+      "pamCitation": "PAM §SYS.2 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between system requirements and stakeholder requirements. requests, and supports the demonstration of coverage of stakeholder requirements. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. trace to. Examples are process requirements. Such stakeholder requirements are still subject to verification.",
+      "pamCitation": "PAM §SYS.2 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Communicate agreed system requirements and impact on the system",
+      "description": "context. Communicate the agreed system requirements, and results of the impact analysis on the system context, to all affected parties. SYS.2 System Requirements Analysis 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §SYS.2 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "17-00",
+      "name": "Requirement"
+    },
+    {
+      "id": "17-54",
+      "name": "Requirement Attribute"
+    },
+    {
+      "id": "15-51",
+      "name": "Analysis Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "08-56",
+      "name": "Schedule",
+      "fromProcess": "MAN.3"
+    },
+    {
+      "id": "13-16",
+      "name": "Change request",
+      "fromProcess": "SUP.10"
+    },
+    {
+      "id": "13-19",
+      "name": "Review evidence",
+      "fromProcess": "SUP.1"
+    },
+    {
+      "id": "17-00",
+      "name": "Requirement",
+      "fromProcess": "SYS.1"
+    },
+    {
+      "id": "17-54",
+      "name": "Requirement Attribute",
+      "fromProcess": "SYS.1"
+    }
+  ],
+  "traceBPs": [
+    "BP3",
+    "BP5"
+  ]
+}

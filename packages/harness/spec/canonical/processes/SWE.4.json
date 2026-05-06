@@ -1,0 +1,103 @@
+{
+  "id": "SWE.4",
+  "name": "Software Unit Verification",
+  "category": "SWE",
+  "pamSection": "4.4.4",
+  "purpose": "The purpose is to verify that software units are consistent with the software detailed design.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Verification measures for software unit verification are specified."
+    },
+    {
+      "id": 2,
+      "text": "Software unit verification measures are selected according to the release scope, including criteria for regression verification."
+    },
+    {
+      "id": 3,
+      "text": "Software units are verified using the selected verification measures, and results are recorded."
+    },
+    {
+      "id": 4,
+      "text": "Consistency and bidirectional traceability are established between verification measures and software units; and bidirectional traceability is established between verification results and verification measures."
+    },
+    {
+      "id": 5,
+      "text": "Results of the software unit verification are summarized and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify software unit verification measures",
+      "description": "Specify verification measures for each software unit defined in the software detailed design, including • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure.",
+      "pamCitation": "PAM §SWE.4 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Select software unit verification measures",
+      "description": "Document the selection of verification measures considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope.",
+      "pamCitation": "PAM §SWE.4 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Verify software units",
+      "description": "Perform software unit verification using the selected verification measures. Record the verification results including pass/fail status and corresponding verification measure data. software units | | | | X | 2) Software unit verification measures are selected according to the release scope, including criteria for regression verification. 3) Software units are verified using the selected verification measures, and results are recorded. 4) Consistency and bidirectional traceability are established between verification measures and software units; and bidirectional traceability is established between verification results and verification measures. 5) Results of the software unit verification are summarized and communicated to all affected parties. | | | each software unit defined in the software detailed design, including • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure. verification measures considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope. | | | verification measures. Record the verification results including pass/fail status and corresponding verification measure data.",
+      "pamCitation": "PAM §SWE.4 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between verification measures and the software units defined in the detailed design. Establish bidirectional traceability between the verification results and the verification measures. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "pamCitation": "PAM §SWE.4 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Summarize and communicate results",
+      "description": "Summarize the results of software unit verification and communicate them to all affected parties. parties to judge the consequences. SWE.4 Software Unit Verification 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO",
+      "pamCitation": "PAM §SWE.4 BP5"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-60",
+      "name": "Verification Measure"
+    },
+    {
+      "id": "03-50",
+      "name": "Verification Measure Data"
+    },
+    {
+      "id": "08-58",
+      "name": "Verification Measure Selection Set"
+    },
+    {
+      "id": "15-52",
+      "name": "Verification Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "04-05",
+      "name": "Software Detailed Design",
+      "fromProcess": "SWE.3"
+    },
+    {
+      "id": "11-05",
+      "name": "Software Unit",
+      "fromProcess": "SWE.3"
+    }
+  ],
+  "traceBPs": [
+    "BP3",
+    "BP4"
+  ]
+}

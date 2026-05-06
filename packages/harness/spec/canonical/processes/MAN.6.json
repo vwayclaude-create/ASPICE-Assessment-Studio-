@@ -1,0 +1,91 @@
+{
+  "id": "MAN.6",
+  "name": "Measurement",
+  "category": "MAN",
+  "pamSection": "4.9.3",
+  "purpose": "The purpose is to Collect and analyze data relating to the development results and processes implemented within the organization and its projects, to support effective management of the processes.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "The measurement information needs that are necessary to evaluate the achievement of process objectives and the achievement of desired work products are identified."
+    },
+    {
+      "id": 2,
+      "text": "An appropriate set of metrics, driven by the information needs are identified and/or developed."
+    },
+    {
+      "id": 3,
+      "text": "Measurement activities are identified and performed."
+    },
+    {
+      "id": 4,
+      "text": "The required metrics are collected, stored, analyzed, and the results interpreted."
+    },
+    {
+      "id": 5,
+      "text": "Metrics are used to support decisions and provide an objective basis for communication."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Identify information needs",
+      "description": "Identify the measurement information needs that are necessary to evaluate the achievement of process objectives and work products. used in an iterative way.",
+      "pamCitation": "PAM §MAN.6 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Specify metrics",
+      "description": "Identify and develop an appropriate set of metrics based on measurement information needs. implemented within the organization and its projects, to support effective management of the processes. | | | process objectives and the achievement of desired work products are identified. 2) An appropriate set of metrics, driven by the information needs are identified and/or developed. 3) Measurement activities are identified and performed. 4) The required metrics are collected, stored, analyzed, and the results interpreted. 5) Metrics are used to support decisions and provide an objective basis for communication. | | | necessary to evaluate the achievement of process objectives and work products. used in an iterative way. | | | measurement information needs.",
+      "pamCitation": "PAM §MAN.6 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Collect and store metrics",
+      "description": "Collect and store both base and derived metrics, including any context information necessary to verify and understand the metrics. defects found” or “number of lines of code”, where derived metrics are two or more metrics that are brought in relation to each other like “number of defects found per line of code”.",
+      "pamCitation": "PAM §MAN.6 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Analyze collected metrics",
+      "description": "Analyze, interpret and review measured values to support decision-making.",
+      "pamCitation": "PAM §MAN.6 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Communicate analysis results",
+      "description": "Communicate analysis results to all affected parties.",
+      "pamCitation": "PAM §MAN.6 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Use metrics for decision-making",
+      "description": "Make accessible and use information from collected metrics and analysis results for any decision-making process for which it is relevant. MAN.6 Measurement 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO",
+      "pamCitation": "PAM §MAN.6 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "03-03",
+      "name": "Benchmarking data"
+    },
+    {
+      "id": "03-04",
+      "name": "Customer satisfaction data"
+    },
+    {
+      "id": "03-06",
+      "name": "Process performance information"
+    },
+    {
+      "id": "07-51",
+      "name": "Measurement result"
+    },
+    {
+      "id": "15-51",
+      "name": "Analysis results"
+    }
+  ],
+  "inputWorkProducts": [],
+  "traceBPs": []
+}

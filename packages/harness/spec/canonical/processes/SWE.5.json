@@ -1,0 +1,149 @@
+{
+  "id": "SWE.5",
+  "name": "Software Component Verification and Integration Verification",
+  "category": "SWE",
+  "pamSection": "4.4.5",
+  "purpose": "consistency and establish bidirectional traceability between verification measures and the software units defined in the detailed design. Establish bidirectional traceability between the verification results and the verification measures. Note 4: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. | verification and communicate them to all affected parties. Note 5: Providing all necessary information from the test case execution in a summary enables other parties to judge the consequences. | emoctuO | | | 2 emoctuO | | | 3 emoctuO | | | 4 emoctuO | | | 5 emoctuO | | software unit verification | | | | | | | | | | | X | | | | | | The purpose is to verify that software components are consistent with the software architectural design, and to integrate software elements and verify that the integrated software elements are consistent with the software architecture and software detailed design.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Verification measures are specified for software integration verification of the integrated software elements based on the software architecture and detailed design, including the interfaces of, and interactions between, the software components."
+    },
+    {
+      "id": 2,
+      "text": "Verification measures for software components are specified to provide evidence for compliance of the software components with the software components’ behavior and interfaces."
+    },
+    {
+      "id": 3,
+      "text": "Software elements are integrated up to a complete integrated software."
+    },
+    {
+      "id": 4,
+      "text": "Verification measures are selected according to the release scope considering criteria, including criteria for regression verification."
+    },
+    {
+      "id": 5,
+      "text": "Software components are verified using the selected verification measures, and the results of the integration verification are recorded."
+    },
+    {
+      "id": 6,
+      "text": "Integrated software elements are verified using the selected verification measures, and the results of the integration verification are recorded."
+    },
+    {
+      "id": 7,
+      "text": "Consistency and bidirectional traceability are established between verification measures and the software architecture and detailed design; and bidirectional traceability is established between verification results and verification measures."
+    },
+    {
+      "id": 8,
+      "text": "The results of software component verification and software elements integration verification are summarized and communicated to all affected parties"
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify software integration verification measures",
+      "description": "Specify verification measures, based on a defined sequence and preconditions for the integration of software elements, against the defined static and dynamic aspects of the software architecture, including • techniques for the verification measures, • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure and environment setup. correct dataflow and dynamic interaction between software components together with their timing dependencies, the correct interpretation of data by all software components using an interface, and the compliance to resource consumption objectives. interfaces or simulation environments (e.g, Software-in-the-Loop-Simulation). design, and to integrate software elements and verify that the integrated software elements are consistent with the software architecture and software detailed design. | | | software elements based on the software architecture and detailed design, including the interfaces of, and interactions between, the software components. 2) Verification measures for software components are specified to provide evidence for compliance of the software components with the software components’ behavior and interfaces. 3) Software elements are integrated up to a complete integrated software. 4) Verification measures are selected according to the release scope considering criteria, including criteria for regression verification. 5) Software components are verified using the selected verification measures, and the results of the integration verification are recorded. 6) Integrated software elements are verified using the selected verification measures, and the results of the integration verification are recorded. 7) Consistency and bidirectional traceability are established between verification measures and the software architecture and detailed design; and bidirectional traceability is established between verification results and verification measures. 8) The results of software component verification and software elements integration verification are summarized and communicated to all affected parties | | | measures, based on a defined sequence and preconditions for the integration of software elements, against the defined static and dynamic aspects of the software architecture, including • techniques for the verification measures, • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure and environment setup. correct dataflow and dynamic interaction between software components together with their timing dependencies, the correct interpretation of data by all software components using an interface, and the compliance to resource consumption objectives. interfaces or simulation environments (e.g, Software-in-the-Loop-Simulation). |",
+      "pamCitation": "PAM §SWE.5 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Specify verification measures for verifying software component behavior",
+      "description": "Specify verification measures for software component verification against the defined software components’ behavior and their interfaces in the software architecture, including • techniques for the verification measures, • entry and exit criteria for verification measures, • pass/fail criteria for verification measures, and • the required verification infrastructure and environment setup. software unit verification is addressed in the process SWE.4 Software Unit Verification.",
+      "pamCitation": "PAM §SWE.5 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Select verification measures",
+      "description": "Document the selection of integration verification measures for each integration step considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope. development regression verification (due to e.g, changes to the software architectural or detailed design), or the intended use of the delivered product release (e.g, test bench, test track, public road etc.).",
+      "pamCitation": "PAM §SWE.5 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Integrate software elements and perform integration verification",
+      "description": "Integrate the software elements until the software is fully integrated according to the specified interfaces and interactions between the Software elements, and according to the defined sequence and defined preconditions. Perform the selected integration verification measures. Record the verification measure data including pass/fail status and corresponding verification measure data. software components, off-the-shelf software components, open-source-software, or auto-code generated software. continuous integration, as well as stepwise integration (e.g, across software units and/or software components up to the fully integrated software) with accompanying verification measures.",
+      "pamCitation": "PAM §SWE.5 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Perform software component verification",
+      "description": "Perform the selected verification measures for verifying software component behavior. Record the verification results including pass/fail status and corresponding verification measure data.",
+      "pamCitation": "PAM §SWE.5 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between verification measures and the static and dynamic aspects of the software architecture and detailed design. Establish bidirectional traceability between verification results and verification measures. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Specify verification measures for software component verification against the defined software components’ behavior and their interfaces in the software architecture, including • techniques for the verification measures, • entry and exit criteria for verification measures, • pass/fail criteria for verification measures, and • the required verification infrastructure and environment setup. software unit verification is addressed in the process SWE.4 Software Unit Verification. | measures for each integration step considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope. development regression verification (due to e.g, changes to the software architectural or detailed design), or the intended use of the delivered product release (e.g, test bench, test track, public road etc.). | software elements until the software is fully integrated according to the specified interfaces and interactions between the Software elements, and according to the defined sequence and defined preconditions. Perform the selected integration verification measures. Record the verification measure data including pass/fail status and corresponding verification measure data. software components, off-the-shelf software components, open-source-software, or auto-code generated software. continuous integration, as well as stepwise integration (e.g, across software units and/or software components up to the fully integrated software) with accompanying verification measures. measures for verifying software component behavior. Record the verification results including pass/fail status and corresponding verification measure data. consistency and establish bidirectional traceability between verification measures and the static and dynamic aspects of the software architecture and detailed design. Establish bidirectional traceability between verification results and verification measures. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. |",
+      "pamCitation": "PAM §SWE.5 BP6"
+    },
+    {
+      "id": "BP7",
+      "title": "Summarize and communicate results",
+      "description": "Summarize the software component verification and the software integration verification results and communicate them to all affected parties. other parties to judge the consequences. SWE.5 Software Component Verification and Integration Verification 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO 7 emoctuO 8 emoctuO",
+      "pamCitation": "PAM §SWE.5 BP7"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-60",
+      "name": "Verification Measure"
+    },
+    {
+      "id": "06-50",
+      "name": "Integration Sequence Instruction"
+    },
+    {
+      "id": "03-50",
+      "name": "Verification Measure Data"
+    },
+    {
+      "id": "08-58",
+      "name": "Verification Measure Selection Set"
+    },
+    {
+      "id": "15-52",
+      "name": "Verification Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    },
+    {
+      "id": "01-03",
+      "name": "Software Component"
+    },
+    {
+      "id": "01-50",
+      "name": "Integrated Software"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "01-52",
+      "name": "Configuration item list",
+      "fromProcess": "SUP.8"
+    },
+    {
+      "id": "04-04",
+      "name": "Software Architecture",
+      "fromProcess": "SWE.2"
+    },
+    {
+      "id": "11-05",
+      "name": "Software Unit",
+      "fromProcess": "SWE.4"
+    },
+    {
+      "id": "13-08",
+      "name": "Baseline",
+      "fromProcess": "SUP.8"
+    }
+  ],
+  "traceBPs": [
+    "BP1",
+    "BP6"
+  ]
+}

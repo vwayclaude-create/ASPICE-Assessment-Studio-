@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --test test/harness.test.js)",
+      "Bash(node --test test/)",
+      "Bash(node --test test/*.test.js)",
+      "Bash(rmdir legacy/src/crossProcess legacy/src/evaluators legacy/src/llm/prompts legacy/test/fixtures)",
+      "Bash(mkdir -p src/model src/evaluators src/crossProcess src/llm/prompts src/io test/fixtures spec/canonical/processes spec/sources)",
+      "Bash(node spec/extractor.js)",
+      "Bash(grep -n \"^4\\\\.[0-9]*\\\\.[0-9]*\\\\. SYS\\\\.2\\\\|^Process purpose$\\\\|^Process outcomes$\\\\|^Base Practices$\\\\|^Output Information Items$\" Automotive-SPICE-PAM-v40.md)",
+      "Bash(node -e ' *)",
+      "Bash(cat)",
+      "Bash(node /tmp/debug3.mjs)",
+      "Bash(awk -F: '$1>2260 && $1<2800')",
+      "Bash(awk -F: '$1>2640 && $1<2820')",
+      "Bash(awk -F: '$1>=2428 && $1<=2642')",
+      "Bash(npm install *)",
+      "Bash(node src/cli.js list)",
+      "Bash(node src/cli.js evaluate -p SYS.2 -l 1 -e rule test/fixtures/sys2_srs.md test/fixtures/sys2_trace_matrix.csv)",
+      "Bash(node src/cli.js evaluate -p \"SYS.1,SYS.2,SYS.3,SWE.1,SYS.5,SUP.10\" -l 1 -e rule test/fixtures/project/*.md)",
+      "Bash(xargs grep *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(curl -s -o /dev/null -w \"Root HTTP %{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5173/src/data/aspiceData.js -o /dev/null -w \"data module HTTP %{http_code}\\\\n\")",
+      "Bash(curl -sS http://localhost:5173/src/SolutionApp.jsx -o /dev/null -w \"SolutionApp HTTP %{http_code}\\\\n\")",
+      "Bash(curl -sS -X POST http://localhost:5173/api/analyze -H 'Content-Type: application/json' -d '{\"processId\":\"SYS.2\",\"artifact\":{\"name\":\"test.md\",\"text\":\"# Requirements\\\\nREQ-SYS-001: bidirectional traceability shall be established between requirements.\\\\nConsistency review is captured.\"},\"targetLevel\":1,\"engine\":\"rule\"}')",
+      "Bash(curl -sS -X POST http://localhost:5173/api/project -H 'Content-Type: application/json' -d '{\"processIds\":[\"SYS.1\",\"SYS.2\",\"SYS.3\",\"SWE.1\"],\"artifacts\":[{\"name\":\"stk.md\",\"text\":\"Stakeholder requirements. STK-001: response time 100ms. STK-002: temp range -40 to 85.\"},{\"name\":\"srs.md\",\"text\":\"System Requirements Specification. REQ-SYS-001: traces from STK-001. REQ-SYS-002: traces from STK-002. Bidirectional traceability is maintained.\"},{\"name\":\"arch.md\",\"text\":\"System architecture. ARCH-SYS-001 realises REQ-SYS-001. ARCH-SYS-002 realises REQ-SYS-002.\"},{\"name\":\"sw_srs.md\",\"text\":\"Software requirements. REQ-SW-001: derived from REQ-SYS-001 via ARCH-SYS-001.\"}],\"targetLevel\":1,\"engine\":\"rule\"}')",
+      "Bash(python -m json.tool)",
+      "Bash(curl -sS \"http://localhost:5173/src/main.jsx\" -o /dev/null -w \"main: %{http_code}\\\\n\")",
+      "Bash(curl -sS \"http://localhost:5173/src/SolutionApp.jsx\" -o /dev/null -w \"SolutionApp: %{http_code}\\\\n\")",
+      "Bash(curl -sS \"http://localhost:5173/src/data/aspiceData.js\" -o /dev/null -w \"aspiceData: %{http_code}\\\\n\")",
+      "Bash(curl -sS \"http://localhost:5173/src/data/ratingMeta.js\" -o /dev/null -w \"ratingMeta: %{http_code}\\\\n\")",
+      "Bash(curl -sS \"http://localhost:5173/src/components/ProjectModeCard.jsx\" -o /dev/null -w \"ProjectModeCard: %{http_code}\\\\n\")",
+      "PowerShell(Get-NetTCPConnection *)"
+    ]
+  }
+}

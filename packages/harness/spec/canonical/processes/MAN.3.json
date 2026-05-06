@@ -1,0 +1,160 @@
+{
+  "id": "MAN.3",
+  "name": "Project Management",
+  "category": "MAN",
+  "pamSection": "4.9.1",
+  "purpose": "The purpose is to identify and control the activities, and establish resources necessary for a project to develop a product, in the context of the project’s requirements and constraints.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "The scope of the work for the project is defined."
+    },
+    {
+      "id": 2,
+      "text": "The feasibility of achieving the goals of the project with available resources and constraints is evaluated."
+    },
+    {
+      "id": 3,
+      "text": "The activities and resources necessary to complete the work are sized and estimated."
+    },
+    {
+      "id": 4,
+      "text": "Interfaces within the project, and with other projects and organizational units, are identified and monitored."
+    },
+    {
+      "id": 5,
+      "text": "Plans for the execution of the project are developed, implemented and maintained."
+    },
+    {
+      "id": 6,
+      "text": "Progress of the project is monitored and reported."
+    },
+    {
+      "id": 7,
+      "text": "Adjustment is performed when project goals are not achieved."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Define the scope of work",
+      "description": "Identify the project's goals, motivation and boundaries.",
+      "pamCitation": "PAM §MAN.3 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Define project life cycle",
+      "description": "Define the life cycle for the project, which is appropriate to the scope, context, and complexity of the project. Define a release scope for relevant milestones. process.",
+      "pamCitation": "PAM §MAN.3 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Evaluate feasibility of the project",
+      "description": "Evaluate the feasibility of achieving the goals of the project with respect to time, project estimates, and available resources.",
+      "pamCitation": "PAM §MAN.3 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Define and monitor work packages",
+      "description": "Define and monitor work packages and their dependencies according to defined project life cycle and estimations. project to develop a product, in the context of the project’s requirements and constraints. | | | 2) The feasibility of achieving the goals of the project with available resources and constraints is evaluated. 3) The activities and resources necessary to complete the work are sized and estimated. 4) Interfaces within the project, and with other projects and organizational units, are identified and monitored. 5) Plans for the execution of the project are developed, implemented and maintained. 6) Progress of the project is monitored and reported. 7) Adjustment is performed when project goals are not achieved. | | | to the scope, context, and complexity of the project. Define a release scope for relevant milestones. process. | | | of the project with respect to time, project estimates, and available resources. dependencies according to defined project life cycle and estimations.",
+      "pamCitation": "PAM §MAN.3 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Define and monitor project estimates and resources",
+      "description": "Define and monitor project estimates of effort and resources based on project's goals, project risks, motivation and boundaries. processes.",
+      "pamCitation": "PAM §MAN.3 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Define and monitor required skills, knowledge, and experience",
+      "description": "Identify and monitor the required skills, knowledge, and experience for the project in line with the estimates and work packages. required skills and knowledge.",
+      "pamCitation": "PAM §MAN.3 BP6"
+    },
+    {
+      "id": "BP7",
+      "title": "Define and monitor project interfaces and agreed commitments",
+      "description": "Identify and agree interfaces of the project with affected stakeholders and monitor agreed commitments. Define an escalation mechanism for commitments that are not fulfilled. service providers.",
+      "pamCitation": "PAM §MAN.3 BP7"
+    },
+    {
+      "id": "BP8",
+      "title": "Define and monitor project schedule",
+      "description": "Allocate resources to work packages and schedule each activity of the project. Monitor the performance of activities against schedule.",
+      "pamCitation": "PAM §MAN.3 BP8"
+    },
+    {
+      "id": "BP9",
+      "title": "Ensure consistency",
+      "description": "Regularly adjust estimates, resources, skills, work packages and their dependencies, schedules, plans, interfaces, and commitments for the project to ensure consistency with the scope of work. management.",
+      "pamCitation": "PAM §MAN.3 BP9"
+    },
+    {
+      "id": "BP10",
+      "title": "Review and report progress of the project",
+      "description": "Regularly review and report the status of the project and the fulfillment of work packages against estimated effort and duration to all affected parties. Prevent recurrence of identified problems. may contribute to identify best practices and lessons learned. MAN.3 Project Management 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO 7 emoctuO",
+      "pamCitation": "PAM §MAN.3 BP10"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-53",
+      "name": "Scope of work"
+    },
+    {
+      "id": "08-54",
+      "name": "Feasibility analysis"
+    },
+    {
+      "id": "14-10",
+      "name": "Work package"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    },
+    {
+      "id": "13-16",
+      "name": "Change request"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency evidence"
+    },
+    {
+      "id": "14-02",
+      "name": "Corrective action"
+    },
+    {
+      "id": "18-52",
+      "name": "Escalation path"
+    },
+    {
+      "id": "08-56",
+      "name": "Schedule"
+    },
+    {
+      "id": "14-50",
+      "name": "Stakeholder groups list"
+    },
+    {
+      "id": "15-06",
+      "name": "Project status"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "03-06",
+      "name": "Process performance information",
+      "fromProcess": "MAN.6"
+    },
+    {
+      "id": "15-09",
+      "name": "Risk status",
+      "fromProcess": "MAN.5"
+    }
+  ],
+  "traceBPs": [
+    "BP9"
+  ]
+}

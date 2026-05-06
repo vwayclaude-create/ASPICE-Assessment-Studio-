@@ -1,0 +1,93 @@
+{
+  "id": "MAN.5",
+  "name": "Risk Management",
+  "category": "MAN",
+  "pamSection": "4.9.2",
+  "purpose": "The purpose is to Regularly identify, analyze, treat and monitor process related risks and product related risks.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "The sources of risks are identified and regularly updated."
+    },
+    {
+      "id": 2,
+      "text": "Potential undesirable events are identified as they develop during the conduct of the project."
+    },
+    {
+      "id": 3,
+      "text": "Risks are analyzed and the priority in which to apply resources to treatment of these risks is determined."
+    },
+    {
+      "id": 4,
+      "text": "Risk measures are defined, applied, and assessed to determine changes in the status of risk"
+    },
+    {
+      "id": 5,
+      "text": "Appropriate treatment is taken to correct or avoid the impact of risk based on its priority, probability, and consequence or other defined risk threshold."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Identify sources of risks",
+      "description": "Identify and regularly update the sources of risks with affected parties.",
+      "pamCitation": "PAM §MAN.5 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Identify potential undesirable events",
+      "description": "Identify potential undesirable events within the scope of the risk management for the project.",
+      "pamCitation": "PAM §MAN.5 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Determine risks",
+      "description": "Determine the probability and severity of the undesirable events to support priorities for the mitigation of the risks. functional analysis, simulation, FMEA, FTA etc.",
+      "pamCitation": "PAM §MAN.5 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Define risk treatment options",
+      "description": "For each risk select a treatment option to accept, mitigate, avoid, or share (transfer) the risk.",
+      "pamCitation": "PAM §MAN.5 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Define and perform risk treatment activities",
+      "description": "Define and perform risk activities for risk treatment options.",
+      "pamCitation": "PAM §MAN.5 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Monitor risks",
+      "description": "Regularly re-evaluate the risk related to the identified potential undesirable events to determine changes in the status of a risk and to evaluate the progress of the risk treatment activities. management.",
+      "pamCitation": "PAM §MAN.5 BP6"
+    },
+    {
+      "id": "BP7",
+      "title": "Take corrective action",
+      "description": "When risk treatment activities are not effective, take appropriate corrective action. mitigation concepts or adjusting the existing concepts. MAN.5 Risk Management 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO",
+      "pamCitation": "PAM §MAN.5 BP7"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "15-51",
+      "name": "Analysis results"
+    },
+    {
+      "id": "15-09",
+      "name": "Risk status"
+    },
+    {
+      "id": "08-55",
+      "name": "Risk measure"
+    },
+    {
+      "id": "14-02",
+      "name": "Corrective action"
+    }
+  ],
+  "inputWorkProducts": [],
+  "traceBPs": []
+}

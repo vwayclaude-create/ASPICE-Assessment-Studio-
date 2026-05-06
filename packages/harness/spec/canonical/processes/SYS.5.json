@@ -1,0 +1,112 @@
+{
+  "id": "SYS.5",
+  "name": "System Verification",
+  "category": "SYS",
+  "pamSection": "4.3.5",
+  "purpose": "The purpose is to ensure that the system is verified to be consistent with the system requirements.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Verification measures are specified for system verification of the system based on the system requirements."
+    },
+    {
+      "id": 2,
+      "text": "Verification measures are selected according to the release scope considering criteria, including criteria for regression verification."
+    },
+    {
+      "id": 3,
+      "text": "The integrated system is verified using the selected verification measures and the results of system verification are recorded."
+    },
+    {
+      "id": 4,
+      "text": "Consistency and bidirectional traceability are established between verification measures and system requirements."
+    },
+    {
+      "id": 5,
+      "text": "Bidirectional traceability is established between verification results and verification measures."
+    },
+    {
+      "id": 6,
+      "text": "Verification results are summarized and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify verification measures for system verification",
+      "description": "Specify the verification measures for system verification suitable to provide evidence for compliance with the functional and non-functional information in the system requirements, including • techniques for the verification measures, • pass/fail criteria for verification measures, • a definition of entry and exit criteria for the verification measures, • necessary sequence of verification measures, and • the required verification infrastructure and environment setup. robustness/lifetime, and EMC.",
+      "pamCitation": "PAM §SYS.5 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Select verification measures",
+      "description": "Document the selection of verification measures considering selection criteria including criteria for regression verification. The selection of verification measures shall have sufficient coverage according to the release scope. regression verification (due to e.g., changes to the system requirements), the intended use of the delivered product release (test bench, test track, public road etc.) requirements. | | requirements. 2) Verification measures are selected according to the release scope considering criteria, including criteria for regression verification. 3) The integrated system is verified using the selected verification measures and the results of system verification are recorded. 4) Consistency and bidirectional traceability are established between verification measures and system requirements. 5) Bidirectional traceability is established between verification results and verification measures. 6) Verification results are summarized and communicated to all affected parties. | | measures for system verification suitable to provide evidence for compliance with the functional and non-functional information in the system requirements, including • techniques for the verification measures, • pass/fail criteria for verification measures, • a definition of entry and exit criteria for the verification measures, • necessary sequence of verification measures, and • the required verification infrastructure and environment setup. robustness/lifetime, and EMC. | | considering selection criteria including criteria for regression verification. The selection of verification measures shall have sufficient coverage according to the release scope. regression verification (due to e.g., changes to the system requirements), the intended use of the delivered product release (test bench, test track, public road etc.) | |",
+      "pamCitation": "PAM §SYS.5 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Perform verification of the integrated system",
+      "description": "Perform the verification of the integrated system using the selected verification measures. Record the verification results including pass/fail status and corresponding verification measure data.",
+      "pamCitation": "PAM §SYS.5 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between verification measures and system requirements. Establish bidirectional traceability between verification results and verification measures. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "pamCitation": "PAM §SYS.5 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Summarize and communicate results",
+      "description": "Summarize the system verification results and communicate them to all affected parties. parties to judge the consequences. SYS.5 System Verification 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §SYS.5 BP5"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-60",
+      "name": "Verification Measure"
+    },
+    {
+      "id": "03-50",
+      "name": "Verification Measure Data"
+    },
+    {
+      "id": "08-58",
+      "name": "Verification Measure Selection Set"
+    },
+    {
+      "id": "15-52",
+      "name": "Verification Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "04-06",
+      "name": "System Architecture",
+      "fromProcess": "SYS.3"
+    },
+    {
+      "id": "08-56",
+      "name": "Schedule",
+      "fromProcess": "MAN.3"
+    },
+    {
+      "id": "11-06",
+      "name": "Integrated System",
+      "fromProcess": "SYS.4"
+    }
+  ],
+  "traceBPs": [
+    "BP2",
+    "BP4"
+  ]
+}

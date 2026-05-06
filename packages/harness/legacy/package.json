@@ -1,0 +1,32 @@
+{
+  "name": "aspice-cl1-harness",
+  "version": "0.1.0",
+  "description": "ASPICE v4.0 Capability Level 1 evaluator harness driven by work product evidence. Rule-based + LLM hybrid engine.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "aspice-cl1": "src/cli.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./processes": "./src/processes/index.js",
+    "./engine": "./src/engine/index.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "commander": "^12.1.0",
+    "mammoth": "^1.8.0",
+    "openai": "^4.68.0",
+    "pdf-parse": "^1.1.1",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": ["aspice", "automotive", "spice", "cl1", "capability-level-1", "assessment", "vda"],
+  "license": "MIT"
+}

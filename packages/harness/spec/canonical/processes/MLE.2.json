@@ -1,0 +1,114 @@
+{
+  "id": "MLE.2",
+  "name": "Machine Learning Architecture",
+  "category": "MLE",
+  "pamSection": "4.6.2",
+  "purpose": "The purpose is to establish an ML architecture supporting training and deployment, consistent with the ML requirements, and to evaluate the ML architecture against defined criteria.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "A ML architecture is developed."
+    },
+    {
+      "id": 2,
+      "text": "Hyperparameter ranges and initial values are determined as a basis for the training."
+    },
+    {
+      "id": 3,
+      "text": "Evaluation of ML architectural elements is conducted."
+    },
+    {
+      "id": 4,
+      "text": "Interfaces of the ML architectural elements are defined."
+    },
+    {
+      "id": 5,
+      "text": "Resource consumption objectives for the ML architectural elements are defined."
+    },
+    {
+      "id": 6,
+      "text": "Consistency and bidirectional traceability are established between the ML architectural elements and the ML requirements."
+    },
+    {
+      "id": 7,
+      "text": "The ML architecture is agreed and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Develop ML architecture",
+      "description": "Develop and document the ML architecture that specifies ML architectural elements including details of the ML model, pre- and postprocessing, and hyperparameters which are required to create, train, test, and deploy the ML model. backpropagation. The level of detail of the ML model may not need to cover aspects like single neurons. deployed ML model.",
+      "pamCitation": "PAM §MLE.2 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Determine hyperparameter ranges and initial values",
+      "description": "Determine and document the hyperparameter ranges and the initial values as a basis for the training.",
+      "pamCitation": "PAM §MLE.2 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Analyze ML architectural elements",
+      "description": "Define criteria for analysis of the ML architectural elements. Analyze ML architectural elements according to the defined criteria. elements.",
+      "pamCitation": "PAM §MLE.2 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Define interfaces of the ML architectural elements",
+      "description": "Determine and document the internal and external interfaces of each ML architectural element including its interfaces to related software components.",
+      "pamCitation": "PAM §MLE.2 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Define resource consumption objectives for the ML architectural elements",
+      "description": "Determine and document the resource consumption objectives for all relevant ML architectural elements during training and deployment. with the ML requirements, and to evaluate the ML architecture against defined criteria. | 2) Hyperparameter ranges and initial values are determined as a basis for the training. 3) Evaluation of ML architectural elements is conducted. 4) Interfaces of the ML architectural elements are defined. 5) Resource consumption objectives for the ML architectural elements are defined. 6) Consistency and bidirectional traceability are established between the ML architectural elements and the ML requirements. 7) The ML architecture is agreed and communicated to all affected parties. | specifies ML architectural elements including details of the ML model, pre- and postprocessing, and hyperparameters which are required to create, train, test, and deploy the ML model. backpropagation. The level of detail of the ML model may not need to cover aspects like single neurons. deployed ML model. | | | the hyperparameter ranges and the initial values as a basis for the training. | | | architectural elements. Analyze ML architectural elements according to the defined criteria. elements. | | | the internal and external interfaces of each ML architectural element including its interfaces to related software components. | | | Determine and document the resource consumption objectives for all relevant ML architectural elements during training and deployment. | | |",
+      "pamCitation": "PAM §MLE.2 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between the ML architectural elements and the ML requirements. requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. the ML architectural elements.",
+      "pamCitation": "PAM §MLE.2 BP6"
+    },
+    {
+      "id": "BP7",
+      "title": "Communicate agreed ML architecture",
+      "description": "Inform all affected parties about the agreed ML architecture including the details of the ML model and the initial hyperparameter values. MLE.2 Machine Learning Architecture 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO 7 emoctuO",
+      "pamCitation": "PAM §MLE.2 BP7"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "04-51",
+      "name": "ML architecture"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency evidence"
+    },
+    {
+      "id": "01-54",
+      "name": "Hyperparameter"
+    },
+    {
+      "id": "15-51",
+      "name": "Analysis results"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "17-00",
+      "name": "Requirement",
+      "fromProcess": "MLE.1"
+    }
+  ],
+  "traceBPs": [
+    "BP5",
+    "BP6"
+  ]
+}

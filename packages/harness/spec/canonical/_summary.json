@@ -1,0 +1,354 @@
+{
+  "generatedAt": "2026-04-24T08:01:41.155Z",
+  "pamBytes": 578858,
+  "guidelineBytes": 391251,
+  "processCount": 32,
+  "processesById": [
+    {
+      "id": "ACQ.4",
+      "bps": 5,
+      "outcomes": 4,
+      "outputWPs": 8,
+      "inputWPs": 0,
+      "traceBPs": []
+    },
+    {
+      "id": "HWE.1",
+      "bps": 6,
+      "outcomes": 7,
+      "outputWPs": 5,
+      "inputWPs": 6,
+      "traceBPs": [
+        "BP1",
+        "BP5"
+      ]
+    },
+    {
+      "id": "HWE.2",
+      "bps": 6,
+      "outcomes": 6,
+      "outputWPs": 11,
+      "inputWPs": 4,
+      "traceBPs": [
+        "BP5",
+        "BP6"
+      ]
+    },
+    {
+      "id": "HWE.3",
+      "bps": 6,
+      "outcomes": 6,
+      "outputWPs": 6,
+      "inputWPs": 2,
+      "traceBPs": [
+        "BP5"
+      ]
+    },
+    {
+      "id": "HWE.4",
+      "bps": 6,
+      "outcomes": 6,
+      "outputWPs": 6,
+      "inputWPs": 2,
+      "traceBPs": [
+        "BP4",
+        "BP5"
+      ]
+    },
+    {
+      "id": "MAN.3",
+      "bps": 10,
+      "outcomes": 7,
+      "outputWPs": 11,
+      "inputWPs": 2,
+      "traceBPs": [
+        "BP9"
+      ]
+    },
+    {
+      "id": "MAN.5",
+      "bps": 7,
+      "outcomes": 5,
+      "outputWPs": 4,
+      "inputWPs": 0,
+      "traceBPs": []
+    },
+    {
+      "id": "MAN.6",
+      "bps": 6,
+      "outcomes": 5,
+      "outputWPs": 5,
+      "inputWPs": 0,
+      "traceBPs": []
+    },
+    {
+      "id": "MLE.1",
+      "bps": 6,
+      "outcomes": 6,
+      "outputWPs": 5,
+      "inputWPs": 5,
+      "traceBPs": [
+        "BP3",
+        "BP5"
+      ]
+    },
+    {
+      "id": "MLE.2",
+      "bps": 7,
+      "outcomes": 7,
+      "outputWPs": 5,
+      "inputWPs": 1,
+      "traceBPs": [
+        "BP5",
+        "BP6"
+      ]
+    },
+    {
+      "id": "MLE.3",
+      "bps": 5,
+      "outcomes": 5,
+      "outputWPs": 6,
+      "inputWPs": 3,
+      "traceBPs": [
+        "BP4"
+      ]
+    },
+    {
+      "id": "MLE.4",
+      "bps": 6,
+      "outcomes": 6,
+      "outputWPs": 6,
+      "inputWPs": 3,
+      "traceBPs": [
+        "BP1",
+        "BP6"
+      ]
+    },
+    {
+      "id": "PIM.3",
+      "bps": 8,
+      "outcomes": 6,
+      "outputWPs": 10,
+      "inputWPs": 0,
+      "traceBPs": []
+    },
+    {
+      "id": "REU.2",
+      "bps": 6,
+      "outcomes": 6,
+      "outputWPs": 5,
+      "inputWPs": 0,
+      "traceBPs": []
+    },
+    {
+      "id": "SPL.2",
+      "bps": 7,
+      "outcomes": 5,
+      "outputWPs": 5,
+      "inputWPs": 4,
+      "traceBPs": []
+    },
+    {
+      "id": "SUP.1",
+      "bps": 7,
+      "outcomes": 6,
+      "outputWPs": 7,
+      "inputWPs": 0,
+      "traceBPs": []
+    },
+    {
+      "id": "SUP.10",
+      "bps": 6,
+      "outcomes": 6,
+      "outputWPs": 3,
+      "inputWPs": 1,
+      "traceBPs": [
+        "BP1",
+        "BP4"
+      ]
+    },
+    {
+      "id": "SUP.11",
+      "bps": 6,
+      "outcomes": 5,
+      "outputWPs": 4,
+      "inputWPs": 0,
+      "traceBPs": [
+        "BP2"
+      ]
+    },
+    {
+      "id": "SUP.8",
+      "bps": 8,
+      "outcomes": 8,
+      "outputWPs": 8,
+      "inputWPs": 0,
+      "traceBPs": [
+        "BP2",
+        "BP7"
+      ]
+    },
+    {
+      "id": "SUP.9",
+      "bps": 7,
+      "outcomes": 5,
+      "outputWPs": 3,
+      "inputWPs": 0,
+      "traceBPs": [
+        "BP1",
+        "BP5"
+      ]
+    },
+    {
+      "id": "SWE.1",
+      "bps": 6,
+      "outcomes": 7,
+      "outputWPs": 5,
+      "inputWPs": 7,
+      "traceBPs": [
+        "BP1",
+        "BP5"
+      ]
+    },
+    {
+      "id": "SWE.2",
+      "bps": 5,
+      "outcomes": 4,
+      "outputWPs": 4,
+      "inputWPs": 5,
+      "traceBPs": [
+        "BP2",
+        "BP4"
+      ]
+    },
+    {
+      "id": "SWE.3",
+      "bps": 5,
+      "outcomes": 4,
+      "outputWPs": 4,
+      "inputWPs": 4,
+      "traceBPs": [
+        "BP1",
+        "BP4"
+      ]
+    },
+    {
+      "id": "SWE.4",
+      "bps": 5,
+      "outcomes": 5,
+      "outputWPs": 6,
+      "inputWPs": 2,
+      "traceBPs": [
+        "BP3",
+        "BP4"
+      ]
+    },
+    {
+      "id": "SWE.5",
+      "bps": 7,
+      "outcomes": 8,
+      "outputWPs": 9,
+      "inputWPs": 4,
+      "traceBPs": [
+        "BP1",
+        "BP6"
+      ]
+    },
+    {
+      "id": "SWE.6",
+      "bps": 5,
+      "outcomes": 5,
+      "outputWPs": 6,
+      "inputWPs": 3,
+      "traceBPs": [
+        "BP1",
+        "BP4"
+      ]
+    },
+    {
+      "id": "SYS.1",
+      "bps": 4,
+      "outcomes": 4,
+      "outputWPs": 4,
+      "inputWPs": 3,
+      "traceBPs": []
+    },
+    {
+      "id": "SYS.2",
+      "bps": 6,
+      "outcomes": 6,
+      "outputWPs": 5,
+      "inputWPs": 5,
+      "traceBPs": [
+        "BP3",
+        "BP5"
+      ]
+    },
+    {
+      "id": "SYS.3",
+      "bps": 5,
+      "outcomes": 4,
+      "outputWPs": 5,
+      "inputWPs": 6,
+      "traceBPs": [
+        "BP2",
+        "BP4"
+      ]
+    },
+    {
+      "id": "SYS.4",
+      "bps": 5,
+      "outcomes": 7,
+      "outputWPs": 8,
+      "inputWPs": 8,
+      "traceBPs": [
+        "BP4"
+      ]
+    },
+    {
+      "id": "SYS.5",
+      "bps": 5,
+      "outcomes": 6,
+      "outputWPs": 6,
+      "inputWPs": 3,
+      "traceBPs": [
+        "BP2",
+        "BP4"
+      ]
+    },
+    {
+      "id": "VAL.1",
+      "bps": 5,
+      "outcomes": 4,
+      "outputWPs": 5,
+      "inputWPs": 4,
+      "traceBPs": [
+        "BP4"
+      ]
+    }
+  ],
+  "paCount": 5,
+  "pasById": {
+    "PA 1.1": {
+      "level": 1,
+      "gps": 1
+    },
+    "PA 2.1": {
+      "level": 2,
+      "gps": 6
+    },
+    "PA 2.2": {
+      "level": 2,
+      "gps": 4
+    },
+    "PA 3.1": {
+      "level": 3,
+      "gps": 4
+    },
+    "PA 3.2": {
+      "level": 3,
+      "gps": 4
+    }
+  },
+  "wpCount": 118
+}

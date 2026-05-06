@@ -1,0 +1,89 @@
+{
+  "id": "SUP.11",
+  "name": "Machine Learning Data Management",
+  "category": "SUP",
+  "pamSection": "4.8.5",
+  "purpose": "The purpose is to define and align ML data with ML data requirements, maintain the integrity and quality of the ML data, and make them available to affected parties.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "A ML data management system including an ML data lifecycle is established."
+    },
+    {
+      "id": 2,
+      "text": "A ML data quality approach is developed including ML data quality criteria."
+    },
+    {
+      "id": 3,
+      "text": "Collected ML data are processed for consistency with ML data requirements."
+    },
+    {
+      "id": 4,
+      "text": "ML data are verified against defined ML data quality criteria and updated as needed."
+    },
+    {
+      "id": 5,
+      "text": "ML data are agreed and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Establish an ML data management system",
+      "description": "Establish an ML data management system which supports • ML data management activities, • relevant sources of ML data, • ML data life cycle including a status model, and • interfaces to affected parties. and structuring.",
+      "pamCitation": "PAM §SUP.11 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Develop an ML data quality approach",
+      "description": "Develop an approach to ensure that the quality of ML data is analyzed based on defined ML data quality criteria and activities are performed to support avoidance of biases of data. labelling, completeness against ML data requirements. data quality approach. and quality of the ML data, and make them available to affected parties. | | | 2) A ML data quality approach is developed including ML data quality criteria. 3) Collected ML data are processed for consistency with ML data requirements. 4) ML data are verified against defined ML data quality criteria and updated as needed. 5) ML data are agreed and communicated to all affected parties. | | | system which supports • ML data management activities, • relevant sources of ML data, • ML data life cycle including a status model, and • interfaces to affected parties. and structuring. | | | quality of ML data is analyzed based on defined ML data quality criteria and activities are performed to support avoidance of biases of data. labelling, completeness against ML data requirements. data quality approach.",
+      "pamCitation": "PAM §SUP.11 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Collect ML data",
+      "description": "Relevant sources for raw data are identified and continuously monitored for changes. The raw data is collected according to the ML data requirements. requirements.",
+      "pamCitation": "PAM §SUP.11 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Process ML data",
+      "description": "The raw data are processed (annotated, analyzed, and structured) according to the ML data requirements.",
+      "pamCitation": "PAM §SUP.11 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Assure quality of ML data",
+      "description": "Perform the activities according to the ML data quality approach to ensure that the ML data meets the defined ML data quality criteria.",
+      "pamCitation": "PAM §SUP.11 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Communicate agreed processed ML data",
+      "description": "Inform all affected parties about the agreed processed ML data and provide them to the affected parties. SUP.11 Machine Learning Data Management 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO",
+      "pamCitation": "PAM §SUP.11 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "16-52",
+      "name": "ML data management system"
+    },
+    {
+      "id": "19-50",
+      "name": "ML data quality approach"
+    },
+    {
+      "id": "03-53",
+      "name": "ML data"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication evidence"
+    }
+  ],
+  "inputWorkProducts": [],
+  "traceBPs": [
+    "BP2"
+  ]
+}

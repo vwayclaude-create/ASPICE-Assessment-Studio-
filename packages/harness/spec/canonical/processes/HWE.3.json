@@ -1,0 +1,112 @@
+{
+  "id": "HWE.3",
+  "name": "Verification against Hardware Design",
+  "category": "HWE",
+  "pamSection": "4.7.3",
+  "purpose": "The purpose is to ensure that the production data compliant hardware is verified to provide evidence for compliance with the hardware design.",
+  "outcomes": [
+    {
+      "id": 1,
+      "text": "Verification measures are specified for verification of the hardware against the hardware design, including the interfaces between hardware elements and the dynamic aspects."
+    },
+    {
+      "id": 2,
+      "text": "Verification measures are selected according to the release scope considering criteria, including criteria for regression verification."
+    },
+    {
+      "id": 3,
+      "text": "Verification is performed on production data compliant samples using the selected verification measures, and verification results are recorded."
+    },
+    {
+      "id": 4,
+      "text": "Consistency and bidirectional traceability are established between hardware elements and verification measures."
+    },
+    {
+      "id": 5,
+      "text": "Bidirectional traceability is established between verification measures and verification results."
+    },
+    {
+      "id": 6,
+      "text": "Verification results are summarized and communicated to all affected parties."
+    }
+  ],
+  "basePractices": [
+    {
+      "id": "BP1",
+      "title": "Specify verification measures for the verification against hardware design",
+      "description": "Specify the verification measures suitable to provide evidence for compliance of the hardware with the hardware design and its dynamic aspects. This includes • techniques for the verification measures, • pass/fail criteria for the verification measures, • a definition of entry and exit criteria for the verification measures, • necessary sequence of the verification measures, and • the required verification infrastructure and environment setup. dependencies of the correct signal flow between interfacing hardware elements, interactions between hardware components.",
+      "pamCitation": "PAM §HWE.3 BP1"
+    },
+    {
+      "id": "BP2",
+      "title": "Ensure use of compliant samples",
+      "description": "Ensure that the samples used for verification against hardware design are compliant with the corresponding production data, including special characteristics. Ensure that deviations are documented and that they do not alter verification results.",
+      "pamCitation": "PAM §HWE.3 BP2"
+    },
+    {
+      "id": "BP3",
+      "title": "Select verification measures",
+      "description": "Document the selection of verification measures considering selection criteria including regression criteria. The documented selection of verification measures shall have sufficient coverage according to the release scope. due to changes to the hardware design, or the intended use of the delivered hardware release (e.g., test bench, test track, public road etc.)",
+      "pamCitation": "PAM §HWE.3 BP3"
+    },
+    {
+      "id": "BP4",
+      "title": "Verify hardware design",
+      "description": "Verify the hardware design using the selected verification measures. Record the verification results including pass/fail status and corresponding verification measure output data. Specify the verification measures suitable to provide evidence for compliance of the hardware with the hardware design and its dynamic aspects. This includes • techniques for the verification measures, • pass/fail criteria for the verification measures, • a definition of entry and exit criteria for the verification measures, • necessary sequence of the verification measures, and • the required verification infrastructure and environment setup. dependencies of the correct signal flow between interfacing hardware elements, interactions between hardware components. against hardware design are compliant with the corresponding production data, including special characteristics. Ensure that deviations are documented and that they do not alter verification results. considering selection criteria including regression criteria. The documented selection of verification measures shall have sufficient coverage according to the release scope. due to changes to the hardware design, or the intended use of the delivered hardware release (e.g., test bench, test track, public road etc.) | | | verification measures. Record the verification results including pass/fail status and corresponding verification measure output data.",
+      "pamCitation": "PAM §HWE.3 BP4"
+    },
+    {
+      "id": "BP5",
+      "title": "Ensure consistency and establish bidirectional traceability",
+      "description": "Ensure consistency and establish bidirectional traceability between hardware elements and the verification measures. Establish bidirectional traceability between the verification measures and verification results. requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "pamCitation": "PAM §HWE.3 BP5"
+    },
+    {
+      "id": "BP6",
+      "title": "Summarize and communicate results",
+      "description": "Summarize the verification results and communicate them to all affected parties. parties to judge the consequences. HWE.3 Verification against Hardware Design 1 emoctuO 2 emoctuO 3 emoctuO 4 emoctuO 5 emoctuO 6 emoctuO",
+      "pamCitation": "PAM §HWE.3 BP6"
+    }
+  ],
+  "outputWorkProducts": [
+    {
+      "id": "08-60",
+      "name": "Verification Measure"
+    },
+    {
+      "id": "03-50",
+      "name": "Verification Measure Data"
+    },
+    {
+      "id": "08-58",
+      "name": "Verification Measure Selection Set"
+    },
+    {
+      "id": "15-52",
+      "name": "Verification Results"
+    },
+    {
+      "id": "13-51",
+      "name": "Consistency Evidence"
+    },
+    {
+      "id": "13-52",
+      "name": "Communication Evidence"
+    }
+  ],
+  "inputWorkProducts": [
+    {
+      "id": "04-52",
+      "name": "Hardware Architecture",
+      "fromProcess": "HWE.2"
+    },
+    {
+      "id": "04-53",
+      "name": "Hardware Detailed Design",
+      "fromProcess": "HWE.2"
+    }
+  ],
+  "traceBPs": [
+    "BP5"
+  ]
+}
