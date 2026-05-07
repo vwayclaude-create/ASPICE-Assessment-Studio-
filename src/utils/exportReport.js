@@ -1,6 +1,6 @@
 import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
 import { normalizeEvidence } from "./evidence";
+import { captureToPngCanvas, sliceCanvasToPdfPage } from "./pdfPaginator";
 
 export const exportReportAsText = ({ proc, results, fileName, date }) => {
   const lines = [];
@@ -218,22 +218,14 @@ const renderHeader = (pdf, proc, pageWidth, headerH, headerPad, cont) => {
 };
 
 const sliceCanvasToPdf = (pdf, canvas, imgX, yTop, sliceMm, srcY, srcH, scaledImgW) => {
-  const tmp = document.createElement("canvas");
-  tmp.width = canvas.width;
-  tmp.height = srcH;
-  const ctx = tmp.getContext("2d");
-  ctx.fillStyle = "#FFFFFF";
-  ctx.fillRect(0, 0, tmp.width, tmp.height);
-  ctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
-  pdf.addImage(tmp.toDataURL("image/png"), "PNG", imgX, yTop, scaledImgW, sliceMm);
+  sliceCanvasToPdfPage(pdf, canvas, {
+    srcY, srcH,
+    dstX: imgX, dstY: yTop, dstW: scaledImgW, dstH: sliceMm,
+  });
 };
 
 export const exportReportAsPdf = async ({ proc, node }) => {
-  const canvas = await html2canvas(node, {
-    scale: 2,
-    backgroundColor: "#FFFFFF",
-    useCORS: true,
-    logging: false,
+  const canvas = await captureToPngCanvas(node, {
     windowWidth: node.scrollWidth,
     onclone: attachPrintStyle,
   });

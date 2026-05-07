@@ -10,8 +10,8 @@
 // 렌더는 모두 html2canvas → 이미지 변환을 거치므로 한글 폰트 임베딩 없이도 깨지지 않는다.
 // 화면용 컴포넌트는 건드리지 않고 PDF 전용 정적 HTML을 직접 빌드한다.
 import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
 import { RATING_META } from "../data/ratingMeta";
+import { captureToPngCanvas, sliceCanvasToPdfPage } from "./pdfPaginator";
 
 // A4 가로
 const PAGE_W_MM = 297;
@@ -360,13 +360,7 @@ function buildContentBodyHtml(sections) {
 }
 
 async function captureToCanvas(htmlNode) {
-  return html2canvas(htmlNode, {
-    scale: 2,
-    backgroundColor: "#FFFFFF",
-    useCORS: true,
-    logging: false,
-    windowWidth: CAPTURE_W_PX,
-  });
+  return captureToPngCanvas(htmlNode, { windowWidth: CAPTURE_W_PX });
 }
 
 // jsPDF 기본 폰트(Helvetica)는 한글을 못 그려서 mojibake 가 된다.
@@ -414,14 +408,10 @@ function paginateContent(pdf, canvas, sectionMarkers, startingPageIndex) {
   for (let i = 0; i < totalPages; i++) {
     pdf.addPage();
     const srcH = Math.min(pageHeightPx, canvas.height - cursor);
-    const tmp = document.createElement("canvas");
-    tmp.width = canvas.width;
-    tmp.height = srcH;
-    const ctx = tmp.getContext("2d");
-    ctx.fillStyle = "#FFFFFF";
-    ctx.fillRect(0, 0, tmp.width, tmp.height);
-    ctx.drawImage(canvas, 0, cursor, canvas.width, srcH, 0, 0, canvas.width, srcH);
-    pdf.addImage(tmp.toDataURL("image/png"), "PNG", SIDE_MM, CONTENT_TOP_MM, CONTENT_W_MM, srcH / pxPerMm);
+    sliceCanvasToPdfPage(pdf, canvas, {
+      srcY: cursor, srcH,
+      dstX: SIDE_MM, dstY: CONTENT_TOP_MM, dstW: CONTENT_W_MM, dstH: srcH / pxPerMm,
+    });
     for (const sec of sectionMarkers) {
       if (!sectionPageStarts.has(sec.id) && sec.srcY >= cursor && sec.srcY < cursor + srcH) {
         sectionPageStarts.set(sec.id, pageIdx);

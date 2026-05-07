@@ -1,9 +1,10 @@
-import { Clock, Trash2, FileText, FolderOpen, Eye, Layers, FileDown, Loader2 } from "lucide-react";
-import { T, FONTS, SECTION_CONTAINER_STYLE } from "../theme";
-import { SectionBadge } from "./SectionBadge";
+import { Trash2, FolderOpen, Eye, Layers, FileDown, Loader2 } from "lucide-react";
+import { T, FONTS } from "../theme";
+import { HistoryListShell } from "./HistoryListShell";
 
 const GRID_TEMPLATE = "180px 1fr 1.6fr 110px";
 const HISTORY_COLOR = "#A78BFA";
+const HEADER_COLUMNS = ["분석일자", "증적 / 엔진", "프로젝트 평가 결과", "Action"];
 
 const summarize = (entry) => {
   const v = entry.verdict || {};
@@ -17,28 +18,8 @@ const summarize = (entry) => {
   return { processes, total, meets, pass, targetLevel, consistencyErrors, coverage };
 };
 
-const HistoryHeader = () => (
-  <div style={{
-    display: "grid",
-    gridTemplateColumns: GRID_TEMPLATE,
-    background: T.surface3,
-    borderBottom: `1px solid ${T.borderM}`,
-    fontFamily: FONTS.mono,
-    fontSize: 10,
-    letterSpacing: "0.12em",
-    textTransform: "uppercase",
-    color: T.textMd,
-    fontWeight: 700,
-  }}>
-    <div style={{ padding: "12px 16px", borderRight: `1px solid ${T.borderL}` }}>분석일자</div>
-    <div style={{ padding: "12px 16px", borderRight: `1px solid ${T.borderL}` }}>증적 / 엔진</div>
-    <div style={{ padding: "12px 16px", borderRight: `1px solid ${T.borderL}` }}>프로젝트 평가 결과</div>
-    <div style={{ padding: "12px 16px", textAlign: "center" }}>Action</div>
-  </div>
-);
-
 const HistoryRow = ({ entry, isActive, isLast, onView, onDelete, onExportPdf, exporting }) => {
-  const { processes, total, meets, pass, targetLevel, consistencyErrors, coverage } = summarize(entry);
+  const { total, meets, pass, targetLevel, consistencyErrors, coverage } = summarize(entry);
   const dateStr = new Date(entry.date).toLocaleString("ko-KR", {
     year: "numeric", month: "2-digit", day: "2-digit",
     hour: "2-digit", minute: "2-digit",
@@ -260,110 +241,29 @@ export const ProjectHistoryCard = ({
   onExportEntryPdf,
   exportingEntryId,
 }) => (
-  <section style={SECTION_CONTAINER_STYLE}>
-    <SectionBadge color={HISTORY_COLOR}>§ 07 · PROJECT HISTORY</SectionBadge>
-
-    <div style={{
-      display: "flex",
-      alignItems: "baseline",
-      justifyContent: "space-between",
-      marginBottom: 18,
-      marginTop: 6,
-      flexWrap: "wrap",
-      gap: 12,
-    }}>
-      <div>
-        <h3 style={{
-          fontFamily: FONTS.sans,
-          fontSize: 22,
-          fontWeight: 700,
-          margin: "0 0 4px 0",
-          letterSpacing: "-0.02em",
-          color: T.textHi,
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-        }}>
-          <Clock size={18} style={{ color: HISTORY_COLOR }}/>
-          프로젝트 평가 이력 관리
-        </h3>
-        <div style={{
-          fontFamily: FONTS.mono,
-          fontSize: 10,
-          color: T.textLo,
-          letterSpacing: "0.1em",
-        }}>
-          {history.length} ENTRIES · 브라우저에 자동 저장됨
-        </div>
-      </div>
-      {history.length > 0 && (
-        <button
-          onClick={onClearAll}
-          style={{
-            background: "transparent",
-            color: T.textMd,
-            border: `1px solid ${T.borderM}`,
-            padding: "8px 16px",
-            fontFamily: FONTS.mono,
-            fontSize: 10,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            gap: 6,
-            borderRadius: 3,
-            fontWeight: 600,
-          }}
-        >
-          <Trash2 size={11}/> Clear All
-        </button>
-      )}
-    </div>
-
-    {history.length === 0 ? (
-      <div style={{
-        padding: "36px 20px",
-        textAlign: "center",
-        border: `1px dashed ${T.borderM}`,
-        borderRadius: 4,
-        color: T.textLo,
-        fontSize: 13,
-        background: T.surface2,
-      }}>
-        <FileText size={26} style={{ color: T.textDim, marginBottom: 10 }}/>
-        <div>아직 저장된 프로젝트 평가 이력이 없습니다.</div>
-        <div style={{
-          fontSize: 11,
-          marginTop: 6,
-          color: T.textDim,
-          fontFamily: FONTS.mono,
-          letterSpacing: "0.05em",
-        }}>
-          산출물을 업로드하고 프로젝트 평가를 실행하면 이곳에 자동 기록됩니다.
-        </div>
-      </div>
-    ) : (
-      <div style={{
-        border: `1px solid ${T.borderL}`,
-        borderRadius: 4,
-        overflow: "hidden",
-        background: T.surface2,
-      }}>
-        <HistoryHeader />
-        {history.map((h, idx) => (
-          <HistoryRow
-            key={h.id}
-            entry={h}
-            isActive={selectedHistoryId === h.id}
-            isLast={idx === history.length - 1}
-            onView={() => onToggleView(h.id)}
-            onDelete={() => onDeleteEntry(h.id)}
-            onExportPdf={() => onExportEntryPdf?.(h)}
-            exporting={exportingEntryId === h.id}
-          />
-        ))}
-      </div>
+  <HistoryListShell
+    accentColor={HISTORY_COLOR}
+    sectionLabel="§ 07 · PROJECT HISTORY"
+    title="프로젝트 평가 이력 관리"
+    subtitle={`${history.length} ENTRIES · 브라우저에 자동 저장됨`}
+    gridTemplate={GRID_TEMPLATE}
+    headerColumns={HEADER_COLUMNS}
+    entries={history}
+    isActiveEntry={(h) => selectedHistoryId === h.id}
+    onClearAll={onClearAll}
+    emptyPrimary="아직 저장된 프로젝트 평가 이력이 없습니다."
+    emptyHint="산출물을 업로드하고 프로젝트 평가를 실행하면 이곳에 자동 기록됩니다."
+    renderRow={(h, { isLast, isActive }) => (
+      <HistoryRow
+        key={h.id}
+        entry={h}
+        isActive={isActive}
+        isLast={isLast}
+        onView={() => onToggleView(h.id)}
+        onDelete={() => onDeleteEntry(h.id)}
+        onExportPdf={() => onExportEntryPdf?.(h)}
+        exporting={exportingEntryId === h.id}
+      />
     )}
-  </section>
+  />
 );
