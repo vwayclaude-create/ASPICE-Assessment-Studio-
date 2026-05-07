@@ -7,27 +7,52 @@
   "13-52": {
     "id": "13-52",
     "name": "Communication evidence",
-    "aliases": []
+    "aliases": [
+      "의사소통 증거",
+      "커뮤니케이션 증거",
+      "공지 메일",
+      "배포 메일",
+      "communication evidence"
+    ]
   },
   "13-09": {
     "id": "13-09",
     "name": "Meeting support evidence",
-    "aliases": []
+    "aliases": [
+      "회의록",
+      "회의 자료",
+      "meeting minute",
+      "meeting support evidence"
+    ]
   },
   "13-14": {
     "id": "13-14",
     "name": "Progress status",
-    "aliases": []
+    "aliases": [
+      "진척 현황",
+      "진척 보고",
+      "progress status"
+    ]
   },
   "13-16": {
     "id": "13-16",
     "name": "Change request",
-    "aliases": []
+    "aliases": [
+      "변경 요청",
+      "변경 요구서",
+      "change request"
+    ]
   },
   "13-19": {
     "id": "13-19",
     "name": "Review evidence",
-    "aliases": []
+    "aliases": [
+      "리뷰 증거",
+      "검토 증거",
+      "리뷰 결과",
+      "검토 결과",
+      "review evidence"
+    ]
   },
   "14-02": {
     "id": "14-02",
@@ -37,62 +62,133 @@
   "15-51": {
     "id": "15-51",
     "name": "Analysis results",
-    "aliases": []
+    "aliases": [
+      "분석 결과",
+      "analysis result",
+      "analysis results"
+    ]
   },
   "11-03": {
     "id": "11-03",
     "name": "Release note",
-    "aliases": []
+    "aliases": [
+      "릴리스 노트",
+      "릴리즈 노트",
+      "release note"
+    ]
   },
   "11-04": {
     "id": "11-04",
     "name": "Product release package",
-    "aliases": []
+    "aliases": [
+      "제품 릴리스 패키지",
+      "release package"
+    ]
   },
   "13-06": {
     "id": "13-06",
     "name": "Delivery evidence",
-    "aliases": []
+    "aliases": [
+      "인도 증거",
+      "납품 증거",
+      "delivery evidence"
+    ]
   },
   "13-13": {
     "id": "13-13",
     "name": "Product release approval",
-    "aliases": []
+    "aliases": [
+      "릴리스 승인",
+      "출하 승인",
+      "product release approval"
+    ]
   },
   "18-06": {
     "id": "18-06",
     "name": "Product release criteria",
-    "aliases": []
+    "aliases": [
+      "릴리스 기준",
+      "출하 기준",
+      "product release criteria"
+    ]
   },
   "17-00": {
     "id": "17-00",
     "name": "Requirement",
-    "aliases": []
+    "aliases": [
+      "요구사항 명세서",
+      "요구사항 정의서",
+      "요구사항 정의",
+      "요구사항 문서",
+      "system requirements specification",
+      "software requirements specification",
+      "syrs",
+      "srs",
+      "swrs"
+    ]
   },
   "17-54": {
     "id": "17-54",
     "name": "Requirement Attribute",
-    "aliases": []
+    "aliases": [
+      "요구사항 속성",
+      "요구사항 특성",
+      "요구사항 ID",
+      "요구사항 식별자",
+      "requirement attribute",
+      "requirement attributes"
+    ]
   },
   "13-51": {
     "id": "13-51",
     "name": "Consistency Evidence",
-    "aliases": []
+    "aliases": [
+      "일관성 증거",
+      "일관성 점검",
+      "일관성 평가",
+      "추적성 매트릭스",
+      "consistency evidence",
+      "traceability matrix"
+    ]
   },
   "04-06": {
     "id": "04-06",
     "name": "System Architecture",
-    "aliases": []
+    "aliases": [
+      "시스템 아키텍처",
+      "시스템 구조",
+      "syad",
+      "system architectural design",
+      "system architecture"
+    ]
   },
   "17-57": {
     "id": "17-57",
     "name": "Special Characteristics",
-    "aliases": []
+    "aliases": [
+      "특별 특성",
+      "특수 특성",
+      "안전 특성",
+      "안전 관련 특성",
+      "special characteristic",
+      "special characteristics",
+      "safety characteristic"
+    ]
   },
   "08-60": {
     "id": "08-60",
     "name": "Verification Measure",
-    "aliases": []
+    "aliases": [
+      "검증 측정",
+      "검증 절차",
+      "검증 계획",
+      "테스트 계획",
+      "테스트 명세",
+      "verification measure",
+      "verification plan",
+      "test plan",
+      "test specification"
+    ]
   },
   "06-50": {
     "id": "06-50",
@@ -102,117 +198,212 @@
   "03-50": {
     "id": "03-50",
     "name": "Verification Measure Data",
-    "aliases": []
+    "aliases": [
+      "검증 데이터",
+      "테스트 데이터",
+      "verification measure data"
+    ]
   },
   "08-58": {
     "id": "08-58",
     "name": "Verification Measure Selection Set",
-    "aliases": []
+    "aliases": [
+      "검증 케이스 선정",
+      "검증 항목 선정",
+      "검증 측정 선정",
+      "verification measure selection",
+      "verification measure selection set"
+    ]
   },
   "15-52": {
     "id": "15-52",
     "name": "Verification Results",
-    "aliases": []
+    "aliases": [
+      "검증 결과 보고서",
+      "검증 보고서",
+      "verification result report"
+    ]
   },
   "11-06": {
     "id": "11-06",
     "name": "Integrated System",
-    "aliases": []
+    "aliases": [
+      "통합 시스템",
+      "integrated system"
+    ]
   },
   "04-04": {
     "id": "04-04",
     "name": "Software Architecture",
-    "aliases": []
+    "aliases": [
+      "소프트웨어 아키텍처",
+      "sw 아키텍처",
+      "소프트웨어 구조",
+      "아키텍처 설계서",
+      "아키텍처 설계",
+      "swad",
+      "software architectural design"
+    ]
   },
   "04-05": {
     "id": "04-05",
     "name": "Software Detailed Design",
-    "aliases": []
+    "aliases": [
+      "소프트웨어 상세설계",
+      "sw 상세설계",
+      "상세설계서",
+      "상세 설계",
+      "swdd",
+      "software detailed design"
+    ]
   },
   "11-05": {
     "id": "11-05",
     "name": "Software Unit",
-    "aliases": []
+    "aliases": [
+      "소프트웨어 유닛",
+      "sw 유닛",
+      "software unit"
+    ]
   },
   "01-03": {
     "id": "01-03",
     "name": "Software Component",
-    "aliases": []
+    "aliases": [
+      "소프트웨어 컴포넌트",
+      "sw 컴포넌트",
+      "software component"
+    ]
   },
   "01-50": {
     "id": "01-50",
     "name": "Integrated Software",
-    "aliases": []
+    "aliases": [
+      "통합 소프트웨어",
+      "통합 sw",
+      "integrated software"
+    ]
   },
   "08-59": {
     "id": "08-59",
     "name": "Validation Measure",
-    "aliases": []
+    "aliases": [
+      "확인 측정",
+      "확인 절차",
+      "validation measure"
+    ]
   },
   "08-57": {
     "id": "08-57",
     "name": "Validation Measure Selection Set",
-    "aliases": []
+    "aliases": [
+      "확인 측정 선정",
+      "validation measure selection"
+    ]
   },
   "13-24": {
     "id": "13-24",
     "name": "Validation Results",
-    "aliases": []
+    "aliases": [
+      "확인 결과",
+      "validation result",
+      "validation results"
+    ]
   },
   "04-51": {
     "id": "04-51",
     "name": "ML architecture",
-    "aliases": []
+    "aliases": [
+      "ml 아키텍처",
+      "머신러닝 아키텍처",
+      "ml architecture"
+    ]
   },
   "01-54": {
     "id": "01-54",
     "name": "Hyperparameter",
-    "aliases": []
+    "aliases": [
+      "하이퍼파라미터",
+      "hyperparameter"
+    ]
   },
   "08-65": {
     "id": "08-65",
     "name": "ML training and validation approach",
-    "aliases": []
+    "aliases": [
+      "ml 학습 검증 접근",
+      "ml training and validation approach"
+    ]
   },
   "03-51": {
     "id": "03-51",
     "name": "ML data set",
-    "aliases": []
+    "aliases": [
+      "ml 데이터셋",
+      "ml data set",
+      "ml dataset"
+    ]
   },
   "01-53": {
     "id": "01-53",
     "name": "Trained ML model",
-    "aliases": []
+    "aliases": [
+      "학습된 ml 모델",
+      "trained ml model"
+    ]
   },
   "08-64": {
     "id": "08-64",
     "name": "ML test approach",
-    "aliases": []
+    "aliases": [
+      "ml 테스트 접근",
+      "ml test approach"
+    ]
   },
   "13-50": {
     "id": "13-50",
     "name": "ML test results",
-    "aliases": []
+    "aliases": [
+      "ml 테스트 결과",
+      "ml test result"
+    ]
   },
   "11-50": {
     "id": "11-50",
     "name": "Deployed ML model",
-    "aliases": []
+    "aliases": [
+      "배포된 ml 모델",
+      "deployed ml model"
+    ]
   },
   "04-52": {
     "id": "04-52",
     "name": "Hardware Architecture",
-    "aliases": []
+    "aliases": [
+      "하드웨어 아키텍처",
+      "hw 아키텍처",
+      "hwad",
+      "hardware architecture"
+    ]
   },
   "04-53": {
     "id": "04-53",
     "name": "Hardware Detailed Design",
-    "aliases": []
+    "aliases": [
+      "하드웨어 상세설계",
+      "hw 상세설계",
+      "hwdd",
+      "hardware detailed design"
+    ]
   },
   "04-54": {
     "id": "04-54",
     "name": "Hardware Schematics",
-    "aliases": []
+    "aliases": [
+      "하드웨어 회로도",
+      "hw 회로도",
+      "hardware schematic"
+    ]
   },
   "14-54": {
     "id": "14-54",
@@ -222,7 +413,11 @@
   "04-55": {
     "id": "04-55",
     "name": "Hardware Layout",
-    "aliases": []
+    "aliases": [
+      "하드웨어 레이아웃",
+      "hw 레이아웃",
+      "hardware layout"
+    ]
   },
   "03-54": {
     "id": "03-54",
@@ -232,7 +427,11 @@
   "04-56": {
     "id": "04-56",
     "name": "Hardware Element Interface",
-    "aliases": []
+    "aliases": [
+      "하드웨어 인터페이스",
+      "hw 인터페이스",
+      "hardware element interface"
+    ]
   },
   "16-50": {
     "id": "16-50",
@@ -242,27 +441,43 @@
   "18-52": {
     "id": "18-52",
     "name": "Escalation path",
-    "aliases": []
+    "aliases": [
+      "에스컬레이션 경로",
+      "escalation path"
+    ]
   },
   "18-07": {
     "id": "18-07",
     "name": "Quality criteria",
-    "aliases": []
+    "aliases": [
+      "품질 기준",
+      "quality criteria"
+    ]
   },
   "13-18": {
     "id": "13-18",
     "name": "Quality conformance evidence",
-    "aliases": []
+    "aliases": [
+      "품질 적합성 증거",
+      "quality conformance evidence"
+    ]
   },
   "18-53": {
     "id": "18-53",
     "name": "Configuration item selection criteria",
-    "aliases": []
+    "aliases": [
+      "형상 항목 선정 기준",
+      "configuration item selection criteria"
+    ]
   },
   "01-52": {
     "id": "01-52",
     "name": "Configuration item list",
-    "aliases": []
+    "aliases": [
+      "형상 항목 목록",
+      "형상 식별 목록",
+      "configuration item list"
+    ]
   },
   "16-03": {
     "id": "16-03",
@@ -272,7 +487,11 @@
   "13-08": {
     "id": "13-08",
     "name": "Baseline",
-    "aliases": []
+    "aliases": [
+      "베이스라인",
+      "기준선",
+      "baseline"
+    ]
   },
   "14-01": {
     "id": "14-01",
@@ -292,22 +511,37 @@
   "13-07": {
     "id": "13-07",
     "name": "Problem",
-    "aliases": []
+    "aliases": [
+      "문제",
+      "이슈",
+      "결함",
+      "problem report"
+    ]
   },
   "15-55": {
     "id": "15-55",
     "name": "Problem analysis evidence",
-    "aliases": []
+    "aliases": [
+      "문제 분석 증거",
+      "problem analysis evidence"
+    ]
   },
   "15-12": {
     "id": "15-12",
     "name": "Problem status",
-    "aliases": []
+    "aliases": [
+      "문제 현황",
+      "이슈 현황",
+      "problem status"
+    ]
   },
   "18-57": {
     "id": "18-57",
     "name": "Change analysis criteria",
-    "aliases": []
+    "aliases": [
+      "변경 분석 기준",
+      "change analysis criteria"
+    ]
   },
   "16-52": {
     "id": "16-52",
@@ -317,22 +551,34 @@
   "19-50": {
     "id": "19-50",
     "name": "ML data quality approach",
-    "aliases": []
+    "aliases": [
+      "ml 데이터 품질 접근",
+      "ml data quality approach"
+    ]
   },
   "03-53": {
     "id": "03-53",
     "name": "ML data",
-    "aliases": []
+    "aliases": [
+      "ml 데이터",
+      "ml data"
+    ]
   },
   "08-53": {
     "id": "08-53",
     "name": "Scope of work",
-    "aliases": []
+    "aliases": [
+      "작업 범위",
+      "scope of work"
+    ]
   },
   "08-54": {
     "id": "08-54",
     "name": "Feasibility analysis",
-    "aliases": []
+    "aliases": [
+      "타당성 분석",
+      "feasibility analysis"
+    ]
   },
   "14-10": {
     "id": "14-10",
@@ -342,7 +588,12 @@
   "08-56": {
     "id": "08-56",
     "name": "Schedule",
-    "aliases": []
+    "aliases": [
+      "일정",
+      "프로젝트 일정",
+      "마스터 일정",
+      "schedule"
+    ]
   },
   "14-50": {
     "id": "14-50",
@@ -352,17 +603,28 @@
   "15-06": {
     "id": "15-06",
     "name": "Project status",
-    "aliases": []
+    "aliases": [
+      "프로젝트 현황",
+      "project status"
+    ]
   },
   "15-09": {
     "id": "15-09",
     "name": "Risk status",
-    "aliases": []
+    "aliases": [
+      "리스크 현황",
+      "위험 현황",
+      "risk status"
+    ]
   },
   "08-55": {
     "id": "08-55",
     "name": "Risk measure",
-    "aliases": []
+    "aliases": [
+      "리스크 측정",
+      "위험 측정",
+      "risk measure"
+    ]
   },
   "03-03": {
     "id": "03-03",
@@ -402,12 +664,20 @@
   "15-13": {
     "id": "15-13",
     "name": "Assessment/audit report",
-    "aliases": []
+    "aliases": [
+      "평가 보고서",
+      "심사 보고서",
+      "assessment report",
+      "audit report"
+    ]
   },
   "15-16": {
     "id": "15-16",
     "name": "Improvement opportunity",
-    "aliases": []
+    "aliases": [
+      "개선 기회",
+      "improvement opportunity"
+    ]
   },
   "16-06": {
     "id": "16-06",
@@ -417,7 +687,10 @@
   "04-02": {
     "id": "04-02",
     "name": "Domain architecture",
-    "aliases": []
+    "aliases": [
+      "도메인 아키텍처",
+      "domain architecture"
+    ]
   },
   "12-03": {
     "id": "12-03",
@@ -427,12 +700,19 @@
   "15-07": {
     "id": "15-07",
     "name": "Reuse analysis evidence",
-    "aliases": []
+    "aliases": [
+      "재사용 분석",
+      "재사용 검토",
+      "reuse analysis"
+    ]
   },
   "13-53": {
     "id": "13-53",
     "name": "Qualification evidence",
-    "aliases": []
+    "aliases": [
+      "적격성 증거",
+      "qualification evidence"
+    ]
   },
   "19-01": {
     "id": "19-01",
@@ -442,32 +722,53 @@
   "18-58": {
     "id": "18-58",
     "name": "Process performance objectives",
-    "aliases": []
+    "aliases": [
+      "프로세스 성과 목표",
+      "process performance objective"
+    ]
   },
   "17-55": {
     "id": "17-55",
     "name": "Resource needs",
-    "aliases": []
+    "aliases": [
+      "자원 필요사항",
+      "리소스 필요사항",
+      "resource needs"
+    ]
   },
   "08-61": {
     "id": "08-61",
     "name": "Resource allocation",
-    "aliases": []
+    "aliases": [
+      "자원 할당",
+      "리소스 할당",
+      "resource allocation"
+    ]
   },
   "08-62": {
     "id": "08-62",
     "name": "Communication matrix",
-    "aliases": []
+    "aliases": [
+      "커뮤니케이션 매트릭스",
+      "의사소통 매트릭스",
+      "communication matrix"
+    ]
   },
   "17-05": {
     "id": "17-05",
     "name": "Requirements for work products",
-    "aliases": []
+    "aliases": [
+      "산출물 요구사항",
+      "work product requirement"
+    ]
   },
   "18-59": {
     "id": "18-59",
     "name": "Review and approval criteria for work products",
-    "aliases": []
+    "aliases": [
+      "리뷰 승인 기준",
+      "review and approval criteria"
+    ]
   },
   "16-00": {
     "id": "16-00",
@@ -582,7 +883,16 @@
   "13-25": {
     "id": "13-25",
     "name": "Verification results • Verification data and logs",
-    "aliases": []
+    "aliases": [
+      "검증 결과",
+      "검증 데이터",
+      "검증 로그",
+      "테스트 결과",
+      "테스트 로그",
+      "verification result",
+      "verification results",
+      "verification data and logs"
+    ]
   },
   "18-00": {
     "id": "18-00",

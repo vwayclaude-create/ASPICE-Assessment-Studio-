@@ -8,6 +8,11 @@ import { ruleScorer } from "../src/evaluators/ruleScorer.js";
 import { indexArtifacts } from "../src/io/artifactIndex.js";
 import { loadWorkProducts } from "../spec/canonical/index.js";
 import { renderReport } from "../src/io/reporter.js";
+import {
+  computeCoverage,
+  isRequirementId,
+  REQUIREMENT_PREFIXES,
+} from "../src/crossProcess/coverage.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const FIXTURE_DIR = resolve(__dirname, "fixtures", "project");
@@ -98,6 +103,66 @@ test("project: coverage finds REQ → TC links", async () => {
     cov.uncovered.includes("REQ-SYS-003"),
     `REQ-SYS-003 should be flagged uncovered, got uncovered=${cov.uncovered.join(",")}`
   );
+});
+
+test("coverage: requirement allow-list filters non-requirement IDs", () => {
+  // Three requirement IDs and three noise IDs (sequence number, version tag,
+  // test case). The allow-list should keep only the first three.
+  const wpCatalog = loadWorkProducts();
+  const artifacts = indexArtifacts(
+    [
+      {
+        name: "SRS.docx",
+        text: "본 명세서의 요구사항: REQ-001, FR-014, IF-007. 시퀀스: SEQ-1, SEQ-2. 버전: BSD-OTA-VER-001. 테스트: TC-099.",
+      },
+      {
+        name: "TestPlan.docx",
+        text: "테스트 계획. 검증 측정 verification measure 항목: REQ-001, FR-014, SEQ-1.",
+      },
+    ],
+    { wpCatalog }
+  );
+  const cov = computeCoverage(artifacts);
+  assert.equal(cov.totalRequirements, 3, "only requirement-shaped IDs are counted");
+  assert.ok(!cov.uncovered.includes("SEQ-1"), "SEQ-* dropped");
+  assert.ok(!cov.uncovered.includes("BSD-OTA-VER-001"), "BSD-OTA-VER-* dropped");
+  assert.ok(!cov.uncovered.includes("TC-099"), "TC-* dropped");
+});
+
+test("coverage: extraRequirementPrefixes lets projects extend the allow-list", () => {
+  const wpCatalog = loadWorkProducts();
+  const artifacts = indexArtifacts(
+    [
+      {
+        name: "SRS.docx",
+        text: "본 명세: PROJ-001, PROJ-002, PROJ-003. 외부 참조: SEQ-1.",
+      },
+      { name: "TestPlan.docx", text: "test plan: PROJ-001 검증 측정." },
+    ],
+    { wpCatalog }
+  );
+  // Without extra prefix: PROJ-* dropped → 0 requirements.
+  assert.equal(computeCoverage(artifacts).totalRequirements, 0);
+  // With extra prefix: PROJ-* kept → 3 requirements.
+  const cov = computeCoverage(artifacts, { extraRequirementPrefixes: ["PROJ"] });
+  assert.equal(cov.totalRequirements, 3);
+  assert.equal(cov.coveredCount, 1, "only PROJ-001 referenced by test artifact");
+});
+
+test("coverage: isRequirementId classifier handles common prefixes", () => {
+  assert.ok(isRequirementId("REQ-001"));
+  assert.ok(isRequirementId("FR-001"));
+  assert.ok(isRequirementId("NFR-001"));
+  assert.ok(isRequirementId("IF-001"));
+  assert.ok(isRequirementId("SYS-001"));
+  assert.ok(isRequirementId("SW-014"));
+  assert.ok(isRequirementId("REQ-SYS-101"));
+  assert.ok(!isRequirementId("SEQ-1"));
+  assert.ok(!isRequirementId("BSD-OTA-VER-001"));
+  assert.ok(!isRequirementId("TC-099"));
+  assert.ok(!isRequirementId("CR-042"));
+  assert.ok(REQUIREMENT_PREFIXES.has("FUNC"));
+  assert.ok(REQUIREMENT_PREFIXES.has("INTF"));
 });
 
 test("project: markdown rendering produces sections we expect", async () => {
