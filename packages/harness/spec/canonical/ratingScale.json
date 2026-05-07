@@ -26,7 +26,7 @@
     "CL1": {
       "description": "Performed",
       "required": [
-        { "pa": "PA 1.1", "minCollapsed": "F" }
+        { "pa": "PA 1.1", "minCollapsed": "L" }
       ]
     },
     "CL2": {

@@ -43,6 +43,28 @@ test("CL: PA 1.1=F → CL1", () => {
   assert.equal(level, 1);
 });
 
+test("CL: PA 1.1=L+ → CL1 (PAM v4.0 only requires L)", () => {
+  const { level } = computeCapabilityLevel([
+    { paId: "PA 1.1", level: 1, rating: "L+", collapsed: "L", gps: [] },
+  ]);
+  assert.equal(level, 1);
+});
+
+test("CL: PA 1.1=L- → CL1 (Largely lower still collapses to L)", () => {
+  const { level } = computeCapabilityLevel([
+    { paId: "PA 1.1", level: 1, rating: "L-", collapsed: "L", gps: [] },
+  ]);
+  assert.equal(level, 1);
+});
+
+test("CL: PA 1.1=P+ → CL0 (Partially is below the L threshold)", () => {
+  const { level, reason } = computeCapabilityLevel([
+    { paId: "PA 1.1", level: 1, rating: "P+", collapsed: "P", gps: [] },
+  ]);
+  assert.equal(level, 0);
+  assert.match(reason, /Largely/);
+});
+
 test("CL: PA 1.1=F, PA 2.1=L+, PA 2.2=L- → CL2 (both collapse to L)", () => {
   const { level } = computeCapabilityLevel([
     { paId: "PA 1.1", level: 1, rating: "F", collapsed: "F", gps: [] },

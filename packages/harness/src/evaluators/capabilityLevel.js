@@ -29,5 +29,5 @@ export function computeCapabilityLevel(pas) {
       return { level, reason: `All ${clKey} required PAs met` };
     }
   }
-  return { level: 0, reason: "PA 1.1 did not reach Fully" };
+  return { level: 0, reason: "PA 1.1 did not reach Largely (L)" };
 }
