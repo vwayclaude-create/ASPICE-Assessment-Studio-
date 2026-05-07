@@ -51,7 +51,13 @@ const isQuotaError = (err) =>
           err.code === 22 || err.code === 1014 ||
           /quota/i.test(err.message || ""));
 
+// Same shape as useProjectHistory: empty list = legitimate clear-all,
+// otherwise leave existing storage untouched if even one entry won't fit.
 const persistHistory = (entries) => {
+  if (entries.length === 0) {
+    try { localStorage.removeItem(STORAGE_KEY); } catch { /* empty */ }
+    return;
+  }
   let working = entries.map(slimEntryForStorage);
   while (working.length > 0) {
     try {
@@ -65,8 +71,10 @@ const persistHistory = (entries) => {
       working = working.slice(0, -1);
     }
   }
-  try { localStorage.removeItem(STORAGE_KEY); } catch { /* empty */ }
-  console.warn("[aspice/history] entry exceeds localStorage quota even after slimming — not persisted.");
+  console.warn(
+    "[aspice/history] new entry exceeds localStorage quota even after slimming — not persisted. " +
+    "Previously saved history retained intact."
+  );
 };
 
 export const useHistory = () => {
