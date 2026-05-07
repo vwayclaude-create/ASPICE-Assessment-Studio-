@@ -10,9 +10,10 @@
  *   PAM §4.3.2 BP5
  *   PAM §5.3.1 GP 2.1.1
  *   PAM §3.2.2
+ *   PAM §5 GP 1.1.1     ← top-level GP section, no subsection dots
  */
 
-const CITATION_RE = /PAM\s*§\s*\d+(?:\.\d+){1,3}(?:\s+(?:BP\d+|GP\s?\d\.\d\.\d))?/;
+const CITATION_RE = /PAM\s*§\s*\d+(?:\.\d+){0,3}(?:\s+(?:BP\d+|GP\s?\d\.\d\.\d))?/;
 
 /** @param {string|undefined} citation */
 export function hasPamCitation(citation) {

@@ -79,7 +79,7 @@ export const ruleScorer = {
         evidence: [
           {
             artifactName: nameHit.name,
-            quote: snippet(nameHit.text ?? nameHit.name, needle, 120),
+            quote: snippet(nameHit.text ?? nameHit.name, needle, 400),
           },
         ],
         gaps,
@@ -218,7 +218,7 @@ function matchKeywords(keywords, artifacts, matchIndex) {
         weighted += w;
         evidence.push({
           artifactName: a.name,
-          quote: snippet(a.text ?? "", kw, 120) || kw,
+          quote: snippet(a.text ?? "", kw, 400) || kw,
         });
         perArtifactHits.set(a.name, (perArtifactHits.get(a.name) ?? 0) + 1);
         matched = true;
@@ -230,14 +230,55 @@ function matchKeywords(keywords, artifacts, matchIndex) {
   return { weighted, total: keywords.length, evidence, missing, perArtifactHits };
 }
 
-function snippet(text, needle, radius = 120) {
+function snippet(text, needle, radius = 400) {
   if (!text || !needle) return "";
   const i = text.toLowerCase().indexOf(needle.toLowerCase());
   if (i < 0) return "";
-  const start = Math.max(0, i - radius);
-  const end = Math.min(text.length, i + needle.length + radius);
-  return text.slice(start, end).replace(/\s+/g, " ");
+  // Find a clean window: extend the raw [i-radius, i+needle+radius] outward to
+  // the nearest sentence/paragraph boundary so the snippet doesn't begin or
+  // end mid-word. Falls back to the raw window if no boundary is found within
+  // a reasonable extension budget.
+  const rawStart = Math.max(0, i - radius);
+  const rawEnd = Math.min(text.length, i + needle.length + radius);
+  const start = expandBackToBoundary(text, rawStart, Math.max(0, rawStart - 200));
+  const end = expandForwardToBoundary(text, rawEnd, Math.min(text.length, rawEnd + 200));
+  return text.slice(start, end).replace(/\s+/g, " ").trim();
 }
+
+// A "real" sentence terminator: . ! ? (incl. CJK fullwidth) or newline.
+// Decimal points like "0.5" are excluded by requiring whitespace / end-of-text
+// AFTER the terminator (so "0.5" does not split, "끝났다. " does).
+const SENTENCE_TERMINATOR = /[.!?。！？]/;
+
+function isSentenceEndAt(text, p) {
+  const ch = text[p];
+  if (ch === "\n") return true;
+  if (!SENTENCE_TERMINATOR.test(ch)) return false;
+  const next = text[p + 1];
+  return next === undefined || /\s/.test(next);
+}
+
+function expandBackToBoundary(text, from, floor) {
+  for (let p = from; p > floor; p--) {
+    if (isSentenceEndAt(text, p - 1)) return p;
+  }
+  // No boundary in budget — at least don't start mid-word.
+  for (let p = from; p > floor; p--) {
+    if (/\s/.test(text[p - 1])) return p;
+  }
+  return from;
+}
+
+function expandForwardToBoundary(text, from, ceil) {
+  for (let p = from; p < ceil; p++) {
+    if (isSentenceEndAt(text, p)) return p + 1;
+  }
+  for (let p = from; p < ceil; p++) {
+    if (/\s/.test(text[p])) return p;
+  }
+  return from;
+}
+
 
 function empty(reason) {
   return {

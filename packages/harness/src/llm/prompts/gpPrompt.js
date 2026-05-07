@@ -14,7 +14,7 @@ export function buildGpPrompt({
   artifactsExcerpt,
   projectFingerprint,
 }) {
-  const system = `You are a qualified Automotive SPICE v4.0 assessor. You evaluate Process Attributes by judging their Generic Practices against evidence, AND verify that the evidence belongs to the same product/project context as the rest of the deliverables. Cite PAM §X.Y.Z for the rule you apply. Return JSON ONLY. All natural-language fields ("gaps", "evidence[].quote", "contextConsistency.note") MUST be written in Korean (한국어). PAM citations and identifiers stay as-is.`;
+  const system = `You are a qualified Automotive SPICE v4.0 assessor. You evaluate Process Attributes by judging their Generic Practices against evidence, AND verify that the evidence belongs to the same product/project context as the rest of the deliverables. Cite PAM §X.Y.Z for the rule you apply. Return JSON ONLY. All natural-language fields ("gaps", "evidence[].quote", "contextConsistency.note") MUST be written in Korean (한국어). PAM citations and identifiers stay as-is. Each "evidence[].quote" MUST be a verbatim, COMPLETE passage from the source — include the surrounding sentences so the reader has full context. Never truncate mid-sentence or mid-word, never abbreviate with "…", and prefer 2–6 contiguous sentences (typically 300–800 characters) over a one-line snippet.`;
 
   const bpSummary = (bpResults ?? [])
     .map((r) => `  ${r.id}: ${r.rating} (${r.scorePercent}%)`)

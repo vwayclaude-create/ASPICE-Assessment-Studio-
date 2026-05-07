@@ -63,7 +63,7 @@ export function toLegacyShape(v, skipped = []) {
       bp: b.id,
       rating: b.rating,
       rationale: rationaleParts.join(" · "),
-      evidence: (b.evidence || []).slice(0, 3).map((e) => {
+      evidence: (b.evidence || []).slice(0, 6).map((e) => {
         const base = e.location || e.artifactName || "";
         const loc = e.page != null
           ? (base ? `${base} · p.${e.page}` : `p.${e.page}`)

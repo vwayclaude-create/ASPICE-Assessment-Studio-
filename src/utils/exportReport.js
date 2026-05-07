@@ -42,47 +42,158 @@ export const exportReportAsText = ({ proc, results, fileName, date }) => {
 };
 
 // PDF 내보내기용 인쇄 스타일: 화면의 다크 테마를 종이용 라이트 레이아웃으로 덮어쓴다.
+// 모든 폰트 크기는 화면 대비 약 0.9× 로 축소되어 종이에 맞춰져 있음.
 const PRINT_STYLE = `
-  #pdf-export-root { background:#FFFFFF !important; color:#3F3F46 !important; border:1.5px solid #0A0A0C !important; border-radius:4px !important; padding:20px 24px 22px !important; font-family:'Inter',system-ui,sans-serif !important; }
+  #pdf-export-root { background:#FFFFFF !important; color:#3F3F46 !important; border:1.5px solid #0A0A0C !important; border-radius:4px !important; padding:18px 22px 20px !important; font-family:'Inter',system-ui,sans-serif !important; }
   #pdf-export-root, #pdf-export-root * { color:#3F3F46 !important; letter-spacing:-0.005em !important; }
-  #pdf-export-root > div:first-child { background:#FFFFFF !important; color:#0A0A0C !important; border:1.5px solid #0A0A0C !important; font-size:9px !important; padding:3px 10px !important; top:-9px !important; }
+  #pdf-export-root > div:first-child { background:#FFFFFF !important; color:#0A0A0C !important; border:1.5px solid #0A0A0C !important; font-size:8px !important; padding:3px 10px !important; top:-9px !important; }
   #pdf-export-root > div:first-child * { color:#0A0A0C !important; }
-  #pdf-export-root h3 { color:#0A0A0C !important; font-size:22px !important; margin:0 0 6px 0 !important; font-weight:700 !important; }
-  #pdf-export-root h3 > span { font-size:12px !important; color:#52525C !important; }
-  #pdf-export-root p { font-size:10.5px !important; line-height:1.45 !important; margin:0 !important; }
-  #pdf-export-root div[style*="repeat(3, 1fr)"] { gap:8px !important; margin-bottom:14px !important; }
-  #pdf-export-root div[style*="repeat(3, 1fr)"] > div { background:#FFFFFF !important; border-radius:4px !important; padding:10px 14px !important; border-width:1px 1px 1px 4px !important; border-style:solid !important; }
-  #pdf-export-root div[style*="repeat(3, 1fr)"] > div > div:nth-child(1) { font-size:9px !important; font-weight:700 !important; opacity:1 !important; }
-  #pdf-export-root div[style*="repeat(3, 1fr)"] > div > div:nth-child(2) { font-size:32px !important; line-height:1 !important; margin-top:6px !important; font-weight:800 !important; color:#111827 !important; }
-  #pdf-export-root div[style*="repeat(3, 1fr)"] > div > div:nth-child(3) { font-size:9px !important; color:#6B7280 !important; opacity:1 !important; margin-top:3px !important; }
-  #pdf-export-root div[style*="1fr 1fr"] { gap:10px !important; margin-bottom:14px !important; }
-  #pdf-export-root div[style*="1fr 1fr"] > div { background:#FAFAFA !important; border:1px solid #D4D4D8 !important; border-left:2.5px solid #0A0A0C !important; border-radius:0 3px 3px 0 !important; padding:10px 12px !important; }
-  #pdf-export-root div[style*="1fr 1fr"] > div > div:nth-child(1) { font-size:9px !important; color:#0A0A0C !important; font-weight:700 !important; margin-bottom:3px !important; }
-  #pdf-export-root div[style*="1fr 1fr"] > div > div:nth-child(2) { font-size:11px !important; color:#3F3F46 !important; line-height:1.45 !important; }
-  #pdf-export-root div[style*="60px 1fr"] { background:#FFFFFF !important; border:1px solid #0A0A0C !important; border-radius:3px !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(1) { background:#FFFFFF !important; color:#0A0A0C !important; border-right:1px solid #0A0A0C !important; padding:6px 0 !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(1) > div:nth-child(1) { font-size:20px !important; font-weight:800 !important; color:#0A0A0C !important; line-height:1 !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(1) > div:nth-child(2) { font-size:7px !important; color:#52525C !important; opacity:1 !important; margin-top:2px !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(2) { padding:8px 12px !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(2) > div:nth-child(2) { font-size:10px !important; color:#3F3F46 !important; line-height:1.4 !important; margin-bottom:5px !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(2) > div:nth-child(3) { font-size:7.5px !important; color:#52525C !important; letter-spacing:0.12em !important; font-weight:700 !important; margin-bottom:3px !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(2) > div:nth-child(4) { gap:3px !important; max-height:none !important; overflow:visible !important; padding-right:0 !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(2) > div:nth-child(4) > div { background:#FAFAFA !important; border:1px solid #D4D4D8 !important; border-left:2px solid #0A0A0C !important; padding:5px 8px !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(2) > div:nth-child(4) > div > div:first-child { background:#0A0A0C !important; color:#FFFFFF !important; border:none !important; padding:1px 6px !important; font-size:8px !important; font-weight:700 !important; letter-spacing:0.06em !important; margin-bottom:3px !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(2) > div:nth-child(4) > div > div:first-child * { color:#FFFFFF !important; }
-  #pdf-export-root div[style*="60px 1fr"] > div:nth-child(2) > div:nth-child(4) > div > div:last-child { font-size:9.5px !important; color:#3F3F46 !important; line-height:1.4 !important; }
+  #pdf-export-root h3 { color:#0A0A0C !important; font-size:20px !important; margin:0 0 5px 0 !important; font-weight:700 !important; }
+  #pdf-export-root h3 > span { font-size:11px !important; color:#52525C !important; }
+  #pdf-export-root p { font-size:9.5px !important; line-height:1.45 !important; margin:0 !important; }
+  #pdf-export-root div[style*="repeat(3, 1fr)"] { gap:7px !important; margin-bottom:13px !important; }
+  #pdf-export-root div[style*="repeat(3, 1fr)"] > div { background:#FFFFFF !important; border-radius:4px !important; padding:9px 13px !important; border-width:1px 1px 1px 4px !important; border-style:solid !important; }
+  #pdf-export-root div[style*="repeat(3, 1fr)"] > div > div:nth-child(1) { font-size:8px !important; font-weight:700 !important; opacity:1 !important; }
+  #pdf-export-root div[style*="repeat(3, 1fr)"] > div > div:nth-child(2) { font-size:29px !important; line-height:1 !important; margin-top:5px !important; font-weight:800 !important; color:#111827 !important; }
+  #pdf-export-root div[style*="repeat(3, 1fr)"] > div > div:nth-child(3) { font-size:8px !important; color:#6B7280 !important; opacity:1 !important; margin-top:3px !important; }
+  #pdf-export-root div[style*="1fr 1fr"] { gap:9px !important; margin-bottom:13px !important; }
+  #pdf-export-root div[style*="1fr 1fr"] > div { background:#FAFAFA !important; border:1px solid #D4D4D8 !important; border-left:2.5px solid #0A0A0C !important; border-radius:0 3px 3px 0 !important; padding:9px 11px !important; }
+  #pdf-export-root div[style*="1fr 1fr"] > div > div:nth-child(1) { font-size:8px !important; color:#0A0A0C !important; font-weight:700 !important; margin-bottom:3px !important; }
+  #pdf-export-root div[style*="1fr 1fr"] > div > div:nth-child(2) { font-size:10px !important; color:#3F3F46 !important; line-height:1.45 !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] { background:#FFFFFF !important; border:1px solid #0A0A0C !important; border-radius:3px !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(1) { background:#FFFFFF !important; color:#0A0A0C !important; border-right:1px solid #0A0A0C !important; padding:6px 0 !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(1) > div:nth-child(1) { font-size:18px !important; font-weight:800 !important; color:#0A0A0C !important; line-height:1 !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(1) > div:nth-child(2) { font-size:6.5px !important; color:#52525C !important; opacity:1 !important; margin-top:2px !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) { padding:7px 11px !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) > div:nth-child(2) { font-size:9px !important; color:#3F3F46 !important; line-height:1.4 !important; margin-bottom:5px !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) > div:nth-child(3) { font-size:7px !important; color:#52525C !important; letter-spacing:0.12em !important; font-weight:700 !important; margin-bottom:3px !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) > div:nth-child(4) { gap:3px !important; max-height:none !important; overflow:visible !important; padding-right:0 !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) > div:nth-child(4) > div { background:#FAFAFA !important; border:1px solid #D4D4D8 !important; border-left:2px solid #0A0A0C !important; padding:5px 8px !important; }
+  /* Evidence "location" pill — black bg + white text + visible icon. Force span/svg color so icon and label both render in PDF. */
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) > div:nth-child(4) > div > div:first-child { background:#0A0A0C !important; color:#FFFFFF !important; border:1px solid #0A0A0C !important; padding:2px 7px !important; font-size:7px !important; font-weight:700 !important; letter-spacing:0.06em !important; margin-bottom:3px !important; display:inline-flex !important; align-items:center !important; gap:4px !important; max-width:100% !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) > div:nth-child(4) > div > div:first-child * { color:#FFFFFF !important; }
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) > div:nth-child(4) > div > div:first-child svg { color:#FFFFFF !important; stroke:#FFFFFF !important; fill:none !important; width:8px !important; height:8px !important; flex-shrink:0 !important; }
+  /* Quote box — show full content (no scroll), neutralise screen-only background/border. */
+  #pdf-export-root div[style*="60px minmax(0, 1fr)"] > div:nth-child(2) > div:nth-child(4) > div > div:last-child { font-size:8.5px !important; color:#3F3F46 !important; line-height:1.4 !important; max-height:none !important; overflow:visible !important; padding:4px 6px !important; background:#FFFFFF !important; border:none !important; }
   #pdf-export-root > div[style*="flex-direction: column"]:last-child { gap:5px !important; }
 `;
 
 const attachPrintStyle = (clonedDoc) => {
-  const sections = clonedDoc.querySelectorAll("section");
-  let target = null;
-  sections.forEach((el) => { if (el.textContent && el.textContent.includes("NPLF VERDICT")) target = el; });
-  if (!target) return;
+  // Prefer the explicit data-attribute marker set by VerdictCard. Fall back
+  // to legacy textContent-based matching so older snapshots still print.
+  let target = clonedDoc.querySelector("[data-pdf-export-root]");
+  if (!target) {
+    clonedDoc.querySelectorAll("section").forEach((el) => {
+      const t = el.textContent || "";
+      if (!target && (t.includes("NPLF VERDICT") || t.includes("NPLF 평가 결과"))) target = el;
+    });
+  }
+  if (!target) {
+    console.warn("[aspice/pdf] verdict section not found in cloned doc — print stylesheet not applied");
+    return;
+  }
   target.id = "pdf-export-root";
   const s = clonedDoc.createElement("style");
   s.textContent = PRINT_STYLE;
-  clonedDoc.head.appendChild(s);
+  (clonedDoc.head || clonedDoc.documentElement).appendChild(s);
+  // Belt-and-braces: also mutate inline styles directly so the print look
+  // applies even if the injected <style> doesn't reach html2canvas's renderer
+  // (selector specificity, attribute mismatch, etc.).
+  applyInlinePdfStyle(target);
+};
+
+const setStyle = (el, patch) => {
+  if (!el) return;
+  for (const [k, v] of Object.entries(patch)) {
+    el.style.setProperty(k, v, "important");
+  }
+};
+
+// Walk the verdict section in the cloned doc and rewrite inline styles for
+// the elements the PDF cares about. This is the load-bearing path now — the
+// CSS in PRINT_STYLE remains as a backstop but is no longer required.
+const applyInlinePdfStyle = (root) => {
+  setStyle(root, {
+    background: "#FFFFFF",
+    color: "#3F3F46",
+    border: "1.5px solid #0A0A0C",
+    "border-radius": "4px",
+    padding: "18px 22px 20px",
+    "font-family": "'Inter',system-ui,sans-serif",
+  });
+
+  // Iterate every BP rating row (grid with 60px + minmax columns).
+  root.querySelectorAll('div[style*="60px"][style*="minmax"]').forEach((row) => {
+    setStyle(row, { background: "#FFFFFF", border: "1px solid #0A0A0C", "border-radius": "3px" });
+    const cells = row.children;
+    if (cells.length < 2) return;
+    const [ratingCell, bodyCell] = cells;
+
+    // Left rating cell — strip rating-color background, big bold rating glyph.
+    setStyle(ratingCell, {
+      background: "#FFFFFF",
+      color: "#0A0A0C",
+      "border-right": "1px solid #0A0A0C",
+      padding: "6px 0",
+    });
+    const ratingChildren = ratingCell.children;
+    if (ratingChildren[0]) setStyle(ratingChildren[0], { "font-size": "18px", "font-weight": "800", color: "#0A0A0C", "line-height": "1" });
+    if (ratingChildren[1]) setStyle(ratingChildren[1], { "font-size": "6.5px", color: "#52525C", opacity: "1", "margin-top": "2px" });
+
+    // Right body cell — title row, rationale, evidence label, evidence list.
+    setStyle(bodyCell, { padding: "7px 11px" });
+    const body = bodyCell.children;
+    if (body[1]) setStyle(body[1], { "font-size": "9px", color: "#3F3F46", "line-height": "1.4", "margin-bottom": "5px" });
+    if (body[2]) setStyle(body[2], { "font-size": "7px", color: "#52525C", "letter-spacing": "0.12em", "font-weight": "700", "margin-bottom": "3px" });
+    const evidenceList = body[3];
+    if (!evidenceList) return;
+    setStyle(evidenceList, { gap: "3px", "max-height": "none", overflow: "visible", "padding-right": "0" });
+
+    Array.from(evidenceList.children).forEach((item) => {
+      setStyle(item, { background: "#FAFAFA", border: "1px solid #D4D4D8", "border-left": "2px solid #0A0A0C", padding: "5px 8px" });
+      const [pill, quote] = item.children;
+      if (pill) {
+        // html2canvas struggles with lucide SVG inside inline-flex containers
+        // (icon AND label sometimes vanish in the rasterised output). Replace
+        // the pill contents with a single plain-text label, which renders
+        // reliably as a normal block element.
+        const labelText = pill.textContent ? pill.textContent.trim() : "";
+        pill.innerHTML = "";
+        const label = pill.ownerDocument.createElement("span");
+        label.textContent = "▸ " + labelText;
+        setStyle(label, { color: "#FFFFFF", "font-weight": "700" });
+        pill.appendChild(label);
+        setStyle(pill, {
+          background: "#0A0A0C",
+          color: "#FFFFFF",
+          border: "1px solid #0A0A0C",
+          "border-radius": "3px",
+          padding: "2px 8px",
+          "font-size": "7.5px",
+          "font-weight": "700",
+          "letter-spacing": "0.04em",
+          "margin-bottom": "3px",
+          display: "inline-block",
+          "max-width": "100%",
+          "word-break": "break-all",
+          "white-space": "normal",
+          "font-family": "'JetBrains Mono', monospace",
+        });
+      }
+      if (quote) {
+        setStyle(quote, {
+          "font-size": "8.5px",
+          color: "#3F3F46",
+          "line-height": "1.4",
+          "max-height": "none",
+          overflow: "visible",
+          padding: "4px 6px",
+          background: "#FFFFFF",
+          border: "none",
+        });
+      }
+    });
+  });
 };
 
 const formatHeaderDate = (d) => {

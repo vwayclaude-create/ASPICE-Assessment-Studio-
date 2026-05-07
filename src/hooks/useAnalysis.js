@@ -81,7 +81,7 @@ export const useAnalysis = () => {
       const isNetwork = e instanceof TypeError && /failed to fetch/i.test(e.message);
       setError(
         isNetwork
-          ? "분석 실패 — 서버 연결 끊김 (Failed to fetch). 개발 서버 재시작 후 페이지를 새로고침하거나, 큰 PDF를 한 번에 한 개씩 업로드해 보세요."
+          ? "분석 실패 — 서버 연결 끊김 (Failed to fetch). 개발 서버 재시작 후 페이지를 새로고침하거나, 큰 파일을 한 번에 한 개씩 업로드해 보세요."
           : `분석 실패 — ${e.message}`
       );
       setPhase("");

@@ -10,7 +10,7 @@ import Anthropic from "@anthropic-ai/sdk";
  * `cache_control: ephemeral` so that repeated per-BP / per-GP calls for the
  * same process reuse the prefix. The `task` block is dynamic and not cached.
  */
-export function createAnthropicClient({ apiKey, model = "claude-opus-4-7", maxTokens = 2048, temperature = 0 } = {}) {
+export function createAnthropicClient({ apiKey, model = "claude-opus-4-7", maxTokens = 8192, temperature = 0 } = {}) {
   if (!apiKey) throw new Error("Anthropic apiKey required");
   const client = new Anthropic({ apiKey });
 

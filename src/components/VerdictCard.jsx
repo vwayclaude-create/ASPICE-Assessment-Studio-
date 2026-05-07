@@ -208,9 +208,7 @@ const EvidenceList = ({ items }) => {
         display: "flex",
         flexDirection: "column",
         gap: 8,
-        maxHeight: 240,
-        overflowY: "auto",
-        paddingRight: 4,
+        minWidth: 0,
       }}
     >
       {items.map((ev, i) => (
@@ -220,11 +218,13 @@ const EvidenceList = ({ items }) => {
           borderLeft: `2px solid ${T.accent}`,
           borderRadius: 3,
           padding: "8px 12px",
+          minWidth: 0,
+          maxWidth: "100%",
         }}>
           {ev.location && (
             <div style={{
               display: "inline-flex",
-              alignItems: "center",
+              alignItems: "flex-start",
               gap: 5,
               padding: "2px 8px",
               background: T.accentSoft,
@@ -236,9 +236,15 @@ const EvidenceList = ({ items }) => {
               fontWeight: 600,
               letterSpacing: "0.04em",
               marginBottom: ev.quote ? 6 : 0,
+              maxWidth: "100%",
+              wordBreak: "break-word",
+              overflowWrap: "anywhere",
+              whiteSpace: "normal",
             }}>
-              <MapPin size={10} />
-              {ev.location}
+              <MapPin size={10} style={{ flexShrink: 0, marginTop: 2 }} />
+              <span style={{ minWidth: 0, wordBreak: "break-word", overflowWrap: "anywhere" }}>
+                {ev.location}
+              </span>
             </div>
           )}
           {ev.quote && (
@@ -246,6 +252,20 @@ const EvidenceList = ({ items }) => {
               fontSize: 12,
               color: T.textMd,
               lineHeight: 1.55,
+              wordBreak: "break-word",
+              overflowWrap: "anywhere",
+              whiteSpace: "pre-wrap",
+              minWidth: 0,
+              maxWidth: "100%",
+              display: "block",
+              maxHeight: 140,
+              overflowY: "scroll",
+              scrollbarGutter: "stable",
+              paddingRight: 6,
+              border: `1px solid ${T.borderL}`,
+              borderRadius: 3,
+              padding: "6px 10px",
+              background: "#FAFBFC",
             }}>
               {ev.quote}
             </div>
@@ -262,7 +282,7 @@ const BpRatingRow = ({ proc, bp, rating }) => {
   return (
     <div style={{
       display: "grid",
-      gridTemplateColumns: "60px 1fr",
+      gridTemplateColumns: "60px minmax(0, 1fr)",
       background: T.surface2,
       border: `1px solid ${T.borderL}`,
       borderRadius: 4,
@@ -292,16 +312,16 @@ const BpRatingRow = ({ proc, bp, rating }) => {
           marginTop: 4,
         }}>{m.range}</div>
       </div>
-      <div style={{ padding: "14px 18px" }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 8 }}>
-          <span style={{ fontFamily: FONTS.mono, fontSize: 11, fontWeight: 600, color: T.accent }}>
+      <div style={{ padding: "14px 18px", minWidth: 0 }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 8, flexWrap: "wrap", minWidth: 0 }}>
+          <span style={{ fontFamily: FONTS.mono, fontSize: 11, fontWeight: 600, color: T.accent, flexShrink: 0 }}>
             {proc.id}.{bp.id}
           </span>
-          <span style={{ fontSize: 14, fontWeight: 600, color: T.textHi, letterSpacing: "-0.005em" }}>
+          <span style={{ fontSize: 14, fontWeight: 600, color: T.textHi, letterSpacing: "-0.005em", minWidth: 0, wordBreak: "break-word", overflowWrap: "anywhere" }}>
             {bp.title}
           </span>
         </div>
-        <div style={{ fontSize: 12.5, color: T.textMd, lineHeight: 1.6, marginBottom: 10 }}>
+        <div style={{ fontSize: 12.5, color: T.textMd, lineHeight: 1.6, marginBottom: 10, wordBreak: "break-word", overflowWrap: "anywhere", minWidth: 0 }}>
           <strong style={{ color: T.accent, fontWeight: 600 }}>근거 · </strong>{rating.rationale}
         </div>
         <div style={{
@@ -370,7 +390,7 @@ export const VerdictCard = forwardRef(function VerdictCard(
   const cl1Pass = isCl1Pass(results.ratings);
 
   return (
-    <section ref={ref} style={{
+    <section ref={ref} data-pdf-export-root="true" style={{
       background: T.surface,
       border: `1px solid ${T.borderL}`,
       borderRadius: 6,

@@ -7,7 +7,7 @@ import OpenAI from "openai";
  * per-BP calls are higher than via Anthropic caching — users who care
  * about cost-efficient bulk assessment should prefer the Anthropic provider.
  */
-export function createOpenAIClient({ apiKey, model = "gpt-4o", maxTokens = 2048, temperature = 0, seed = 42 } = {}) {
+export function createOpenAIClient({ apiKey, model = "gpt-4o", maxTokens = 8192, temperature = 0, seed = 42 } = {}) {
   if (!apiKey) throw new Error("OpenAI apiKey required");
   const client = new OpenAI({ apiKey });
 

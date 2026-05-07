@@ -60,7 +60,10 @@ function merge(method, rule, llm, weights) {
 
     return {
       scorePercent,
-      evidence: [...(ruleRes.evidence ?? []), ...(llmRes.evidence ?? [])],
+      // LLM evidence first: it produces full-sentence quotes with location/citation.
+      // Rule evidence (keyword snippets) is supplementary and gets clipped by the
+      // legacy adapter's slice(0, N) — putting it second keeps the richer quotes.
+      evidence: [...(llmRes.evidence ?? []), ...(ruleRes.evidence ?? [])],
       gaps: [
         ...(ruleRes.gaps ?? []).map((g) => `[rule] ${g}`),
         ...(llmRes.gaps ?? []).map((g) => `[llm] ${g}`),

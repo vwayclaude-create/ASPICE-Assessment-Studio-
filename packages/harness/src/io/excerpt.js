@@ -20,9 +20,9 @@
 export function buildExcerpt({
   artifacts,
   keywords = [],
-  maxChars = 14000,
-  perArtifactChars = 2400,
-  window = 300,
+  maxChars = 18000,
+  perArtifactChars = 3600,
+  window = 600,
 }) {
   const kws = (keywords || []).filter(Boolean).map((k) => k.toLowerCase());
   const chunks = [];

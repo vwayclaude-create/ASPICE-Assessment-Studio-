@@ -39,10 +39,14 @@ export function createLlmScorer({ client }) {
       const { parsed } = await client.generateJson(prompt);
       raw = parsed;
     } catch (err) {
+      console.warn("[aspice/llm] call failed:", err.message);
       return fallback(`LLM call failed: ${err.message}`);
     }
     const v = validateLlmResult(raw);
-    if (!v.ok) return fallback(v.reason, raw);
+    if (!v.ok) {
+      console.warn("[aspice/llm] response rejected:", v.reason, "— pamCitation:", raw?.pamCitation, "evidenceCount:", Array.isArray(raw?.evidence) ? raw.evidence.length : 0);
+      return fallback(v.reason, raw);
+    }
     const { contextConsistency } = v.result;
     const multiplier = CONTEXT_MULTIPLIERS[contextConsistency.status] ?? 1.0;
     const adjustedScore = Math.round(v.result.scorePercent * multiplier);
