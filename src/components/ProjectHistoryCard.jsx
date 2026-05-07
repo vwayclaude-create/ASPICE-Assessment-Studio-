@@ -1,4 +1,4 @@
-import { Clock, Trash2, FileText, FolderOpen, Eye, Layers } from "lucide-react";
+import { Clock, Trash2, FileText, FolderOpen, Eye, Layers, FileDown, Loader2 } from "lucide-react";
 import { T, FONTS, SECTION_CONTAINER_STYLE } from "../theme";
 import { SectionBadge } from "./SectionBadge";
 
@@ -37,7 +37,7 @@ const HistoryHeader = () => (
   </div>
 );
 
-const HistoryRow = ({ entry, isActive, isLast, onView, onDelete }) => {
+const HistoryRow = ({ entry, isActive, isLast, onView, onDelete, onExportPdf, exporting }) => {
   const { processes, total, meets, pass, targetLevel, consistencyErrors, coverage } = summarize(entry);
   const dateStr = new Date(entry.date).toLocaleString("ko-KR", {
     year: "numeric", month: "2-digit", day: "2-digit",
@@ -200,6 +200,32 @@ const HistoryRow = ({ entry, isActive, isLast, onView, onDelete }) => {
           <Eye size={11}/> {isActive ? "닫기" : "보기"}
         </button>
         <button
+          onClick={onExportPdf}
+          disabled={exporting}
+          title="이 분석 결과를 가로 PDF로 내보내기"
+          style={{
+            background: exporting ? T.borderL : "transparent",
+            color: T.textHi,
+            border: `1px solid ${T.borderM}`,
+            padding: "5px 10px",
+            fontFamily: FONTS.mono,
+            fontSize: 9,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            cursor: exporting ? "wait" : "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 5,
+            borderRadius: 3,
+            fontWeight: 600,
+            opacity: exporting ? 0.7 : 1,
+          }}
+        >
+          {exporting ? <Loader2 size={9} className="anim-spin" /> : <FileDown size={9} />}
+          {exporting ? "생성 중" : "PDF"}
+        </button>
+        <button
           onClick={onDelete}
           style={{
             background: "transparent",
@@ -231,6 +257,8 @@ export const ProjectHistoryCard = ({
   onToggleView,
   onDeleteEntry,
   onClearAll,
+  onExportEntryPdf,
+  exportingEntryId,
 }) => (
   <section style={SECTION_CONTAINER_STYLE}>
     <SectionBadge color={HISTORY_COLOR}>§ 07 · PROJECT HISTORY</SectionBadge>
@@ -331,6 +359,8 @@ export const ProjectHistoryCard = ({
             isLast={idx === history.length - 1}
             onView={() => onToggleView(h.id)}
             onDelete={() => onDeleteEntry(h.id)}
+            onExportPdf={() => onExportEntryPdf?.(h)}
+            exporting={exportingEntryId === h.id}
           />
         ))}
       </div>

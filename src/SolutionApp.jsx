@@ -19,6 +19,7 @@ import { useProject } from "./hooks/useProject";
 
 import { extractFileContent } from "./utils/fileReaders";
 import { exportReportAsText, exportReportAsPdf } from "./utils/exportReport";
+import { exportProjectReportAsPdf } from "./utils/exportProjectReport";
 import { DEFAULT_ENGINE } from "./data/engineDefaults";
 
 import { AppHeader } from "./components/AppHeader";
@@ -64,6 +65,7 @@ export default function SolutionApp() {
   const [projectTargetLevel, setProjectTargetLevel] = useState(1);
   const [projectEngine, setProjectEngine] = useState(DEFAULT_ENGINE);
   const [selectedProjectHistoryId, setSelectedProjectHistoryId] = useState(null);
+  const [exportingProjectEntryId, setExportingProjectEntryId] = useState(null);
 
   const { history, addEntry, removeEntry, clearAll } = useHistory();
   const {
@@ -298,6 +300,21 @@ export default function SolutionApp() {
     setSelectedProjectHistoryId(null);
   };
 
+  const handleExportProjectEntryPdf = async (entry) => {
+    if (!entry?.verdict) {
+      alert("PDF로 내보낼 verdict 데이터가 비어있습니다.");
+      return;
+    }
+    setExportingProjectEntryId(entry.id);
+    try {
+      await exportProjectReportAsPdf({ verdict: entry.verdict, entry });
+    } catch (e) {
+      alert(`PDF 생성 실패: ${e.message || e}`);
+    } finally {
+      setExportingProjectEntryId(null);
+    }
+  };
+
   const viewingProjectHistory = selectedProjectHistoryId
     ? projectHistory.find((h) => h.id === selectedProjectHistoryId)
     : null;
@@ -451,6 +468,8 @@ export default function SolutionApp() {
               onToggleView={handleProjectHistoryToggle}
               onDeleteEntry={handleProjectHistoryDelete}
               onClearAll={handleProjectHistoryClearAll}
+              onExportEntryPdf={handleExportProjectEntryPdf}
+              exportingEntryId={exportingProjectEntryId}
             />
             <AppFooter />
           </main>
